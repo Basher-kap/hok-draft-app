@@ -1,0 +1,1314 @@
+[
+  {
+    "slug": "annette",
+    "name": "Annette",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/annette.jpg",
+    "url": "https://hokstats.gg/heroes/annette/"
+  },
+  {
+    "slug": "ata",
+    "name": "Ata",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/ata.jpg",
+    "url": "https://hokstats.gg/heroes/ata/"
+  },
+  {
+    "slug": "butterfly",
+    "name": "Butterfly",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/butterfly.jpg",
+    "url": "https://hokstats.gg/heroes/butterfly/"
+  },
+  {
+    "slug": "devara",
+    "name": "Devara",
+    "tier": "A",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/devara.jpg",
+    "url": "https://hokstats.gg/heroes/devara/"
+  },
+  {
+    "slug": "fatih",
+    "name": "Fatih",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/fatih.jpg",
+    "url": "https://hokstats.gg/heroes/fatih/"
+  },
+  {
+    "slug": "florentino",
+    "name": "Florentino",
+    "tier": "S",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/florentino.jpg",
+    "url": "https://hokstats.gg/heroes/florentino/"
+  },
+  {
+    "slug": "flowborn-mage",
+    "name": "Flowborn (Mage)",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/flowborn-mage.jpg",
+    "url": "https://hokstats.gg/heroes/flowborn-mage/"
+  },
+  {
+    "slug": "flowborn-tank",
+    "name": "Flowborn (Tank)",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/flowborn-tank.jpg",
+    "url": "https://hokstats.gg/heroes/flowborn-tank/"
+  },
+  {
+    "slug": "garuda",
+    "name": "Garuda",
+    "tier": "B",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/garuda.jpg",
+    "url": "https://hokstats.gg/heroes/garuda/"
+  },
+  {
+    "slug": "lapulapu",
+    "name": "Lapulapu",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/lapulapu.jpg",
+    "url": "https://hokstats.gg/heroes/lapulapu/"
+  },
+  {
+    "slug": "lorion",
+    "name": "Lorion",
+    "tier": "A",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/lorion.jpg",
+    "url": "https://hokstats.gg/heroes/lorion/"
+  },
+  {
+    "slug": "luara",
+    "name": "Luara",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": true,
+    "image": "https://hokstats.gg/heroes-splash/luara.jpg",
+    "url": "https://hokstats.gg/heroes/luara/"
+  },
+  {
+    "slug": "agudo",
+    "name": "Agudo",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/agudo.jpg",
+    "url": "https://hokstats.gg/heroes/agudo/"
+  },
+  {
+    "slug": "alessio",
+    "name": "Alessio",
+    "tier": "B",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/alessio.jpg",
+    "url": "https://hokstats.gg/heroes/alessio/"
+  },
+  {
+    "slug": "allain",
+    "name": "Allain",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/allain.jpg",
+    "url": "https://hokstats.gg/heroes/allain/"
+  },
+  {
+    "slug": "angela",
+    "name": "Angela",
+    "tier": "S",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/angela.jpg",
+    "url": "https://hokstats.gg/heroes/angela/"
+  },
+  {
+    "slug": "aoyin",
+    "name": "Ao'yin",
+    "tier": "S",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/aoyin.jpg",
+    "url": "https://hokstats.gg/heroes/aoyin/"
+  },
+  {
+    "slug": "arke",
+    "name": "Arke",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/arke.jpg",
+    "url": "https://hokstats.gg/heroes/arke/"
+  },
+  {
+    "slug": "arli",
+    "name": "Arli",
+    "tier": "B",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/arli.jpg",
+    "url": "https://hokstats.gg/heroes/arli/"
+  },
+  {
+    "slug": "arthur",
+    "name": "Arthur",
+    "tier": "A",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/arthur.jpg",
+    "url": "https://hokstats.gg/heroes/arthur/"
+  },
+  {
+    "slug": "athena",
+    "name": "Athena",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/athena.jpg",
+    "url": "https://hokstats.gg/heroes/athena/"
+  },
+  {
+    "slug": "augran",
+    "name": "Augran",
+    "tier": "S",
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/augran.jpg",
+    "url": "https://hokstats.gg/heroes/augran/"
+  },
+  {
+    "slug": "bai-qi",
+    "name": "Bai Qi",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/bai-qi.jpg",
+    "url": "https://hokstats.gg/heroes/bai-qi/"
+  },
+  {
+    "slug": "biron",
+    "name": "Biron",
+    "tier": "B",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/biron.jpg",
+    "url": "https://hokstats.gg/heroes/biron/"
+  },
+  {
+    "slug": "cai-yan",
+    "name": "Cai Yan",
+    "tier": "A",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/cai-yan.jpg",
+    "url": "https://hokstats.gg/heroes/cai-yan/"
+  },
+  {
+    "slug": "chano",
+    "name": "Chano",
+    "tier": "C",
+    "roles": [
+      "Farm",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/chano.jpg",
+    "url": "https://hokstats.gg/heroes/chano/"
+  },
+  {
+    "slug": "charlotte",
+    "name": "Charlotte",
+    "tier": "B",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/charlotte.jpg",
+    "url": "https://hokstats.gg/heroes/charlotte/"
+  },
+  {
+    "slug": "chicha",
+    "name": "Chicha",
+    "tier": "A",
+    "roles": [
+      "Clash Lane",
+      "Jungle",
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/chicha.jpg",
+    "url": "https://hokstats.gg/heroes/chicha/"
+  },
+  {
+    "slug": "cirrus",
+    "name": "Cirrus",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/cirrus.jpg",
+    "url": "https://hokstats.gg/heroes/cirrus/"
+  },
+  {
+    "slug": "consort-yu",
+    "name": "Consort Yu",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/consort-yu.jpg",
+    "url": "https://hokstats.gg/heroes/consort-yu/"
+  },
+  {
+    "slug": "da-qiao",
+    "name": "Da Qiao",
+    "tier": "B",
+    "roles": [
+      "Roam",
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/da-qiao.jpg",
+    "url": "https://hokstats.gg/heroes/da-qiao/"
+  },
+  {
+    "slug": "daji",
+    "name": "Daji",
+    "tier": "S",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/daji.jpg",
+    "url": "https://hokstats.gg/heroes/daji/"
+  },
+  {
+    "slug": "dharma",
+    "name": "Dharma",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dharma.jpg",
+    "url": "https://hokstats.gg/heroes/dharma/"
+  },
+  {
+    "slug": "di-renjie",
+    "name": "Di Renjie",
+    "tier": "B",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/di-renjie.jpg",
+    "url": "https://hokstats.gg/heroes/di-renjie/"
+  },
+  {
+    "slug": "dian-wei",
+    "name": "Dian Wei",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dian-wei.jpg",
+    "url": "https://hokstats.gg/heroes/dian-wei/"
+  },
+  {
+    "slug": "diaochan",
+    "name": "Diaochan",
+    "tier": "B",
+    "roles": [
+      "Mid",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/diaochan.jpg",
+    "url": "https://hokstats.gg/heroes/diaochan/"
+  },
+  {
+    "slug": "dolia",
+    "name": "Dolia",
+    "tier": "A",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dolia.jpg",
+    "url": "https://hokstats.gg/heroes/dolia/"
+  },
+  {
+    "slug": "donghuang",
+    "name": "Donghuang",
+    "tier": "A",
+    "roles": [
+      "Roam",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/donghuang.jpg",
+    "url": "https://hokstats.gg/heroes/donghuang/"
+  },
+  {
+    "slug": "dr-bian",
+    "name": "Dr Bian",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dr-bian.jpg",
+    "url": "https://hokstats.gg/heroes/dr-bian/"
+  },
+  {
+    "slug": "dun",
+    "name": "Dun",
+    "tier": "A",
+    "roles": [
+      "Clash Lane",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dun.jpg",
+    "url": "https://hokstats.gg/heroes/dun/"
+  },
+  {
+    "slug": "dyadia",
+    "name": "Dyadia",
+    "tier": "A",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/dyadia.jpg",
+    "url": "https://hokstats.gg/heroes/dyadia/"
+  },
+  {
+    "slug": "erin",
+    "name": "Erin",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/erin.jpg",
+    "url": "https://hokstats.gg/heroes/erin/"
+  },
+  {
+    "slug": "fang",
+    "name": "Fang",
+    "tier": "B",
+    "roles": [
+      "Farm",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/fang.jpg",
+    "url": "https://hokstats.gg/heroes/fang/"
+  },
+  {
+    "slug": "feyd",
+    "name": "Feyd",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/feyd.jpg",
+    "url": "https://hokstats.gg/heroes/feyd/"
+  },
+  {
+    "slug": "flowborn-marksman",
+    "name": "Flowborn (Marksman)",
+    "tier": "B",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/flowborn-marksman.jpg",
+    "url": "https://hokstats.gg/heroes/flowborn-marksman/"
+  },
+  {
+    "slug": "fuzi",
+    "name": "Fuzi",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/fuzi.jpg",
+    "url": "https://hokstats.gg/heroes/fuzi/"
+  },
+  {
+    "slug": "gan-mo",
+    "name": "Gan & Mo",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/gan-mo.jpg",
+    "url": "https://hokstats.gg/heroes/gan-mo/"
+  },
+  {
+    "slug": "gao",
+    "name": "Gao",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/gao.jpg",
+    "url": "https://hokstats.gg/heroes/gao/"
+  },
+  {
+    "slug": "gao-changgong",
+    "name": "Gao Changgong",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/gao-changgong.jpg",
+    "url": "https://hokstats.gg/heroes/gao-changgong/"
+  },
+  {
+    "slug": "garo",
+    "name": "Garo",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/garo.jpg",
+    "url": "https://hokstats.gg/heroes/garo/"
+  },
+  {
+    "slug": "guan-yu",
+    "name": "Guan Yu",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/guan-yu.jpg",
+    "url": "https://hokstats.gg/heroes/guan-yu/"
+  },
+  {
+    "slug": "guiguzi",
+    "name": "Guiguzi",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/guiguzi.jpg",
+    "url": "https://hokstats.gg/heroes/guiguzi/"
+  },
+  {
+    "slug": "han-xin",
+    "name": "Han Xin",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/han-xin.jpg",
+    "url": "https://hokstats.gg/heroes/han-xin/"
+  },
+  {
+    "slug": "haya",
+    "name": "Haya",
+    "tier": "A",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/haya.jpg",
+    "url": "https://hokstats.gg/heroes/haya/"
+  },
+  {
+    "slug": "heino",
+    "name": "Heino",
+    "tier": "B",
+    "roles": [
+      "Mid",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/heino.jpg",
+    "url": "https://hokstats.gg/heroes/heino/"
+  },
+  {
+    "slug": "hou-yi",
+    "name": "Hou Yi",
+    "tier": "S",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/hou-yi.jpg",
+    "url": "https://hokstats.gg/heroes/hou-yi/"
+  },
+  {
+    "slug": "huang-zhong",
+    "name": "Huang Zhong",
+    "tier": "C",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/huang-zhong.jpg",
+    "url": "https://hokstats.gg/heroes/huang-zhong/"
+  },
+  {
+    "slug": "jing",
+    "name": "Jing",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/jing.jpg",
+    "url": "https://hokstats.gg/heroes/jing/"
+  },
+  {
+    "slug": "kaizer",
+    "name": "Kaizer",
+    "tier": "A",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/kaizer.jpg",
+    "url": "https://hokstats.gg/heroes/kaizer/"
+  },
+  {
+    "slug": "kongming",
+    "name": "Kongming",
+    "tier": "A",
+    "roles": [
+      "Mid",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/kongming.jpg",
+    "url": "https://hokstats.gg/heroes/kongming/"
+  },
+  {
+    "slug": "kui",
+    "name": "Kui",
+    "tier": "B",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/kui.jpg",
+    "url": "https://hokstats.gg/heroes/kui/"
+  },
+  {
+    "slug": "lady-sun",
+    "name": "Lady Sun",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/lady-sun.jpg",
+    "url": "https://hokstats.gg/heroes/lady-sun/"
+  },
+  {
+    "slug": "lady-zhen",
+    "name": "Lady Zhen",
+    "tier": "B",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/lady-zhen.jpg",
+    "url": "https://hokstats.gg/heroes/lady-zhen/"
+  },
+  {
+    "slug": "lam",
+    "name": "Lam",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/lam.jpg",
+    "url": "https://hokstats.gg/heroes/lam/"
+  },
+  {
+    "slug": "li-bai",
+    "name": "Li Bai",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/li-bai.jpg",
+    "url": "https://hokstats.gg/heroes/li-bai/"
+  },
+  {
+    "slug": "li-xin",
+    "name": "Li Xin",
+    "tier": "S",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/li-xin.jpg",
+    "url": "https://hokstats.gg/heroes/li-xin/"
+  },
+  {
+    "slug": "lian-po",
+    "name": "Lian Po",
+    "tier": "B",
+    "roles": [
+      "Clash Lane",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/lian-po.jpg",
+    "url": "https://hokstats.gg/heroes/lian-po/"
+  },
+  {
+    "slug": "liang",
+    "name": "Liang",
+    "tier": "S",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/liang.jpg",
+    "url": "https://hokstats.gg/heroes/liang/"
+  },
+  {
+    "slug": "liu-bang",
+    "name": "Liu Bang",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/liu-bang.jpg",
+    "url": "https://hokstats.gg/heroes/liu-bang/"
+  },
+  {
+    "slug": "liu-bei",
+    "name": "Liu Bei",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/liu-bei.jpg",
+    "url": "https://hokstats.gg/heroes/liu-bei/"
+  },
+  {
+    "slug": "liu-shan",
+    "name": "Liu Shan",
+    "tier": "B",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/liu-shan.jpg",
+    "url": "https://hokstats.gg/heroes/liu-shan/"
+  },
+  {
+    "slug": "lu-bu",
+    "name": "Lu Bu",
+    "tier": "B",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/lu-bu.jpg",
+    "url": "https://hokstats.gg/heroes/lu-bu/"
+  },
+  {
+    "slug": "luban-no-7",
+    "name": "Luban No.7",
+    "tier": "S",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/luban-no-7.jpg",
+    "url": "https://hokstats.gg/heroes/luban-no-7/"
+  },
+  {
+    "slug": "luna",
+    "name": "Luna",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/luna.jpg",
+    "url": "https://hokstats.gg/heroes/luna/"
+  },
+  {
+    "slug": "mai-shiranui",
+    "name": "Mai Shiranui",
+    "tier": "B",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/mai-shiranui.jpg",
+    "url": "https://hokstats.gg/heroes/mai-shiranui/"
+  },
+  {
+    "slug": "marco-polo",
+    "name": "Marco Polo",
+    "tier": "A",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/marco-polo.jpg",
+    "url": "https://hokstats.gg/heroes/marco-polo/"
+  },
+  {
+    "slug": "mayene",
+    "name": "Mayene",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/mayene.jpg",
+    "url": "https://hokstats.gg/heroes/mayene/"
+  },
+  {
+    "slug": "meng-ya",
+    "name": "Meng Ya",
+    "tier": "C",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/meng-ya.jpg",
+    "url": "https://hokstats.gg/heroes/meng-ya/"
+  },
+  {
+    "slug": "menki",
+    "name": "Menki",
+    "tier": "C",
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/menki.jpg",
+    "url": "https://hokstats.gg/heroes/menki/"
+  },
+  {
+    "slug": "mi-yue",
+    "name": "Mi Yue",
+    "tier": "B",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/mi-yue.jpg",
+    "url": "https://hokstats.gg/heroes/mi-yue/"
+  },
+  {
+    "slug": "milady",
+    "name": "Milady",
+    "tier": "S",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/milady.jpg",
+    "url": "https://hokstats.gg/heroes/milady/"
+  },
+  {
+    "slug": "ming",
+    "name": "Ming",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/ming.jpg",
+    "url": "https://hokstats.gg/heroes/ming/"
+  },
+  {
+    "slug": "mozi",
+    "name": "Mozi",
+    "tier": "A",
+    "roles": [
+      "Mid",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/mozi.jpg",
+    "url": "https://hokstats.gg/heroes/mozi/"
+  },
+  {
+    "slug": "mulan",
+    "name": "Mulan",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/mulan.jpg",
+    "url": "https://hokstats.gg/heroes/mulan/"
+  },
+  {
+    "slug": "musashi",
+    "name": "Musashi",
+    "tier": "B",
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/musashi.jpg",
+    "url": "https://hokstats.gg/heroes/musashi/"
+  },
+  {
+    "slug": "nakoruru",
+    "name": "Nakoruru",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/nakoruru.jpg",
+    "url": "https://hokstats.gg/heroes/nakoruru/"
+  },
+  {
+    "slug": "nezha",
+    "name": "Nezha",
+    "tier": "C",
+    "roles": [
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/nezha.jpg",
+    "url": "https://hokstats.gg/heroes/nezha/"
+  },
+  {
+    "slug": "nuwa",
+    "name": "Nuwa",
+    "tier": "A",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/nuwa.jpg",
+    "url": "https://hokstats.gg/heroes/nuwa/"
+  },
+  {
+    "slug": "pei",
+    "name": "Pei",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/pei.jpg",
+    "url": "https://hokstats.gg/heroes/pei/"
+  },
+  {
+    "slug": "sakeer",
+    "name": "Sakeer",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/sakeer.jpg",
+    "url": "https://hokstats.gg/heroes/sakeer/"
+  },
+  {
+    "slug": "shangguan",
+    "name": "Shangguan",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/shangguan.jpg",
+    "url": "https://hokstats.gg/heroes/shangguan/"
+  },
+  {
+    "slug": "shi",
+    "name": "Shi",
+    "tier": "B",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/shi.jpg",
+    "url": "https://hokstats.gg/heroes/shi/"
+  },
+  {
+    "slug": "shouyue",
+    "name": "Shouyue",
+    "tier": "B",
+    "roles": [
+      "Farm"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/shouyue.jpg",
+    "url": "https://hokstats.gg/heroes/shouyue/"
+  },
+  {
+    "slug": "sima-yi",
+    "name": "Sima Yi",
+    "tier": "B",
+    "roles": [
+      "Jungle",
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/sima-yi.jpg",
+    "url": "https://hokstats.gg/heroes/sima-yi/"
+  },
+  {
+    "slug": "sun-bin",
+    "name": "Sun Bin",
+    "tier": "C",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/sun-bin.jpg",
+    "url": "https://hokstats.gg/heroes/sun-bin/"
+  },
+  {
+    "slug": "sun-ce",
+    "name": "Sun Ce",
+    "tier": "B",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/sun-ce.jpg",
+    "url": "https://hokstats.gg/heroes/sun-ce/"
+  },
+  {
+    "slug": "ukyo-tachibana",
+    "name": "Ukyo Tachibana",
+    "tier": "C",
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/ukyo-tachibana.jpg",
+    "url": "https://hokstats.gg/heroes/ukyo-tachibana/"
+  },
+  {
+    "slug": "umbrosa",
+    "name": "Umbrosa",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/umbrosa.jpg",
+    "url": "https://hokstats.gg/heroes/umbrosa/"
+  },
+  {
+    "slug": "wang-zhaojun",
+    "name": "Wang Zhaojun",
+    "tier": "S",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/wang-zhaojun.jpg",
+    "url": "https://hokstats.gg/heroes/wang-zhaojun/"
+  },
+  {
+    "slug": "wukong",
+    "name": "Wukong",
+    "tier": "A",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/wukong.jpg",
+    "url": "https://hokstats.gg/heroes/wukong/"
+  },
+  {
+    "slug": "wuyan",
+    "name": "Wuyan",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/wuyan.jpg",
+    "url": "https://hokstats.gg/heroes/wuyan/"
+  },
+  {
+    "slug": "xiang-yu",
+    "name": "Xiang Yu",
+    "tier": "B",
+    "roles": [
+      "Roam",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/xiang-yu.jpg",
+    "url": "https://hokstats.gg/heroes/xiang-yu/"
+  },
+  {
+    "slug": "xiao-qiao",
+    "name": "Xiao Qiao",
+    "tier": "A",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/xiao-qiao.jpg",
+    "url": "https://hokstats.gg/heroes/xiao-qiao/"
+  },
+  {
+    "slug": "xuance",
+    "name": "Xuance",
+    "tier": "C",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/xuance.jpg",
+    "url": "https://hokstats.gg/heroes/xuance/"
+  },
+  {
+    "slug": "yang-jian",
+    "name": "Yang Jian",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yang-jian.jpg",
+    "url": "https://hokstats.gg/heroes/yang-jian/"
+  },
+  {
+    "slug": "yango",
+    "name": "Yango",
+    "tier": "C",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yango.jpg",
+    "url": "https://hokstats.gg/heroes/yango/"
+  },
+  {
+    "slug": "yao",
+    "name": "Yao",
+    "tier": "C",
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yao.jpg",
+    "url": "https://hokstats.gg/heroes/yao/"
+  },
+  {
+    "slug": "yaria",
+    "name": "Yaria",
+    "tier": "A",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yaria.jpg",
+    "url": "https://hokstats.gg/heroes/yaria/"
+  },
+  {
+    "slug": "ying",
+    "name": "Ying",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/ying.jpg",
+    "url": "https://hokstats.gg/heroes/ying/"
+  },
+  {
+    "slug": "yixing",
+    "name": "Yixing",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yixing.jpg",
+    "url": "https://hokstats.gg/heroes/yixing/"
+  },
+  {
+    "slug": "yuhuan",
+    "name": "Yuhuan",
+    "tier": "C",
+    "roles": [
+      "Mid",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/yuhuan.jpg",
+    "url": "https://hokstats.gg/heroes/yuhuan/"
+  },
+  {
+    "slug": "zhang-fei",
+    "name": "Zhang Fei",
+    "tier": "B",
+    "roles": [
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/zhang-fei.jpg",
+    "url": "https://hokstats.gg/heroes/zhang-fei/"
+  },
+  {
+    "slug": "zhou-yu",
+    "name": "Zhou Yu",
+    "tier": "C",
+    "roles": [
+      "Mid"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/zhou-yu.jpg",
+    "url": "https://hokstats.gg/heroes/zhou-yu/"
+  },
+  {
+    "slug": "zhuangzi",
+    "name": "Zhuangzi",
+    "tier": "B",
+    "roles": [
+      "Roam",
+      "Clash Lane"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/zhuangzi.jpg",
+    "url": "https://hokstats.gg/heroes/zhuangzi/"
+  },
+  {
+    "slug": "zilong",
+    "name": "Zilong",
+    "tier": "B",
+    "roles": [
+      "Jungle"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/zilong.jpg",
+    "url": "https://hokstats.gg/heroes/zilong/"
+  },
+  {
+    "slug": "ziya",
+    "name": "Ziya",
+    "tier": "B",
+    "roles": [
+      "Mid",
+      "Roam"
+    ],
+    "intl_exclusive": false,
+    "image": "https://hokstats.gg/heroes-splash/ziya.jpg",
+    "url": "https://hokstats.gg/heroes/ziya/"
+  }
+]
