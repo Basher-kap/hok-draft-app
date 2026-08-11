@@ -1,8 +1,21 @@
 "use client";
 
 import { TIER_STYLE } from "@/lib/heroes";
+import { Heart } from "lucide-react";
 
-export default function TierBadge({ tier, size = "sm" }) {
+export default function TierBadge({ tier, size = "sm", isComfort = false }) {
+  if (isComfort) {
+    const iconSize = size === "sm" ? 10 : 13;
+    return (
+      <div className="flex items-center gap-1">
+        <span className="font-display font-bold" style={{ color: "#e879f9", fontSize: size === "sm" ? 13 : 16 }}>
+          X
+        </span>
+        <Heart size={iconSize} color="#e879f9" fill="#e879f9" />
+      </div>
+    );
+  }
+
   const t = TIER_STYLE[tier] || TIER_STYLE.C;
   const dims = size === "sm" ? { w: 6, h: 10 } : { w: 8, h: 13 };
 

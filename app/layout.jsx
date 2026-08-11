@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ComfortProvider } from "@/components/ComfortProvider";
 
 export const metadata = {
   title: "HoK Draft Pick",
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ComfortProvider>{children}</ComfortProvider>
+      </body>
     </html>
   );
 }

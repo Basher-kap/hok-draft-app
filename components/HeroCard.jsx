@@ -6,7 +6,7 @@ import TierBadge from "./TierBadge";
 import { Ban, Lock } from "lucide-react";
 
 // status: "available" | "banned" | "picked" | undefined(available)
-export default function HeroCard({ hero, status, onClick, disabled }) {
+export default function HeroCard({ hero, status, onClick, disabled, isComfort }) {
   const t = TIER_STYLE[hero.tier] || TIER_STYLE.C;
   const isTaken = status === "banned" || status === "picked";
 
@@ -24,7 +24,7 @@ export default function HeroCard({ hero, status, onClick, disabled }) {
       onMouseEnter={(e) => {
         if (isTaken || disabled) return;
         e.currentTarget.style.transform = "translateY(-3px)";
-        e.currentTarget.style.borderColor = t.color;
+        e.currentTarget.style.borderColor = isComfort ? "#e879f9" : t.color;
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = "translateY(0)";
@@ -63,10 +63,10 @@ export default function HeroCard({ hero, status, onClick, disabled }) {
           className="absolute top-1.5 left-1.5 flex items-center gap-1 rounded px-1.5 py-0.5"
           style={{
             background: "rgba(10,11,14,0.72)",
-            border: `1px solid ${t.color}55`,
+            border: `1px solid ${isComfort ? "#e879f955" : t.color + "55"}`,
           }}
         >
-          <TierBadge tier={hero.tier} size="sm" />
+          <TierBadge tier={hero.tier} size="sm" isComfort={isComfort} />
         </div>
 
         {hero.intl_exclusive && (

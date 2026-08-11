@@ -6,7 +6,7 @@ import HeroCard from "./HeroCard";
 import { Search, X } from "lucide-react";
 
 // getStatus(hero) => "available" | "banned" | "picked"
-export default function HeroGrid({ getStatus, onSelect, disabled }) {
+export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero }) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState("All");
 
@@ -74,6 +74,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled }) {
             status={getStatus(hero)}
             onClick={onSelect}
             disabled={disabled}
+            isComfort={isComfortHero ? isComfortHero(hero) : false}
           />
         ))}
       </div>
