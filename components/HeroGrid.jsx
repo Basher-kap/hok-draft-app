@@ -92,7 +92,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero 
         })}
       </div>
 
-      <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))" }}>
+      <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(92px, 1fr))" }}>
         {filtered.map((hero) => (
           <HeroCard
             key={hero.slug}
