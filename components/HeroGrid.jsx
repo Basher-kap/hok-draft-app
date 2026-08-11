@@ -1,28 +1,32 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { HEROES, ROLES, sortByTier } from "@/lib/heroes";
+import { HEROES, ROLES, TIER_STYLE, sortByTier } from "@/lib/heroes";
 import HeroCard from "./HeroCard";
 import { Search, X } from "lucide-react";
+
+const TIERS = ["S", "A", "B", "C"];
 
 // getStatus(hero) => "available" | "banned" | "picked"
 export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero }) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState("All");
+  const [activeTier, setActiveTier] = useState("All");
 
   const filtered = useMemo(() => {
     let list = HEROES;
     if (activeRole !== "All") list = list.filter((h) => h.roles.includes(activeRole));
+    if (activeTier !== "All") list = list.filter((h) => h.tier === activeTier);
     if (query.trim()) {
       const q = query.trim().toLowerCase();
       list = list.filter((h) => h.name.toLowerCase().includes(q));
     }
     return sortByTier(list);
-  }, [query, activeRole]);
+  }, [query, activeRole, activeTier]);
 
   return (
     <div>
-      <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
+      <div className="flex items-center justify-between gap-3 flex-wrap mb-2.5">
         <div className="flex gap-1.5 flex-wrap">
           {["All", ...ROLES].map((r) => {
             const isActive = activeRole === r;
@@ -64,6 +68,28 @@ export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero 
             />
           )}
         </div>
+      </div>
+
+      <div className="flex items-center gap-1.5 flex-wrap mb-3">
+        <span className="font-display font-semibold text-[11px] tracking-wide text-gray-500 mr-0.5">TIER</span>
+        {["All", ...TIERS].map((t) => {
+          const isActive = activeTier === t;
+          const color = t === "All" ? "#e8e6e1" : TIER_STYLE[t].color;
+          return (
+            <button
+              key={t}
+              onClick={() => setActiveTier(t)}
+              className="font-display font-bold rounded px-2.5 py-1 text-[12px] transition-all"
+              style={{
+                border: `1px solid ${isActive ? color : "rgba(255,255,255,0.1)"}`,
+                background: isActive ? `${color}22` : "transparent",
+                color: isActive ? color : "#8a94a6",
+              }}
+            >
+              {t}
+            </button>
+          );
+        })}
       </div>
 
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))" }}>
