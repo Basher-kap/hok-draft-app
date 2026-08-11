@@ -8,7 +8,8 @@ import { Search, X } from "lucide-react";
 const TIERS = ["S", "A", "B", "C"];
 
 // getStatus(hero) => "available" | "banned" | "picked"
-export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero }) {
+// getComfortLevel(hero) => null | "comfort" | "super"
+export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel }) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState("All");
   const [activeTier, setActiveTier] = useState("All");
@@ -100,7 +101,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled, isComfortHero 
             status={getStatus(hero)}
             onClick={onSelect}
             disabled={disabled}
-            isComfort={isComfortHero ? isComfortHero(hero) : false}
+            comfortLevel={getComfortLevel ? getComfortLevel(hero) : null}
           />
         ))}
       </div>

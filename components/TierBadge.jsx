@@ -3,15 +3,21 @@
 import { TIER_STYLE } from "@/lib/heroes";
 import { Heart } from "lucide-react";
 
-export default function TierBadge({ tier, size = "sm", isComfort = false }) {
-  if (isComfort) {
+const COMFORT_COLOR = "#e879f9"; // Comfort - violet-pink
+const SUPER_COMFORT_COLOR = "#ff2d95"; // Super Comfort - hot pink/magenta, brighter + glow
+
+// comfortLevel: null | "comfort" | "super"
+export default function TierBadge({ tier, size = "sm", comfortLevel = null }) {
+  if (comfortLevel) {
+    const isSuper = comfortLevel === "super";
+    const color = isSuper ? SUPER_COMFORT_COLOR : COMFORT_COLOR;
     const iconSize = size === "sm" ? 10 : 13;
     return (
-      <div className="flex items-center gap-1">
-        <span className="font-display font-bold" style={{ color: "#e879f9", fontSize: size === "sm" ? 13 : 16 }}>
-          X
+      <div className="flex items-center gap-1" style={isSuper ? { filter: `drop-shadow(0 0 4px ${color}99)` } : undefined}>
+        <span className="font-display font-bold" style={{ color, fontSize: size === "sm" ? 13 : 16 }}>
+          {isSuper ? "XX" : "X"}
         </span>
-        <Heart size={iconSize} color="#e879f9" fill="#e879f9" />
+        <Heart size={iconSize} color={color} fill={isSuper ? color : "none"} strokeWidth={2} />
       </div>
     );
   }

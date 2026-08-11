@@ -137,7 +137,7 @@ export default function RankDraftPage() {
             getStatus={getStatus}
             onSelect={handleSelect}
             disabled={step.phase === "complete"}
-            isComfortHero={(hero) => isComfortHero(hero.slug)}
+            getComfortLevel={(hero) => isComfortHero(hero.slug)}
           />
         </div>
       </div>

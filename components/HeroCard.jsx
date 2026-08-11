@@ -5,39 +5,44 @@ import { ROLE_COLOR, TIER_STYLE } from "@/lib/heroes";
 import TierBadge from "./TierBadge";
 import { Ban, Lock } from "lucide-react";
 
+const COMFORT_COLOR = "#e879f9";
+const SUPER_COMFORT_COLOR = "#ff2d95";
+
 // status: "available" | "banned" | "picked" | undefined(available)
-export default function HeroCard({ hero, status, onClick, disabled, isComfort }) {
+// comfortLevel: null | "comfort" | "super"
+export default function HeroCard({ hero, status, onClick, disabled, comfortLevel = null }) {
   const t = TIER_STYLE[hero.tier] || TIER_STYLE.C;
   const isTaken = status === "banned" || status === "picked";
+  const accentColor = comfortLevel === "super" ? SUPER_COMFORT_COLOR : comfortLevel === "comfort" ? COMFORT_COLOR : t.color;
 
   return (
     <button
       onClick={() => !isTaken && !disabled && onClick?.(hero)}
       disabled={isTaken || disabled}
-      className="relative flex flex-col rounded-lg overflow-hidden border text-left transition-all duration-150"
+      className="relative flex flex-col rounded-lg overflow-hidden border text-left transition-all duration-150 w-full"
       style={{
         background: "#1a1e26",
-        borderColor: "rgba(255,255,255,0.06)",
+        borderColor: comfortLevel ? accentColor + "40" : "rgba(255,255,255,0.06)",
         cursor: isTaken || disabled ? "default" : "pointer",
         opacity: isTaken ? 0.35 : 1,
       }}
       onMouseEnter={(e) => {
         if (isTaken || disabled) return;
         e.currentTarget.style.transform = "translateY(-3px)";
-        e.currentTarget.style.borderColor = isComfort ? "#e879f9" : t.color;
+        e.currentTarget.style.borderColor = accentColor;
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
+        e.currentTarget.style.borderColor = comfortLevel ? accentColor + "40" : "rgba(255,255,255,0.06)";
       }}
     >
-      <div className="relative w-full aspect-[3/4] bg-[#0f1115] overflow-hidden">
+      <div className="relative w-full aspect-square bg-[#0f1115] overflow-hidden">
         <Image
           src={hero.image}
           alt={hero.name}
           fill
-          sizes="140px"
-          className="object-cover object-top"
+          sizes="100px"
+          className="object-contain p-1"
           unoptimized
         />
         <div
@@ -63,10 +68,10 @@ export default function HeroCard({ hero, status, onClick, disabled, isComfort })
           className="absolute top-1.5 left-1.5 flex items-center gap-1 rounded px-1.5 py-0.5"
           style={{
             background: "rgba(10,11,14,0.72)",
-            border: `1px solid ${isComfort ? "#e879f955" : t.color + "55"}`,
+            border: `1px solid ${accentColor}55`,
           }}
         >
-          <TierBadge tier={hero.tier} size="sm" isComfort={isComfort} />
+          <TierBadge tier={hero.tier} size="sm" comfortLevel={comfortLevel} />
         </div>
 
         {hero.intl_exclusive && (
