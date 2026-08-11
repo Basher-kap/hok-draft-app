@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, RotateCcw } from "lucide-react";
+import { ArrowLeft, RotateCcw, Undo2 } from "lucide-react";
 import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
@@ -17,12 +17,22 @@ import {
 
 export default function RankDraftPage() {
   const [state, setState] = useState(initialDraftState());
+  const [history, setHistory] = useState([]); // stack of previous states, for undo
   const step = getStep(state.step);
 
   function handleSelect(hero) {
     if (step.phase === "complete") return;
     if (isHeroTaken(state, hero.slug)) return;
+    setHistory((h) => [...h, state]);
     setState((s) => applyAction(s, hero.slug));
+  }
+
+  function handleUndo() {
+    setHistory((h) => {
+      if (h.length === 0) return h;
+      setState(h[h.length - 1]);
+      return h.slice(0, -1);
+    });
   }
 
   function getStatus(hero) {
@@ -33,6 +43,7 @@ export default function RankDraftPage() {
 
   function reset() {
     setState(initialDraftState());
+    setHistory([]);
   }
 
   return (
@@ -48,12 +59,22 @@ export default function RankDraftPage() {
           <h1 className="font-display font-bold text-2xl tracking-wide" style={{ color: "#f2efe9" }}>
             RANK DRAFT
           </h1>
-          <button
-            onClick={reset}
-            className="flex items-center gap-1.5 font-display font-semibold text-sm text-gray-400 hover:text-gray-200 transition-colors"
-          >
-            <RotateCcw size={14} /> Reset
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={handleUndo}
+              disabled={history.length === 0}
+              className="flex items-center gap-1.5 font-display font-semibold text-sm transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              style={{ color: history.length === 0 ? undefined : "#e8e6e1" }}
+            >
+              <Undo2 size={14} /> Undo
+            </button>
+            <button
+              onClick={reset}
+              className="flex items-center gap-1.5 font-display font-semibold text-sm text-gray-400 hover:text-gray-200 transition-colors"
+            >
+              <RotateCcw size={14} /> Reset
+            </button>
+          </div>
         </div>
 
         <TurnIndicator step={step} totalBans={TOTAL_BANS} totalPicks={TOTAL_PICKS} />
