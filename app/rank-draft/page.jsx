@@ -16,6 +16,7 @@ import {
   applyAction,
   getStep,
   isHeroTaken,
+  isHeroBannableByTeam,
   TOTAL_BANS,
   TOTAL_PICKS,
 } from "@/lib/rankDraft";
@@ -34,12 +35,18 @@ export default function RankDraftPage() {
 
   function handleHeroClick(hero) {
     if (step.phase === "complete") return;
-    if (isHeroTaken(state, hero.slug)) return;
 
     if (step.phase === "ban") {
+      // Only your OWN team's already-banned heroes are off-limits here — see
+      // isHeroBannableByTeam. Ranked bans aren't alternating-with-visibility
+      // like a tournament draft, so banning something the other side already
+      // banned is a real (if wasted) possibility, not something to block.
+      if (!isHeroBannableByTeam(state, hero.slug, step.team)) return;
       commitPick(hero.slug, null);
       return;
     }
+
+    if (isHeroTaken(state, hero.slug)) return;
 
     // Pick phase: a single-role hero has nothing to choose, so skip the
     // prompt. A flex hero needs the player to say which lane they're
@@ -70,7 +77,17 @@ export default function RankDraftPage() {
     });
   }
 
+  // During the ban phase, only YOUR team's own bans should visually block a
+  // hero — a hero the other side already banned still shows up (with a
+  // "already banned" heads-up badge) because you're not meant to have seen
+  // their pick live. Once bans are done, full visibility applies as normal.
   function getStatus(hero) {
+    if (step.phase === "ban") {
+      const otherTeam = step.team === "A" ? "B" : "A";
+      if (state.bans[step.team].includes(hero.slug)) return "banned";
+      if (state.bans[otherTeam].includes(hero.slug)) return "banned-other";
+      return "available";
+    }
     if (state.bans.A.includes(hero.slug) || state.bans.B.includes(hero.slug)) return "banned";
     if (state.picks.A.some((p) => p.slug === hero.slug) || state.picks.B.some((p) => p.slug === hero.slug)) {
       return "picked";
@@ -191,9 +208,9 @@ export default function RankDraftPage() {
         <TurnIndicator step={step} totalBans={TOTAL_BANS} totalPicks={TOTAL_PICKS} />
 
         <div className="grid grid-cols-[1fr_auto_1fr] gap-4 mb-6 items-start">
-          <TeamPanel side="A" name="TEAM A" bans={state.bans.A} picks={state.picks.A} activeStep={step} />
+          <TeamPanel side="A" name="TEAM A" bans={state.bans.A} otherBans={state.bans.B} picks={state.picks.A} activeStep={step} />
           <div className="w-px self-stretch" style={{ background: "rgba(255,255,255,0.08)" }} />
-          <TeamPanel side="B" name="TEAM B" bans={state.bans.B} picks={state.picks.B} activeStep={step} />
+          <TeamPanel side="B" name="TEAM B" bans={state.bans.B} otherBans={state.bans.A} picks={state.picks.B} activeStep={step} />
         </div>
 
         <div

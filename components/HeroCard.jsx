@@ -8,7 +8,11 @@ import { Ban, Lock } from "lucide-react";
 const COMFORT_COLOR = "#e879f9";
 const SUPER_COMFORT_COLOR = "#ff2d95";
 
-// status: "available" | "banned" | "picked" | undefined(available)
+// status: "available" | "banned" | "banned-other" | "picked" | undefined(available)
+// "banned-other" = already banned by the OTHER team during the ban phase.
+// Since ranked bans aren't alternating-with-visibility, this hero is still
+// selectable (a second, wasted ban is a real possible outcome) — shown as a
+// heads-up, not disabled, unlike "banned" (already banned by YOUR team).
 // comfortLevel: null | "comfort" | "super"
 export default function HeroCard({ hero, status, onClick, disabled, comfortLevel = null }) {
   const t = TIER_STYLE[hero.tier] || TIER_STYLE.C;
@@ -42,7 +46,7 @@ export default function HeroCard({ hero, status, onClick, disabled, comfortLevel
           alt={hero.name}
           fill
           sizes="100px"
-          className="object-cover p-1"
+          className="object-contain p-1"
           unoptimized
         />
         <div
@@ -56,6 +60,18 @@ export default function HeroCard({ hero, status, onClick, disabled, comfortLevel
         {status === "banned" && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/60">
             <Ban size={30} color="#ef4444" strokeWidth={2.5} />
+          </div>
+        )}
+        {status === "banned-other" && (
+          <div
+            className="absolute top-0 left-0 right-0 flex items-center justify-center gap-1 py-0.5"
+            style={{ background: "rgba(239,68,68,0.85)" }}
+            title="Already banned by the other side — still selectable, since ranked bans aren't alternating with visibility"
+          >
+            <Ban size={9} color="#0f1115" strokeWidth={3} />
+            <span className="font-body font-bold" style={{ fontSize: 7, color: "#0f1115", letterSpacing: 0.3 }}>
+              ALSO BANNED
+            </span>
           </div>
         )}
         {status === "picked" && (

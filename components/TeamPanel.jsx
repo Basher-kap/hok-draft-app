@@ -4,12 +4,13 @@ import Image from "next/image";
 import { heroBySlug, ROLE_COLOR } from "@/lib/heroes";
 import { Ban } from "lucide-react";
 
-function BanSlot({ slug }) {
+function BanSlot({ slug, isDuplicate }) {
   const hero = slug ? heroBySlug(slug) : null;
   return (
     <div
       className="relative w-11 h-11 rounded-md overflow-hidden shrink-0"
       style={{ background: "#0f1115", border: "1px solid rgba(239,68,68,0.35)" }}
+      title={isDuplicate ? "Both sides banned this hero — a wasted ban on one side" : undefined}
     >
       {hero && (
         <>
@@ -17,6 +18,16 @@ function BanSlot({ slug }) {
           <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
             <Ban size={16} color="#ef4444" strokeWidth={2.5} />
           </div>
+          {isDuplicate && (
+            <div
+              className="absolute bottom-0 left-0 right-0 flex items-center justify-center py-0.5"
+              style={{ background: "rgba(239,68,68,0.9)" }}
+            >
+              <span className="font-body font-bold" style={{ fontSize: 6, color: "#0f1115", letterSpacing: 0.3 }}>
+                BOTH
+              </span>
+            </div>
+          )}
         </>
       )}
     </div>
@@ -87,7 +98,7 @@ function PickSlot({ pick, side, active }) {
   );
 }
 
-export default function TeamPanel({ side, name, bans, picks, activeStep }) {
+export default function TeamPanel({ side, name, bans, otherBans = [], picks, activeStep }) {
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
   const align = side === "A" ? "text-left" : "text-right";
 
@@ -102,7 +113,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep }) {
 
       <div className={`flex gap-1.5 ${side === "B" ? "flex-row-reverse" : ""}`}>
         {Array.from({ length: 3 }).map((_, i) => (
-          <BanSlot key={i} slug={bans[i]} />
+          <BanSlot key={i} slug={bans[i]} isDuplicate={bans[i] ? otherBans.includes(bans[i]) : false} />
         ))}
       </div>
 
