@@ -49,7 +49,7 @@ function PickSlot({ slug, side, active }) {
               {hero.name}
             </div>
             <div className="flex gap-0.5 mt-0.5 flex-wrap">
-              {hero.roles.slice(0, 1).map((r) => (
+              {hero.roles.map((r) => (
                 <span
                   key={r}
                   className="font-body font-semibold rounded"
