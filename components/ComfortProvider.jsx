@@ -1,10 +1,11 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useMemo } from "react";
+import { createContext, useContext, useState, useCallback, useMemo, useEffect, useRef } from "react";
 import { ROLES } from "@/lib/heroes";
 
 const ComfortContext = createContext(null);
 const LEVELS = ["super", "comfort"];
+const STORAGE_KEY = "hok-draft-comfort-v1";
 
 function emptyAssignments() {
   const obj = {};
@@ -14,12 +15,64 @@ function emptyAssignments() {
   return obj;
 }
 
+// Set objects aren't JSON-serializable - convert to plain arrays for storage.
+function serialize(comfortAssignments, algorithmMode) {
+  const plain = {};
+  ROLES.forEach((lane) => {
+    plain[lane] = {
+      super: [...comfortAssignments[lane].super],
+      comfort: [...comfortAssignments[lane].comfort],
+    };
+  });
+  return JSON.stringify({ v: 1, comfortAssignments: plain, algorithmMode });
+}
+
+function deserialize(raw) {
+  try {
+    const parsed = JSON.parse(raw);
+    const assignments = emptyAssignments();
+    ROLES.forEach((lane) => {
+      const lanePlain = parsed?.comfortAssignments?.[lane];
+      if (!lanePlain) return;
+      assignments[lane].super = new Set(lanePlain.super || []);
+      assignments[lane].comfort = new Set(lanePlain.comfort || []);
+    });
+    const algorithmMode = parsed?.algorithmMode === "comfort" ? "comfort" : "standard";
+    return { assignments, algorithmMode };
+  } catch {
+    return null; // corrupt or missing data - caller falls back to defaults
+  }
+}
+
 export function ComfortProvider({ children }) {
-  // { [lane]: { super: Set<slug>, comfort: Set<slug> } }
-  // A hero's slug can live in ANY lane's set, independent of that hero's
-  // own listed roles (off-role comfort picks are allowed by design).
   const [comfortAssignments, setComfortAssignments] = useState(emptyAssignments);
-  const [algorithmMode, setAlgorithmMode] = useState("standard"); // "standard" | "comfort"
+  const [algorithmMode, setAlgorithmMode] = useState("standard");
+  const [hydrated, setHydrated] = useState(false); // avoids overwriting storage before we've loaded it
+  const skipNextSave = useRef(true);
+
+  // Load once on mount (client-only - localStorage doesn't exist during SSR).
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const result = deserialize(raw);
+      if (result) {
+        setComfortAssignments(result.assignments);
+        setAlgorithmMode(result.algorithmMode);
+      }
+    }
+    setHydrated(true);
+  }, []);
+
+  // Persist on every change, once hydration has happened.
+  useEffect(() => {
+    if (!hydrated || typeof window === "undefined") return;
+    if (skipNextSave.current) {
+      skipNextSave.current = false;
+      return;
+    }
+    window.localStorage.setItem(STORAGE_KEY, serialize(comfortAssignments, algorithmMode));
+  }, [comfortAssignments, algorithmMode, hydrated]);
 
   const assignComfort = useCallback((lane, level, slug) => {
     setComfortAssignments((prev) => {
@@ -40,9 +93,12 @@ export function ComfortProvider({ children }) {
     });
   }, []);
 
+  const clearAllComfort = useCallback(() => {
+    setComfortAssignments(emptyAssignments());
+  }, []);
+
   // Highest comfort level this hero holds across any lane - drives the
   // badge on the draft board's hero grid (which isn't lane-scoped itself).
-  // "super" beats "comfort" if the hero has both somewhere.
   const isComfortHero = useCallback(
     (slug) => {
       const anySuper = ROLES.some((lane) => comfortAssignments[lane].super.has(slug));
@@ -72,11 +128,13 @@ export function ComfortProvider({ children }) {
         comfortAssignments,
         assignComfort,
         removeComfort,
+        clearAllComfort,
         isComfortHero,
         comfortLanesFor,
         totalAssignments,
         algorithmMode,
         setAlgorithmMode,
+        hydrated,
       }}
     >
       {children}
