@@ -53,6 +53,7 @@ export default function RankDraftPage() {
           availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
           phase: step.phase,
           teamPicks: state.picks[step.team],
+          enemyPicks: state.picks[step.team === "A" ? "B" : "A"],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
         });
