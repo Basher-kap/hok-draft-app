@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, RotateCcw, Undo2, Sparkles, Heart } from "lucide-react";
 import HeroGrid from "@/components/HeroGrid";
@@ -48,6 +48,18 @@ export default function RankDraftPage() {
 
   const opponentTeam = step.team === "A" ? "B" : "A";
 
+  // Whole comfort roster as a flat { slug: "super" | "comfort" } map, used in
+  // ban phase to reward denying a hero that would counter one of your
+  // comfort picks before the enemy gets the chance to grab it.
+  const comfortHeroLevels = useMemo(() => {
+    const map = {};
+    HEROES.forEach((h) => {
+      const level = isComfortHero(h.slug);
+      if (level) map[h.slug] = level;
+    });
+    return map;
+  }, [isComfortHero]);
+
   const suggestions =
     step.phase === "complete"
       ? []
@@ -58,6 +70,7 @@ export default function RankDraftPage() {
           opponentPicks: state.picks[opponentTeam],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
+          comfortHeroLevels,
         });
 
   function reset() {
