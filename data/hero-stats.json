@@ -1,1 +1,1294 @@
-{}
+{
+  "zhang-fei": {
+    "winRate": 0.5849,
+    "gamesPlayed": 53,
+    "pickRate": 0.5096,
+    "banRate": 0.2596,
+    "counters": [
+      "lapulapu",
+      "biron",
+      "dyadia",
+      "florentino",
+      "xiao-qiao"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "charlotte",
+      "chicha",
+      "aoyin",
+      "ukyo-tachibana"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lapulapu": {
+    "winRate": 0.46,
+    "gamesPlayed": 50,
+    "pickRate": 0.4808,
+    "banRate": 0.1154,
+    "counters": [],
+    "counteredBy": [
+      "zhang-fei",
+      "lorion",
+      "dyadia",
+      "ukyo-tachibana",
+      "chicha",
+      "charlotte"
+    ],
+    "synergizesWith": [
+      "lorion",
+      "mai-shiranui"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "aoyin": {
+    "winRate": 0.5,
+    "gamesPlayed": 44,
+    "pickRate": 0.4231,
+    "banRate": 0.4135,
+    "counters": [
+      "biron"
+    ],
+    "counteredBy": [
+      "arli",
+      "charlotte"
+    ],
+    "synergizesWith": [
+      "biron",
+      "zhang-fei",
+      "lorion"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lorion": {
+    "winRate": 0.4651,
+    "gamesPlayed": 43,
+    "pickRate": 0.4135,
+    "banRate": 0.375,
+    "counters": [
+      "lapulapu",
+      "biron",
+      "chano",
+      "xiao-qiao"
+    ],
+    "counteredBy": [
+      "guan-yu",
+      "chicha"
+    ],
+    "synergizesWith": [
+      "chano",
+      "lapulapu",
+      "aoyin",
+      "charlotte",
+      "fatih"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "chano": {
+    "winRate": 0.5128,
+    "gamesPlayed": 39,
+    "pickRate": 0.375,
+    "banRate": 0.1635,
+    "counters": [
+      "dharma"
+    ],
+    "counteredBy": [
+      "lorion",
+      "biron"
+    ],
+    "synergizesWith": [
+      "lorion",
+      "pei",
+      "dharma",
+      "dyadia",
+      "haya"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "biron": {
+    "winRate": 0.4,
+    "gamesPlayed": 35,
+    "pickRate": 0.3365,
+    "banRate": 0.1731,
+    "counters": [
+      "chano"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "charlotte",
+      "zhang-fei",
+      "lorion",
+      "haya",
+      "chicha",
+      "lapulapu"
+    ],
+    "synergizesWith": [
+      "aoyin",
+      "xiao-qiao",
+      "zhang-fei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "charlotte": {
+    "winRate": 0.6061,
+    "gamesPlayed": 33,
+    "pickRate": 0.3173,
+    "banRate": 0.2115,
+    "counters": [
+      "biron",
+      "ukyo-tachibana",
+      "lapulapu",
+      "aoyin",
+      "guan-yu",
+      "haya",
+      "dyadia"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "lorion",
+      "pei",
+      "garuda"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "dharma": {
+    "winRate": 0.4848,
+    "gamesPlayed": 33,
+    "pickRate": 0.3173,
+    "banRate": 0.1538,
+    "counters": [
+      "zhang-fei",
+      "aoyin"
+    ],
+    "counteredBy": [
+      "angela",
+      "dyadia",
+      "chano",
+      "lapulapu"
+    ],
+    "synergizesWith": [
+      "arli",
+      "chano",
+      "ukyo-tachibana"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "guan-yu": {
+    "winRate": 0.6129,
+    "gamesPlayed": 31,
+    "pickRate": 0.2981,
+    "banRate": 0.4135,
+    "counters": [
+      "lorion",
+      "lapulapu",
+      "biron"
+    ],
+    "counteredBy": [
+      "ying",
+      "zhang-fei",
+      "charlotte",
+      "dharma"
+    ],
+    "synergizesWith": [
+      "annette",
+      "chicha",
+      "haya",
+      "zhang-fei",
+      "aoyin",
+      "jing"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "chicha": {
+    "winRate": 0.4839,
+    "gamesPlayed": 31,
+    "pickRate": 0.2981,
+    "banRate": 0.125,
+    "counters": [
+      "lapulapu",
+      "lorion",
+      "biron"
+    ],
+    "counteredBy": [
+      "erin",
+      "dyadia",
+      "zhang-fei"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "guan-yu",
+      "mai-shiranui",
+      "annette",
+      "lorion"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "haya": {
+    "winRate": 0.6552,
+    "gamesPlayed": 29,
+    "pickRate": 0.2788,
+    "banRate": 0.5,
+    "counters": [
+      "agudo",
+      "biron",
+      "lapulapu",
+      "fatih",
+      "garuda",
+      "flowborn-marksman"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "guan-yu",
+      "erin",
+      "chano",
+      "lapulapu",
+      "aoyin",
+      "lian-po"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "arli": {
+    "winRate": 0.5,
+    "gamesPlayed": 28,
+    "pickRate": 0.2692,
+    "banRate": 0.0962,
+    "counters": [
+      "aoyin",
+      "lorion"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "xiao-qiao",
+      "ying",
+      "mai-shiranui"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "dharma",
+      "annette",
+      "flowborn-tank",
+      "haya"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "dyadia": {
+    "winRate": 0.4643,
+    "gamesPlayed": 28,
+    "pickRate": 0.2692,
+    "banRate": 0.2019,
+    "counters": [
+      "lapulapu",
+      "chicha",
+      "dharma",
+      "xiao-qiao",
+      "guan-yu",
+      "jing"
+    ],
+    "counteredBy": [
+      "zhang-fei"
+    ],
+    "synergizesWith": [
+      "chano"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "xiao-qiao": {
+    "winRate": 0.3077,
+    "gamesPlayed": 26,
+    "pickRate": 0.25,
+    "banRate": 0.0577,
+    "counters": [
+      "arli"
+    ],
+    "counteredBy": [
+      "lorion",
+      "zhang-fei",
+      "aoyin",
+      "dyadia",
+      "charlotte",
+      "chano",
+      "yuhuan"
+    ],
+    "synergizesWith": [
+      "biron"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "pei": {
+    "winRate": 0.5,
+    "gamesPlayed": 24,
+    "pickRate": 0.2308,
+    "banRate": 0.7212,
+    "counters": [
+      "zhang-fei",
+      "arli"
+    ],
+    "counteredBy": [
+      "ukyo-tachibana",
+      "lapulapu",
+      "dharma",
+      "lorion",
+      "mai-shiranui"
+    ],
+    "synergizesWith": [
+      "chano",
+      "charlotte",
+      "lian-po",
+      "consort-yu",
+      "lorion",
+      "zhang-fei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "ukyo-tachibana": {
+    "winRate": 0.5,
+    "gamesPlayed": 24,
+    "pickRate": 0.2308,
+    "banRate": 0.1538,
+    "counters": [
+      "pei",
+      "lapulapu",
+      "xiao-qiao",
+      "florentino",
+      "aoyin"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "zhang-fei",
+      "garuda"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "dharma",
+      "erin"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "jing": {
+    "winRate": 0.4762,
+    "gamesPlayed": 21,
+    "pickRate": 0.2019,
+    "banRate": 0.3077,
+    "counters": [
+      "biron",
+      "chano",
+      "charlotte",
+      "lorion",
+      "mozi"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "dyadia",
+      "flowborn-tank"
+    ],
+    "synergizesWith": [
+      "chano",
+      "guan-yu",
+      "zhang-fei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "erin": {
+    "winRate": 0.7,
+    "gamesPlayed": 20,
+    "pickRate": 0.1923,
+    "banRate": 0.0577,
+    "counters": [
+      "chicha",
+      "flowborn-marksman",
+      "lorion",
+      "agudo"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "guan-yu"
+    ],
+    "synergizesWith": [
+      "haya",
+      "lapulapu",
+      "ukyo-tachibana",
+      "zhang-fei",
+      "guan-yu",
+      "ying"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "flowborn-marksman": {
+    "winRate": 0.3,
+    "gamesPlayed": 20,
+    "pickRate": 0.1923,
+    "banRate": 0.1058,
+    "counters": [],
+    "counteredBy": [
+      "aoyin",
+      "haya",
+      "erin",
+      "lapulapu"
+    ],
+    "synergizesWith": [
+      "charlotte",
+      "dharma"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "mai-shiranui": {
+    "winRate": 0.6316,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.4615,
+    "counters": [
+      "lorion",
+      "chano",
+      "yuhuan",
+      "arli",
+      "dyadia",
+      "pei",
+      "charlotte"
+    ],
+    "counteredBy": [
+      "zhang-fei"
+    ],
+    "synergizesWith": [
+      "lapulapu",
+      "chicha",
+      "guan-yu",
+      "zhang-fei",
+      "jing",
+      "ukyo-tachibana"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "augran": {
+    "winRate": 0.5789,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.1058,
+    "counters": [
+      "aoyin",
+      "lapulapu",
+      "dharma",
+      "lorion"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "annette",
+      "nuwa",
+      "aoyin",
+      "fatih"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "garuda": {
+    "winRate": 0.5263,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.0673,
+    "counters": [
+      "lorion",
+      "ukyo-tachibana",
+      "lian-po"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "haya",
+      "dharma"
+    ],
+    "synergizesWith": [
+      "charlotte",
+      "mozi",
+      "zhang-fei",
+      "devara"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "ying": {
+    "winRate": 0.5263,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.0096,
+    "counters": [
+      "guan-yu",
+      "arli",
+      "agudo"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "haya",
+      "jing",
+      "zhang-fei"
+    ],
+    "synergizesWith": [
+      "lapulapu",
+      "aoyin",
+      "erin"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lian-po": {
+    "winRate": 0.4737,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.0385,
+    "counters": [
+      "aoyin",
+      "charlotte",
+      "biron"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "zhang-fei",
+      "garuda"
+    ],
+    "synergizesWith": [
+      "pei",
+      "aoyin",
+      "haya",
+      "chano",
+      "charlotte"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "agudo": {
+    "winRate": 0.3684,
+    "gamesPlayed": 19,
+    "pickRate": 0.1827,
+    "banRate": 0.1442,
+    "counters": [
+      "biron",
+      "lapulapu",
+      "arli",
+      "charlotte",
+      "dharma"
+    ],
+    "counteredBy": [
+      "haya",
+      "zhang-fei",
+      "chano"
+    ],
+    "synergizesWith": [
+      "aoyin",
+      "lorion",
+      "annette"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "annette": {
+    "winRate": 0.5556,
+    "gamesPlayed": 18,
+    "pickRate": 0.1731,
+    "banRate": 0.1442,
+    "counters": [
+      "mozi",
+      "lapulapu",
+      "ata",
+      "arli",
+      "biron",
+      "chicha"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "guan-yu",
+      "arli",
+      "chicha",
+      "augran",
+      "haya",
+      "agudo",
+      "ziya"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "mozi": {
+    "winRate": 0.3333,
+    "gamesPlayed": 18,
+    "pickRate": 0.1731,
+    "banRate": 0.0673,
+    "counters": [
+      "lorion"
+    ],
+    "counteredBy": [
+      "annette",
+      "arli",
+      "chano",
+      "dharma",
+      "jing"
+    ],
+    "synergizesWith": [
+      "garuda"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "fatih": {
+    "winRate": 0.5294,
+    "gamesPlayed": 17,
+    "pickRate": 0.1635,
+    "banRate": 0.0673,
+    "counters": [
+      "dharma",
+      "lapulapu",
+      "zhang-fei",
+      "chicha"
+    ],
+    "counteredBy": [
+      "haya"
+    ],
+    "synergizesWith": [
+      "lorion",
+      "aoyin",
+      "augran",
+      "lapulapu",
+      "dyadia"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "angela": {
+    "winRate": 0.4706,
+    "gamesPlayed": 17,
+    "pickRate": 0.1635,
+    "banRate": 0.0288,
+    "counters": [
+      "dharma",
+      "aoyin",
+      "xiao-qiao",
+      "zhang-fei"
+    ],
+    "counteredBy": [
+      "chano",
+      "charlotte",
+      "lorion"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "pei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "florentino": {
+    "winRate": 0.4118,
+    "gamesPlayed": 17,
+    "pickRate": 0.1635,
+    "banRate": 0.3846,
+    "counters": [
+      "charlotte"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "aoyin",
+      "chicha",
+      "devara",
+      "ukyo-tachibana"
+    ],
+    "synergizesWith": [
+      "haya"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "nuwa": {
+    "winRate": 0.6,
+    "gamesPlayed": 15,
+    "pickRate": 0.1442,
+    "banRate": 0.1538,
+    "counters": [
+      "biron",
+      "chano",
+      "haya",
+      "jing"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "guan-yu"
+    ],
+    "synergizesWith": [
+      "aoyin",
+      "augran",
+      "dyadia",
+      "zhang-fei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "yuhuan": {
+    "winRate": 0.4286,
+    "gamesPlayed": 14,
+    "pickRate": 0.1346,
+    "banRate": 0.0481,
+    "counters": [
+      "xiao-qiao",
+      "mozi",
+      "biron",
+      "chicha"
+    ],
+    "counteredBy": [
+      "mai-shiranui"
+    ],
+    "synergizesWith": [
+      "zhang-fei",
+      "dharma",
+      "guan-yu"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "devara": {
+    "winRate": 0.75,
+    "gamesPlayed": 12,
+    "pickRate": 0.1154,
+    "banRate": 0.0481,
+    "counters": [
+      "chicha",
+      "florentino",
+      "lapulapu",
+      "lorion",
+      "ukyo-tachibana",
+      "agudo",
+      "zhang-fei"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "zhang-fei",
+      "dyadia",
+      "garuda",
+      "haya",
+      "chano"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "nezha": {
+    "winRate": 0.5,
+    "gamesPlayed": 12,
+    "pickRate": 0.1154,
+    "banRate": 0.1346,
+    "counters": [
+      "lorion",
+      "chano",
+      "flowborn-marksman",
+      "lapulapu"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "fatih",
+      "ukyo-tachibana"
+    ],
+    "synergizesWith": [
+      "biron"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "ata": {
+    "winRate": 0.2727,
+    "gamesPlayed": 11,
+    "pickRate": 0.1058,
+    "banRate": 0.0481,
+    "counters": [
+      "flowborn-marksman"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "guan-yu",
+      "annette",
+      "haya"
+    ],
+    "synergizesWith": [
+      "dyadia"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "flowborn-tank": {
+    "winRate": 0.5,
+    "gamesPlayed": 10,
+    "pickRate": 0.0962,
+    "banRate": 0.125,
+    "counters": [
+      "jing",
+      "annette",
+      "lian-po"
+    ],
+    "counteredBy": [
+      "guan-yu"
+    ],
+    "synergizesWith": [
+      "arli",
+      "biron"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "luna": {
+    "winRate": 0.5,
+    "gamesPlayed": 10,
+    "pickRate": 0.0962,
+    "banRate": 0.2212,
+    "counters": [
+      "aoyin"
+    ],
+    "counteredBy": [
+      "lorion",
+      "biron",
+      "dharma",
+      "erin",
+      "lapulapu",
+      "ying"
+    ],
+    "synergizesWith": [
+      "haya",
+      "biron",
+      "guan-yu",
+      "lapulapu",
+      "zhang-fei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "kaizer": {
+    "winRate": 0.7778,
+    "gamesPlayed": 9,
+    "pickRate": 0.0865,
+    "banRate": 0.0577,
+    "counters": [
+      "chicha",
+      "dharma",
+      "zhang-fei"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "aoyin",
+      "lorion"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "menki": {
+    "winRate": 0.625,
+    "gamesPlayed": 8,
+    "pickRate": 0.0769,
+    "banRate": 0.0385,
+    "counters": [
+      "angela",
+      "aoyin",
+      "lapulapu",
+      "biron"
+    ],
+    "counteredBy": [
+      "arli",
+      "augran"
+    ],
+    "synergizesWith": [
+      "charlotte",
+      "chano",
+      "dyadia"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "yang-jian": {
+    "winRate": 0.625,
+    "gamesPlayed": 8,
+    "pickRate": 0.0769,
+    "banRate": 0.0385,
+    "counters": [
+      "flowborn-marksman",
+      "zhang-fei"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "dolia"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "umbrosa": {
+    "winRate": 0.5,
+    "gamesPlayed": 8,
+    "pickRate": 0.0769,
+    "banRate": 0.0385,
+    "counters": [],
+    "counteredBy": [
+      "guan-yu"
+    ],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "wang-zhaojun": {
+    "winRate": 0.5,
+    "gamesPlayed": 8,
+    "pickRate": 0.0769,
+    "banRate": 0.0,
+    "counters": [
+      "aoyin",
+      "lorion"
+    ],
+    "counteredBy": [
+      "haya"
+    ],
+    "synergizesWith": [
+      "liang",
+      "biron",
+      "jing"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "dolia": {
+    "winRate": 0.7143,
+    "gamesPlayed": 7,
+    "pickRate": 0.0673,
+    "banRate": 0.0577,
+    "counters": [
+      "flowborn-marksman",
+      "zhang-fei"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "yang-jian",
+      "haya"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "liang": {
+    "winRate": 0.5714,
+    "gamesPlayed": 7,
+    "pickRate": 0.0673,
+    "banRate": 0.2019,
+    "counters": [
+      "aoyin"
+    ],
+    "counteredBy": [
+      "haya"
+    ],
+    "synergizesWith": [
+      "wang-zhaojun",
+      "biron",
+      "jing"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "ziya": {
+    "winRate": 0.4286,
+    "gamesPlayed": 7,
+    "pickRate": 0.0673,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [
+      "annette",
+      "chicha"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "zilong": {
+    "winRate": 0.2857,
+    "gamesPlayed": 7,
+    "pickRate": 0.0673,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [
+      "biron",
+      "chano",
+      "dyadia"
+    ],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "shouyue": {
+    "winRate": 0.6667,
+    "gamesPlayed": 6,
+    "pickRate": 0.0577,
+    "banRate": 0.0192,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [
+      "lapulapu"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "musashi": {
+    "winRate": 0.5,
+    "gamesPlayed": 6,
+    "pickRate": 0.0577,
+    "banRate": 0.1058,
+    "counters": [
+      "augran"
+    ],
+    "counteredBy": [
+      "agudo"
+    ],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "bai-qi": {
+    "winRate": 0.1667,
+    "gamesPlayed": 6,
+    "pickRate": 0.0577,
+    "banRate": 0.0577,
+    "counters": [],
+    "counteredBy": [
+      "lorion"
+    ],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "consort-yu": {
+    "winRate": 0.6,
+    "gamesPlayed": 5,
+    "pickRate": 0.0481,
+    "banRate": 0.0288,
+    "counters": [
+      "florentino",
+      "lapulapu"
+    ],
+    "counteredBy": [],
+    "synergizesWith": [
+      "pei"
+    ],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "dun": {
+    "winRate": 0.6,
+    "gamesPlayed": 5,
+    "pickRate": 0.0481,
+    "banRate": 0.0192,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "heino": {
+    "winRate": 0.5,
+    "gamesPlayed": 4,
+    "pickRate": 0.0385,
+    "banRate": 0.0481,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lady-zhen": {
+    "winRate": 0.5,
+    "gamesPlayed": 4,
+    "pickRate": 0.0385,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "di-renjie": {
+    "winRate": 0.25,
+    "gamesPlayed": 4,
+    "pickRate": 0.0385,
+    "banRate": 0.0577,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "xiang-yu": {
+    "winRate": 0.25,
+    "gamesPlayed": 4,
+    "pickRate": 0.0385,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [
+      "guan-yu"
+    ],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "alessio": {
+    "winRate": 0.6667,
+    "gamesPlayed": 3,
+    "pickRate": 0.0288,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "liu-bang": {
+    "winRate": 0.6667,
+    "gamesPlayed": 3,
+    "pickRate": 0.0288,
+    "banRate": 0.0481,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "mi-yue": {
+    "winRate": 0.6667,
+    "gamesPlayed": 3,
+    "pickRate": 0.0288,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "gan-mo": {
+    "winRate": 0.3333,
+    "gamesPlayed": 3,
+    "pickRate": 0.0288,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "kui": {
+    "winRate": 0.3333,
+    "gamesPlayed": 3,
+    "pickRate": 0.0288,
+    "banRate": 0.0096,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lady-sun": {
+    "winRate": 0.5,
+    "gamesPlayed": 2,
+    "pickRate": 0.0192,
+    "banRate": 0.0096,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "yao": {
+    "winRate": 0.5,
+    "gamesPlayed": 2,
+    "pickRate": 0.0192,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lam": {
+    "winRate": 0.0,
+    "gamesPlayed": 2,
+    "pickRate": 0.0192,
+    "banRate": 0.0096,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "sun-bin": {
+    "winRate": 1.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "butterfly": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "da-qiao": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0096,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "fang": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "hou-yi": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "nakoruru": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "shi": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0481,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "sun-ce": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "zhuangzi": {
+    "winRate": 0.0,
+    "gamesPlayed": 1,
+    "pickRate": 0.0096,
+    "banRate": 0.0,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "fuzi": {
+    "winRate": null,
+    "gamesPlayed": 0,
+    "pickRate": 0.0,
+    "banRate": 0.0192,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "lu-bu": {
+    "winRate": null,
+    "gamesPlayed": 0,
+    "pickRate": 0.0,
+    "banRate": 0.0192,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  },
+  "yango": {
+    "winRate": null,
+    "gamesPlayed": 0,
+    "pickRate": 0.0,
+    "banRate": 0.0769,
+    "counters": [],
+    "counteredBy": [],
+    "synergizesWith": [],
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics"
+  }
+}
