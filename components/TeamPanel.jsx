@@ -23,8 +23,9 @@ function BanSlot({ slug }) {
   );
 }
 
-function PickSlot({ slug, side, active }) {
-  const hero = slug ? heroBySlug(slug) : null;
+function PickSlot({ pick, side, active }) {
+  const hero = pick ? heroBySlug(pick.slug) : null;
+  const role = pick?.role;
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
 
   return (
@@ -49,15 +50,27 @@ function PickSlot({ slug, side, active }) {
               {hero.name}
             </div>
             <div className="flex gap-0.5 mt-0.5 flex-wrap">
-              {hero.roles.map((r) => (
+              {/* Show the lane this hero was actually drafted to play, not
+                  every lane it could theoretically fill (that list already
+                  lives in the hero grid) — a flex hero occupies one lane. */}
+              {role ? (
                 <span
-                  key={r}
                   className="font-body font-semibold rounded"
-                  style={{ fontSize: 7.5, color: "#0f1115", background: ROLE_COLOR[r], padding: "1px 3px" }}
+                  style={{ fontSize: 7.5, color: "#0f1115", background: ROLE_COLOR[role], padding: "1px 3px" }}
                 >
-                  {r}
+                  {role}
                 </span>
-              ))}
+              ) : (
+                hero.roles.map((r) => (
+                  <span
+                    key={r}
+                    className="font-body font-semibold rounded"
+                    style={{ fontSize: 7.5, color: "#0f1115", background: ROLE_COLOR[r], padding: "1px 3px" }}
+                  >
+                    {r}
+                  </span>
+                ))
+              )}
             </div>
           </div>
         </>
@@ -97,7 +110,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep }) {
         {Array.from({ length: 5 }).map((_, i) => (
           <PickSlot
             key={i}
-            slug={picks[i]}
+            pick={picks[i]}
             side={side}
             active={activeStep.phase === "pick" && activeStep.team === side && activeStep.index === i}
           />

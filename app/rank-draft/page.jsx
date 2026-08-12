@@ -7,8 +7,9 @@ import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
 import AISuggestPanel from "@/components/AISuggestPanel";
+import RoleSelectModal from "@/components/RoleSelectModal";
 import { useComfort } from "@/components/ComfortProvider";
-import { getSuggestions } from "@/lib/recommendation";
+import { getSuggestions, getFilledLanes } from "@/lib/recommendation";
 import { HEROES } from "@/lib/heroes";
 import {
   initialDraftState,
@@ -22,14 +23,43 @@ import {
 export default function RankDraftPage() {
   const [state, setState] = useState(initialDraftState());
   const [history, setHistory] = useState([]); // stack of previous states, for undo
+  const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice, or null
   const step = getStep(state.step);
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
 
-  function handleSelect(hero) {
+  function commitPick(heroSlug, role) {
+    setHistory((h) => [...h, state]);
+    setState((s) => applyAction(s, heroSlug, role));
+  }
+
+  function handleHeroClick(hero) {
     if (step.phase === "complete") return;
     if (isHeroTaken(state, hero.slug)) return;
-    setHistory((h) => [...h, state]);
-    setState((s) => applyAction(s, hero.slug));
+
+    if (step.phase === "ban") {
+      commitPick(hero.slug, null);
+      return;
+    }
+
+    // Pick phase: a single-role hero has nothing to choose, so skip the
+    // prompt. A flex hero needs the player to say which lane they're
+    // actually playing it as — that choice is what the suggestion engine
+    // uses afterward to know which lanes are truly filled.
+    if (hero.roles.length === 1) {
+      commitPick(hero.slug, hero.roles[0]);
+    } else {
+      setPendingHero(hero);
+    }
+  }
+
+  function handleRoleSelect(role) {
+    if (!pendingHero) return;
+    commitPick(pendingHero.slug, role);
+    setPendingHero(null);
+  }
+
+  function handleRoleCancel() {
+    setPendingHero(null);
   }
 
   function handleUndo() {
@@ -42,7 +72,9 @@ export default function RankDraftPage() {
 
   function getStatus(hero) {
     if (state.bans.A.includes(hero.slug) || state.bans.B.includes(hero.slug)) return "banned";
-    if (state.picks.A.includes(hero.slug) || state.picks.B.includes(hero.slug)) return "picked";
+    if (state.picks.A.some((p) => p.slug === hero.slug) || state.picks.B.some((p) => p.slug === hero.slug)) {
+      return "picked";
+    }
     return "available";
   }
 
@@ -67,15 +99,20 @@ export default function RankDraftPage() {
           availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
           phase: step.phase,
           teamPicks: state.picks[step.team],
-          opponentPicks: state.picks[opponentTeam],
+          opponentPicks: state.picks[opponentTeam].map((p) => p.slug),
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
           comfortHeroLevels,
         });
 
+  // Lanes the currently-active team already has covered — passed into the
+  // role modal purely as a "you already have one of these" hint.
+  const activeTeamFilledLanes = getFilledLanes(state.picks[step.team] || []);
+
   function reset() {
     setState(initialDraftState());
     setHistory([]);
+    setPendingHero(null);
   }
 
   return (
@@ -166,17 +203,24 @@ export default function RankDraftPage() {
           <AISuggestPanel
             suggestions={suggestions}
             phase={step.phase}
-            onSelect={handleSelect}
+            onSelect={handleHeroClick}
             disabled={step.phase === "complete"}
           />
           <HeroGrid
             getStatus={getStatus}
-            onSelect={handleSelect}
+            onSelect={handleHeroClick}
             disabled={step.phase === "complete"}
             getComfortLevel={(hero) => isComfortHero(hero.slug)}
           />
         </div>
       </div>
+
+      <RoleSelectModal
+        hero={pendingHero}
+        filledLanes={activeTeamFilledLanes}
+        onSelectRole={handleRoleSelect}
+        onCancel={handleRoleCancel}
+      />
     </div>
   );
 }
