@@ -46,8 +46,6 @@ export default function RankDraftPage() {
     return "available";
   }
 
-  const opponentTeam = step.team === "A" ? "B" : "A";
-
   const suggestions =
     step.phase === "complete"
       ? []
@@ -55,7 +53,6 @@ export default function RankDraftPage() {
           availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
           phase: step.phase,
           teamPicks: state.picks[step.team],
-          opponentPicks: state.picks[opponentTeam],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
         });

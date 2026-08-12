@@ -57,6 +57,62 @@ function isHeroTaken(state, slug) {
   return state.bans.A.includes(slug) || state.bans.B.includes(slug) || state.picks.A.includes(slug) || state.picks.B.includes(slug);
 }
 
+// ---- Phase 1 AI suggestion engine ----
+// Factors in: hero tier, lane flexibility (bans), team's empty-lane gaps
+// (picks), and Comfort/Super Comfort profile (picks, comfort mode only).
+// Does NOT yet factor in: counters, synergy, real win/pick/ban-rate data.
+const TIER_SCORE = { S: 100, A: 80, B: 60, C: 40, D: 20 };
+const FLEX_BONUS_PER_EXTRA_LANE = 20;
+const GAP_BONUS_PER_LANE = 35;
+const COMFORT_BONUS = {
+  standard: { super: 0, comfort: 0 },
+  comfort: { super: 90, comfort: 45 },
+};
+
+function scoreBanCandidate(hero) {
+  const tierScore = TIER_SCORE[hero.tier] ?? 0;
+  const flexBonus = (hero.roles.length - 1) * FLEX_BONUS_PER_EXTRA_LANE;
+  const reasons = [`${hero.tier}-tier`];
+  if (flexBonus > 0) reasons.push(`flexible · ${hero.roles.length} lanes`);
+  return { hero, score: tierScore + flexBonus, reasons };
+}
+
+function scorePickCandidate(hero, { filledLanes, algorithmMode, comfortLevel }) {
+  const tierScore = TIER_SCORE[hero.tier] ?? 0;
+  const missingCovered = hero.roles.filter((r) => !filledLanes.has(r));
+  const gapBonus = missingCovered.length * GAP_BONUS_PER_LANE;
+  const comfortWeights = COMFORT_BONUS[algorithmMode] || COMFORT_BONUS.standard;
+  const comfortBonus = comfortLevel ? comfortWeights[comfortLevel] || 0 : 0;
+  const reasons = [`${hero.tier}-tier`];
+  if (gapBonus > 0) reasons.push(`fills ${missingCovered.join("/")}`);
+  if (comfortBonus > 0) reasons.push(comfortLevel === "super" ? "Super Comfort" : "Comfort pick");
+  return { hero, score: tierScore + gapBonus + comfortBonus, reasons };
+}
+
+function getFilledLanes(pickedSlugs) {
+  const set = new Set();
+  pickedSlugs.forEach((slug) => {
+    const hero = heroBySlug(slug);
+    if (hero) hero.roles.forEach((r) => set.add(r));
+  });
+  return set;
+}
+
+function getSuggestions({ availableHeroes, phase, teamPicks, algorithmMode, getComfortLevel, topN = 3 }) {
+  if (phase === "ban") {
+    return availableHeroes.map(scoreBanCandidate).sort((a, b) => b.score - a.score).slice(0, topN);
+  }
+  if (phase === "pick") {
+    const filledLanes = getFilledLanes(teamPicks);
+    return availableHeroes
+      .map((hero) => scorePickCandidate(hero, { filledLanes, algorithmMode, comfortLevel: getComfortLevel ? getComfortLevel(hero) : null }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, topN);
+  }
+  return [];
+}
+
+
 // ---- UI bits ----
 function Chevrons({ tier }) {
   const t = TIER_STYLE[tier] || TIER_STYLE.C;
@@ -375,6 +431,38 @@ function ComfortPicksScreen({ comfortAssignments, assignComfort, removeComfort, 
   );
 }
 
+function AISuggestPanel({ suggestions, phase, onSelect, disabled }) {
+  if (!suggestions || suggestions.length === 0) return null;
+  const accent = phase === "ban" ? "#ef4444" : "#f5c451";
+  return (
+    <div style={{ borderRadius: 8, padding: 12, marginBottom: 12, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", background: "#161920", border: `1px solid ${accent}33` }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
+        <Sparkles size={14} color={accent} />
+        <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: 0.5, color: accent }}>
+          AI SUGGESTS {phase === "ban" ? "BANNING" : "PICKING"}
+        </span>
+      </div>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", flex: 1 }}>
+        {suggestions.map(({ hero, reasons }, i) => (
+          <button key={hero.slug} onClick={() => !disabled && onSelect(hero)} disabled={disabled} style={{
+            display: "flex", alignItems: "center", gap: 8, borderRadius: 6, paddingLeft: 6, paddingRight: 12, paddingTop: 6, paddingBottom: 6,
+            background: "#1a1e26", border: `1px solid ${i === 0 ? accent + "88" : "rgba(255,255,255,0.08)"}`, cursor: disabled ? "default" : "pointer",
+          }}>
+            <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: 11, width: 16, textAlign: "center", color: "#6b7280" }}>{i + 1}</span>
+            <div style={{ position: "relative", width: 28, height: 36, borderRadius: 4, overflow: "hidden", flexShrink: 0, background: "#0f1115" }}>
+              <img src={hero.image} alt={hero.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+              <span style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 600, fontSize: 12, color: "#f2efe9" }}>{hero.name}</span>
+              <span style={{ fontFamily: "'Inter',sans-serif", fontSize: 10, color: "#6b7280" }}>{reasons.join(" · ")}</span>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function RankDraftBoard({ onBack, onOpenComfort, isComfortHero, totalAssignments, algorithmMode, setAlgorithmMode }) {
   const [state, setState] = useState(initialDraftState());
   const [history, setHistory] = useState([]);
@@ -401,6 +489,14 @@ function RankDraftBoard({ onBack, onOpenComfort, isComfortHero, totalAssignments
     if (state.picks.A.includes(hero.slug) || state.picks.B.includes(hero.slug)) return "picked";
     return "available";
   }
+
+  const suggestions = step.phase === "complete" ? [] : getSuggestions({
+    availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
+    phase: step.phase,
+    teamPicks: state.picks[step.team],
+    algorithmMode,
+    getComfortLevel: isComfortHero,
+  });
 
   return (
     <div style={{ maxWidth: 1180, margin: "0 auto", padding: "22px 18px 50px" }}>
@@ -442,6 +538,7 @@ function RankDraftBoard({ onBack, onOpenComfort, isComfortHero, totalAssignments
       </div>
 
       <div style={{ borderRadius: 10, padding: 14, background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <AISuggestPanel suggestions={suggestions} phase={step.phase} onSelect={handleSelect} disabled={step.phase === "complete"} />
         <HeroGrid getStatus={getStatus} onSelect={handleSelect} disabled={step.phase === "complete"} getComfortLevel={isComfortHero} />
       </div>
     </div>

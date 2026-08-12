@@ -42,7 +42,7 @@ export default function HeroCard({ hero, status, onClick, disabled, comfortLevel
           alt={hero.name}
           fill
           sizes="100px"
-          className="object-cover p-1"
+          className="object-contain p-1"
           unoptimized
         />
         <div
