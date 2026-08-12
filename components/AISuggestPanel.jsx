@@ -17,7 +17,7 @@ export default function AISuggestPanel({ suggestions, phase, onSelect, disabled 
       <div className="flex items-center gap-1.5 shrink-0">
         <Sparkles size={14} color={accent} />
         <span className="font-display font-bold text-xs tracking-wide" style={{ color: accent }}>
-          AI SUGGESTS {phase === "ban" ? "BANNING" : "PICKING"}
+         {phase === "ban" ? "BANNING" : "PICKING"}
         </span>
       </div>
 
@@ -40,7 +40,7 @@ export default function AISuggestPanel({ suggestions, phase, onSelect, disabled 
                 {i + 1}
               </span>
               <div className="relative w-7 h-9 rounded overflow-hidden shrink-0 bg-[#0f1115]">
-                <Image src={hero.image} alt={hero.name} fill className="object-contain" unoptimized />
+                <Image src={hero.image} alt={hero.name} fill className="object-cover" unoptimized />
               </div>
               <div className="flex flex-col items-start">
                 <span className="font-display font-semibold text-xs" style={{ color: "#f2efe9" }}>
