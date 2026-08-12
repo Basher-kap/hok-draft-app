@@ -6,7 +6,10 @@ import { ArrowLeft, RotateCcw, Undo2, Sparkles, Heart } from "lucide-react";
 import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
+import AISuggestPanel from "@/components/AISuggestPanel";
 import { useComfort } from "@/components/ComfortProvider";
+import { getSuggestions } from "@/lib/recommendation";
+import { HEROES } from "@/lib/heroes";
 import {
   initialDraftState,
   applyAction,
@@ -42,6 +45,17 @@ export default function RankDraftPage() {
     if (state.picks.A.includes(hero.slug) || state.picks.B.includes(hero.slug)) return "picked";
     return "available";
   }
+
+  const suggestions =
+    step.phase === "complete"
+      ? []
+      : getSuggestions({
+          availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
+          phase: step.phase,
+          teamPicks: state.picks[step.team],
+          algorithmMode,
+          getComfortLevel: (hero) => isComfortHero(hero.slug),
+        });
 
   function reset() {
     setState(initialDraftState());
@@ -133,6 +147,12 @@ export default function RankDraftPage() {
           className="rounded-lg p-4"
           style={{ background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}
         >
+          <AISuggestPanel
+            suggestions={suggestions}
+            phase={step.phase}
+            onSelect={handleSelect}
+            disabled={step.phase === "complete"}
+          />
           <HeroGrid
             getStatus={getStatus}
             onSelect={handleSelect}
