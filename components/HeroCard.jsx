@@ -10,9 +10,13 @@ const SUPER_COMFORT_COLOR = "#ff2d95";
 
 // status: "available" | "banned" | "picked" | undefined(available)
 // comfortLevel: null | "comfort" | "super"
-export default function HeroCard({ hero, status, onClick, disabled, comfortLevel = null }) {
+// enemyBannedTeam: null | "A" | "B" - the OTHER team already banned this hero
+//   (ban phase only). Shown as a warning, doesn't block selection - bans
+//   across sides can duplicate since they're effectively blind picks.
+export default function HeroCard({ hero, status, onClick, disabled, comfortLevel = null, enemyBannedTeam = null }) {
   const t = TIER_STYLE[hero.tier] || TIER_STYLE.C;
   const isTaken = status === "banned" || status === "picked";
+  const teamColor = enemyBannedTeam === "A" ? "#3b82f6" : "#ef4444";
   const accentColor = comfortLevel === "super" ? SUPER_COMFORT_COLOR : comfortLevel === "comfort" ? COMFORT_COLOR : t.color;
 
   return (
@@ -42,7 +46,7 @@ export default function HeroCard({ hero, status, onClick, disabled, comfortLevel
           alt={hero.name}
           fill
           sizes="100px"
-          className="object-cover p-1"
+          className="object-contain p-1"
           unoptimized
         />
         <div
@@ -85,6 +89,22 @@ export default function HeroCard({ hero, status, onClick, disabled, comfortLevel
             }}
           >
             INTL
+          </div>
+        )}
+
+        {enemyBannedTeam && (
+          <div
+            className="absolute right-1.5 flex items-center justify-center rounded-full"
+            style={{
+              top: hero.intl_exclusive ? 24 : 6,
+              width: 18,
+              height: 18,
+              background: teamColor,
+              boxShadow: "0 0 6px " + teamColor + "aa",
+            }}
+            title={`Team ${enemyBannedTeam} already banned this hero - banning it now would duplicate that ban`}
+          >
+            <Ban size={11} color="#fff" strokeWidth={2.5} />
           </div>
         )}
 

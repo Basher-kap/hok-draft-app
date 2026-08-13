@@ -9,7 +9,8 @@ const TIERS = ["S", "A", "B", "C"];
 
 // getStatus(hero) => "available" | "banned" | "picked"
 // getComfortLevel(hero) => null | "comfort" | "super"
-export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel }) {
+// getEnemyBannedTeam(hero) => null | "A" | "B" (ban phase only - already banned by the OTHER team)
+export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel, getEnemyBannedTeam }) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState("All");
   const [activeTier, setActiveTier] = useState("All");
@@ -102,6 +103,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLeve
             onClick={onSelect}
             disabled={disabled}
             comfortLevel={getComfortLevel ? getComfortLevel(hero) : null}
+            enemyBannedTeam={getEnemyBannedTeam ? getEnemyBannedTeam(hero) : null}
           />
         ))}
       </div>

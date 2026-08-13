@@ -14,7 +14,10 @@ import {
   initialDraftState,
   applyAction,
   getStep,
-  isHeroTaken,
+  isSelectable,
+  isHeroBannedByTeam,
+  isHeroBannedByAnyone,
+  isHeroPicked,
   TOTAL_BANS,
   TOTAL_PICKS,
 } from "@/lib/rankDraft";
@@ -27,7 +30,7 @@ export default function RankDraftPage() {
 
   function handleSelect(hero) {
     if (step.phase === "complete") return;
-    if (isHeroTaken(state, hero.slug)) return;
+    if (!isSelectable(state, step, hero.slug)) return;
     setHistory((h) => [...h, state]);
     setState((s) => applyAction(s, hero.slug));
   }
@@ -40,17 +43,35 @@ export default function RankDraftPage() {
     });
   }
 
+  // Ban phase: a hero only shows "banned" (locked) once the CURRENTLY
+  // ACTING team has banned it themselves - a hero the other side already
+  // banned stays selectable, since bans are independent per side and
+  // duplicate bans across sides are allowed (mirrors real ranked draft).
+  // Pick phase / complete: banned-by-anyone or picked-by-anyone applies.
   function getStatus(hero) {
-    if (state.bans.A.includes(hero.slug) || state.bans.B.includes(hero.slug)) return "banned";
-    if (state.picks.A.includes(hero.slug) || state.picks.B.includes(hero.slug)) return "picked";
+    if (step.phase === "ban") {
+      return isHeroBannedByTeam(state, step.team, hero.slug) ? "banned" : "available";
+    }
+    if (isHeroBannedByAnyone(state, hero.slug)) return "banned";
+    if (isHeroPicked(state, hero.slug)) return "picked";
     return "available";
+  }
+
+  // During ban phase, flag (without blocking) a hero the OTHER team has
+  // already banned - so it's visible in the grid that picking it now
+  // would duplicate a ban, but it stays clickable since duplicate bans
+  // across sides are allowed.
+  function getEnemyBannedTeam(hero) {
+    if (step.phase !== "ban") return null;
+    const otherTeam = step.team === "A" ? "B" : "A";
+    return isHeroBannedByTeam(state, otherTeam, hero.slug) ? otherTeam : null;
   }
 
   const suggestions =
     step.phase === "complete"
       ? []
       : getSuggestions({
-          availableHeroes: HEROES.filter((h) => !isHeroTaken(state, h.slug)),
+          availableHeroes: HEROES.filter((h) => isSelectable(state, step, h.slug)),
           phase: step.phase,
           teamPicks: state.picks[step.team],
           enemyPicks: state.picks[step.team === "A" ? "B" : "A"],
@@ -159,6 +180,7 @@ export default function RankDraftPage() {
             onSelect={handleSelect}
             disabled={step.phase === "complete"}
             getComfortLevel={(hero) => isComfortHero(hero.slug)}
+            getEnemyBannedTeam={getEnemyBannedTeam}
           />
         </div>
       </div>
