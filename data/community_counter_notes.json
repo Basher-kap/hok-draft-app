@@ -408,5 +408,90 @@
     "a": "agudo",
     "b": "liu-shan",
     "note": "denies fast rotation/push"
+  },
+  {
+    "a": "liang",
+    "b": "luna",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "jing",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "arke",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "lam",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "ying",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "zilong",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "li-bai",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "pei",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "mai-shiranui",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "sima-yi",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "sima-yi",
+    "b": "angela",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "nuwa",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "garuda",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "ziya",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "garo",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "lian-po",
+    "b": "mozi",
+    "note": "interrupts ultimate"
+  },
+  {
+    "a": "lapulapu",
+    "b": "mozi",
+    "note": "interrupts ultimate"
   }
 ]

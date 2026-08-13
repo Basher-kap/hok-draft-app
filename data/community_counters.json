@@ -263,7 +263,8 @@
   "pei": {
     "strongAgainst": [],
     "counteredBy": [
-      "diaochan"
+      "diaochan",
+      "liang"
     ]
   },
   "ming": {
@@ -284,7 +285,9 @@
     ]
   },
   "lian-po": {
-    "strongAgainst": [],
+    "strongAgainst": [
+      "mozi"
+    ],
     "counteredBy": [
       "arli",
       "zhuangzi"
@@ -336,6 +339,7 @@
   },
   "liang": {
     "strongAgainst": [
+      "arke",
       "arli",
       "diaochan",
       "dyadia",
@@ -347,6 +351,8 @@
       "mai-shiranui",
       "menki",
       "milady",
+      "pei",
+      "sima-yi",
       "sun-ce",
       "ukyo-tachibana",
       "ying",
@@ -368,6 +374,8 @@
     ],
     "counteredBy": [
       "chano",
+      "lapulapu",
+      "lian-po",
       "milady",
       "sakeer"
     ]
@@ -498,7 +506,9 @@
       "flowborn-marksman",
       "hou-yi"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "sima-yi"
+    ]
   },
   "flowborn-marksman": {
     "strongAgainst": [
@@ -623,7 +633,8 @@
     "counteredBy": [
       "kongming",
       "mai-shiranui",
-      "shangguan"
+      "shangguan",
+      "sima-yi"
     ]
   },
   "shangguan": {
@@ -723,11 +734,16 @@
   "sima-yi": {
     "strongAgainst": [
       "angela",
+      "garo",
+      "garuda",
       "nuwa",
       "wang-zhaojun",
-      "xiao-qiao"
+      "xiao-qiao",
+      "ziya"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "liang"
+    ]
   },
   "angela": {
     "strongAgainst": [],
@@ -828,5 +844,23 @@
     "counteredBy": [
       "agudo"
     ]
+  },
+  "arke": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "liang"
+    ]
+  },
+  "garuda": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "lapulapu": {
+    "strongAgainst": [
+      "mozi"
+    ],
+    "counteredBy": []
   }
 }
