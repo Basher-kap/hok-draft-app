@@ -7,6 +7,7 @@ import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
 import AISuggestPanel from "@/components/AISuggestPanel";
+import RoleSelectModal from "@/components/RoleSelectModal";
 import { useComfort } from "@/components/ComfortProvider";
 import { getSuggestions } from "@/lib/recommendation";
 import { HEROES } from "@/lib/heroes";
@@ -25,14 +26,32 @@ import {
 export default function RankDraftPage() {
   const [state, setState] = useState(initialDraftState());
   const [history, setHistory] = useState([]); // stack of previous states, for undo
+  const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const step = getStep(state.step);
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
+
+  // Commits a ban, or a pick with its chosen role, to state + history.
+  function commit(hero, role) {
+    setHistory((h) => [...h, state]);
+    setState((s) => applyAction(s, hero.slug, role));
+  }
 
   function handleSelect(hero) {
     if (step.phase === "complete") return;
     if (!isSelectable(state, step, hero.slug)) return;
-    setHistory((h) => [...h, state]);
-    setState((s) => applyAction(s, hero.slug));
+
+    if (step.phase === "pick" && hero.roles.length > 1) {
+      // Flex hero - ask which lane they're being drafted for before committing.
+      setPendingHero(hero);
+      return;
+    }
+    commit(hero, step.phase === "pick" ? hero.roles[0] : null);
+  }
+
+  function handleRoleChosen(role) {
+    if (!pendingHero) return;
+    commit(pendingHero, role);
+    setPendingHero(null);
   }
 
   function handleUndo() {
@@ -73,8 +92,8 @@ export default function RankDraftPage() {
       : getSuggestions({
           availableHeroes: HEROES.filter((h) => isSelectable(state, step, h.slug)),
           phase: step.phase,
-          teamPicks: state.picks[step.team],
-          enemyPicks: state.picks[step.team === "A" ? "B" : "A"],
+          teamPickEntries: state.picks[step.team],
+          enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
         });
@@ -82,10 +101,13 @@ export default function RankDraftPage() {
   function reset() {
     setState(initialDraftState());
     setHistory([]);
+    setPendingHero(null);
   }
 
   return (
     <div className="min-h-screen" style={{ background: "#12141a", color: "#e8e6e1" }}>
+      <RoleSelectModal hero={pendingHero} onChoose={handleRoleChosen} onCancel={() => setPendingHero(null)} />
+
       <div className="max-w-[1280px] mx-auto px-5 py-6">
         <div className="flex items-center justify-between mb-3 flex-wrap gap-3">
           <Link
