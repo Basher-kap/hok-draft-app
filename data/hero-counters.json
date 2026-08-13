@@ -1,23 +1,27 @@
 {
   "zhang-fei": {
     "counters": [
-      "lapulapu",
       "biron",
       "dyadia",
       "florentino",
-      "xiao-qiao"
+      "lapulapu",
+      "liang",
+      "xiao-qiao",
+      "yaria"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "cai-yan"
+    ]
   },
   "lapulapu": {
     "counters": [],
     "counteredBy": [
-      "zhang-fei",
-      "lorion",
-      "dyadia",
-      "ukyo-tachibana",
+      "charlotte",
       "chicha",
-      "charlotte"
+      "dyadia",
+      "lorion",
+      "ukyo-tachibana",
+      "zhang-fei"
     ]
   },
   "aoyin": {
@@ -31,85 +35,104 @@
   },
   "lorion": {
     "counters": [
-      "lapulapu",
       "biron",
       "chano",
+      "lapulapu",
       "xiao-qiao"
     ],
     "counteredBy": [
+      "chicha",
       "guan-yu",
-      "chicha"
+      "sima-yi"
     ]
   },
   "chano": {
     "counters": [
-      "dharma"
+      "arli",
+      "dharma",
+      "mai-shiranui",
+      "mozi"
     ],
     "counteredBy": [
+      "biron",
+      "di-renjie",
       "lorion",
-      "biron"
+      "ziya"
     ]
   },
   "biron": {
     "counters": [
-      "chano"
+      "chano",
+      "dharma"
     ],
     "counteredBy": [
       "aoyin",
       "charlotte",
-      "zhang-fei",
-      "lorion",
-      "haya",
       "chicha",
-      "lapulapu"
+      "fatih",
+      "haya",
+      "lapulapu",
+      "lorion",
+      "shi",
+      "zhang-fei"
     ]
   },
   "charlotte": {
     "counters": [
-      "biron",
-      "ukyo-tachibana",
-      "lapulapu",
+      "allain",
       "aoyin",
+      "biron",
+      "dyadia",
       "guan-yu",
       "haya",
-      "dyadia"
+      "lapulapu",
+      "mayene",
+      "ukyo-tachibana"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "donghuang"
+    ]
   },
   "dharma": {
     "counters": [
-      "zhang-fei",
-      "aoyin"
+      "aoyin",
+      "arli",
+      "mai-shiranui",
+      "zhang-fei"
     ],
     "counteredBy": [
+      "allain",
       "angela",
-      "dyadia",
+      "biron",
       "chano",
+      "dyadia",
       "lapulapu"
     ]
   },
   "guan-yu": {
     "counters": [
-      "lorion",
+      "biron",
+      "heino",
       "lapulapu",
-      "biron"
+      "lorion"
     ],
     "counteredBy": [
-      "ying",
-      "zhang-fei",
       "charlotte",
-      "dharma"
+      "dharma",
+      "sun-ce",
+      "ying",
+      "zhang-fei"
     ]
   },
   "chicha": {
     "counters": [
+      "biron",
       "lapulapu",
-      "lorion",
-      "biron"
+      "lorion"
     ],
     "counteredBy": [
-      "erin",
       "dyadia",
+      "erin",
       "zhang-fei"
     ]
   },
@@ -117,79 +140,117 @@
     "counters": [
       "agudo",
       "biron",
-      "lapulapu",
       "fatih",
+      "flowborn-marksman",
       "garuda",
-      "flowborn-marksman"
+      "lapulapu",
+      "mai-shiranui"
     ],
     "counteredBy": [
-      "charlotte"
+      "charlotte",
+      "gan-mo",
+      "nuwa",
+      "sima-yi"
     ]
   },
   "arli": {
     "counters": [
       "aoyin",
-      "lorion"
+      "arthur",
+      "bai-qi",
+      "dun",
+      "lian-po",
+      "lorion",
+      "menki"
     ],
     "counteredBy": [
+      "chano",
+      "dharma",
+      "di-renjie",
+      "dyadia",
+      "fuzi",
+      "garo",
+      "hou-yi",
+      "lady-sun",
       "lapulapu",
+      "liang",
+      "luara",
+      "mai-shiranui",
+      "mayene",
       "xiao-qiao",
-      "ying",
-      "mai-shiranui"
+      "ying"
     ]
   },
   "dyadia": {
     "counters": [
-      "lapulapu",
+      "arli",
+      "cai-yan",
       "chicha",
       "dharma",
-      "xiao-qiao",
+      "diaochan",
+      "feyd",
       "guan-yu",
-      "jing"
+      "jing",
+      "lam",
+      "lapulapu",
+      "li-bai",
+      "luna",
+      "mai-shiranui",
+      "ukyo-tachibana",
+      "xiao-qiao",
+      "ying",
+      "zilong"
     ],
     "counteredBy": [
+      "lady-zhen",
+      "liang",
       "zhang-fei"
     ]
   },
   "xiao-qiao": {
     "counters": [
-      "arli"
+      "arli",
+      "liang"
     ],
     "counteredBy": [
-      "lorion",
-      "zhang-fei",
       "aoyin",
-      "dyadia",
-      "charlotte",
       "chano",
-      "yuhuan"
+      "charlotte",
+      "dyadia",
+      "lorion",
+      "sima-yi",
+      "yuhuan",
+      "zhang-fei"
     ]
   },
   "pei": {
     "counters": [
-      "zhang-fei",
-      "arli"
+      "arli",
+      "zhang-fei"
     ],
     "counteredBy": [
-      "ukyo-tachibana",
-      "lapulapu",
       "dharma",
+      "diaochan",
+      "lapulapu",
       "lorion",
-      "mai-shiranui"
+      "mai-shiranui",
+      "ukyo-tachibana"
     ]
   },
   "ukyo-tachibana": {
     "counters": [
-      "pei",
-      "lapulapu",
-      "xiao-qiao",
+      "aoyin",
       "florentino",
-      "aoyin"
+      "lapulapu",
+      "pei",
+      "xiao-qiao"
     ],
     "counteredBy": [
       "charlotte",
-      "zhang-fei",
-      "garuda"
+      "dyadia",
+      "garuda",
+      "liang",
+      "zhang-fei"
     ]
   },
   "jing": {
@@ -203,149 +264,199 @@
     "counteredBy": [
       "aoyin",
       "dyadia",
-      "flowborn-tank"
+      "flowborn-tank",
+      "liang"
     ]
   },
   "erin": {
     "counters": [
+      "agudo",
       "chicha",
+      "consort-yu",
       "flowborn-marksman",
-      "lorion",
-      "agudo"
+      "lorion"
     ],
     "counteredBy": [
       "charlotte",
-      "guan-yu"
+      "guan-yu",
+      "huang-zhong"
     ]
   },
   "flowborn-marksman": {
-    "counters": [],
+    "counters": [
+      "di-renjie",
+      "hou-yi",
+      "meng-ya"
+    ],
     "counteredBy": [
       "aoyin",
-      "haya",
+      "consort-yu",
       "erin",
-      "lapulapu"
+      "garo",
+      "haya",
+      "lapulapu",
+      "marco-polo"
     ]
   },
   "mai-shiranui": {
     "counters": [
-      "lorion",
-      "chano",
-      "yuhuan",
       "arli",
+      "chano",
+      "charlotte",
       "dyadia",
+      "gan-mo",
+      "lorion",
+      "nuwa",
       "pei",
-      "charlotte"
+      "yuhuan",
+      "ziya"
     ],
     "counteredBy": [
+      "chano",
+      "daji",
+      "dharma",
+      "dyadia",
+      "fuzi",
+      "haya",
+      "liang",
+      "mayene",
+      "milady",
+      "sima-yi",
+      "yuhuan",
       "zhang-fei"
     ]
   },
   "augran": {
     "counters": [
       "aoyin",
-      "lapulapu",
       "dharma",
+      "lapulapu",
       "lorion"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "agudo",
+      "lady-zhen",
+      "menki",
+      "shi",
+      "wang-zhaojun",
+      "yuhuan"
+    ]
   },
   "garuda": {
     "counters": [
+      "lian-po",
       "lorion",
-      "ukyo-tachibana",
-      "lian-po"
+      "ukyo-tachibana"
     ],
     "counteredBy": [
-      "zhang-fei",
+      "dharma",
       "haya",
-      "dharma"
+      "sima-yi",
+      "zhang-fei"
     ]
   },
   "ying": {
     "counters": [
-      "guan-yu",
+      "agudo",
       "arli",
-      "agudo"
+      "guan-yu"
     ],
     "counteredBy": [
       "aoyin",
+      "dyadia",
       "haya",
       "jing",
+      "liang",
       "zhang-fei"
     ]
   },
   "lian-po": {
     "counters": [
       "aoyin",
-      "charlotte",
-      "biron"
+      "biron",
+      "charlotte"
     ],
     "counteredBy": [
+      "arli",
+      "garuda",
       "lapulapu",
       "zhang-fei",
-      "garuda"
+      "zhuangzi"
     ]
   },
   "agudo": {
     "counters": [
-      "biron",
-      "lapulapu",
       "arli",
+      "augran",
+      "biron",
       "charlotte",
-      "dharma"
+      "dharma",
+      "lapulapu",
+      "li-xin",
+      "liu-shan",
+      "milady"
     ],
     "counteredBy": [
+      "chano",
       "haya",
       "zhang-fei",
-      "chano"
+      "ziya"
     ]
   },
   "annette": {
     "counters": [
-      "mozi",
-      "lapulapu",
-      "ata",
       "arli",
+      "ata",
       "biron",
-      "chicha"
+      "chicha",
+      "lapulapu",
+      "mozi"
     ],
     "counteredBy": []
   },
   "mozi": {
     "counters": [
-      "lorion"
+      "donghuang",
+      "lorion",
+      "ming"
     ],
     "counteredBy": [
       "annette",
       "arli",
       "chano",
       "dharma",
-      "jing"
+      "jing",
+      "milady",
+      "sakeer",
+      "sima-yi"
     ]
   },
   "fatih": {
     "counters": [
+      "biron",
+      "chicha",
       "dharma",
       "lapulapu",
-      "zhang-fei",
-      "chicha"
+      "zhang-fei"
     ],
     "counteredBy": [
-      "haya"
+      "haya",
+      "mi-yue",
+      "shi"
     ]
   },
   "angela": {
     "counters": [
-      "dharma",
       "aoyin",
+      "dharma",
       "xiao-qiao",
       "zhang-fei"
     ],
     "counteredBy": [
       "chano",
       "charlotte",
-      "lorion"
+      "lorion",
+      "sima-yi"
     ]
   },
   "florentino": {
@@ -353,11 +464,11 @@
       "charlotte"
     ],
     "counteredBy": [
-      "zhang-fei",
       "aoyin",
       "chicha",
       "devara",
-      "ukyo-tachibana"
+      "ukyo-tachibana",
+      "zhang-fei"
     ]
   },
   "nuwa": {
@@ -365,68 +476,85 @@
       "biron",
       "chano",
       "haya",
-      "jing"
+      "jing",
+      "liang",
+      "shi"
     ],
     "counteredBy": [
       "charlotte",
-      "guan-yu"
+      "guan-yu",
+      "kongming",
+      "mai-shiranui",
+      "shangguan",
+      "sima-yi"
     ]
   },
   "yuhuan": {
     "counters": [
-      "xiao-qiao",
-      "mozi",
+      "augran",
       "biron",
-      "chicha"
+      "chicha",
+      "kongming",
+      "mai-shiranui",
+      "mozi",
+      "xiao-qiao"
     ],
     "counteredBy": [
-      "mai-shiranui"
+      "mai-shiranui",
+      "sima-yi"
     ]
   },
   "devara": {
     "counters": [
+      "agudo",
       "chicha",
       "florentino",
       "lapulapu",
       "lorion",
       "ukyo-tachibana",
-      "agudo",
       "zhang-fei"
     ],
     "counteredBy": []
   },
   "nezha": {
     "counters": [
-      "lorion",
       "chano",
+      "di-renjie",
       "flowborn-marksman",
-      "lapulapu"
+      "lapulapu",
+      "lorion"
     ],
     "counteredBy": [
-      "zhang-fei",
       "fatih",
-      "ukyo-tachibana"
+      "ukyo-tachibana",
+      "zhang-fei"
     ]
   },
   "ata": {
     "counters": [
-      "flowborn-marksman"
+      "flowborn-marksman",
+      "sun-ce"
     ],
     "counteredBy": [
-      "lapulapu",
-      "guan-yu",
       "annette",
-      "haya"
+      "guan-yu",
+      "haya",
+      "lapulapu"
     ]
   },
   "flowborn-tank": {
     "counters": [
-      "jing",
       "annette",
-      "lian-po"
+      "jing",
+      "lian-po",
+      "luna",
+      "wukong"
     ],
     "counteredBy": [
-      "guan-yu"
+      "guan-yu",
+      "liu-bei",
+      "luara",
+      "shi"
     ]
   },
   "luna": {
@@ -434,11 +562,14 @@
       "aoyin"
     ],
     "counteredBy": [
-      "lorion",
       "biron",
       "dharma",
+      "dyadia",
       "erin",
+      "flowborn-tank",
       "lapulapu",
+      "liang",
+      "lorion",
       "ying"
     ]
   },
@@ -446,20 +577,27 @@
     "counters": [
       "chicha",
       "dharma",
+      "liu-bei",
       "zhang-fei"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "han-xin"
+    ]
   },
   "menki": {
     "counters": [
       "angela",
       "aoyin",
+      "augran",
+      "biron",
       "lapulapu",
-      "biron"
+      "musashi"
     ],
     "counteredBy": [
       "arli",
-      "augran"
+      "augran",
+      "dian-wei",
+      "liang"
     ]
   },
   "yang-jian": {
@@ -478,25 +616,52 @@
   "wang-zhaojun": {
     "counters": [
       "aoyin",
+      "augran",
+      "gao",
       "lorion"
     ],
     "counteredBy": [
-      "haya"
+      "haya",
+      "kongming",
+      "sima-yi"
     ]
   },
   "dolia": {
     "counters": [
       "flowborn-marksman",
+      "liang",
       "zhang-fei"
     ],
     "counteredBy": []
   },
   "liang": {
     "counters": [
-      "aoyin"
+      "aoyin",
+      "arli",
+      "diaochan",
+      "dyadia",
+      "feyd",
+      "jing",
+      "lam",
+      "li-bai",
+      "luna",
+      "mai-shiranui",
+      "menki",
+      "milady",
+      "sun-ce",
+      "ukyo-tachibana",
+      "ying",
+      "zilong"
     ],
     "counteredBy": [
-      "haya"
+      "dolia",
+      "gan-mo",
+      "haya",
+      "nuwa",
+      "sima-yi",
+      "xiao-qiao",
+      "zhang-fei",
+      "ziya"
     ]
   },
   "zilong": {
@@ -504,7 +669,8 @@
     "counteredBy": [
       "biron",
       "chano",
-      "dyadia"
+      "dyadia",
+      "liang"
     ]
   },
   "musashi": {
@@ -512,26 +678,524 @@
       "augran"
     ],
     "counteredBy": [
-      "agudo"
+      "agudo",
+      "menki"
     ]
   },
   "bai-qi": {
     "counters": [],
     "counteredBy": [
+      "arli",
       "lorion"
     ]
   },
   "consort-yu": {
     "counters": [
+      "alessio",
       "florentino",
-      "lapulapu"
+      "flowborn-marksman",
+      "lady-sun",
+      "lapulapu",
+      "luban-no-7"
     ],
-    "counteredBy": []
+    "counteredBy": [
+      "erin",
+      "shouyue"
+    ]
   },
   "xiang-yu": {
     "counters": [],
     "counteredBy": [
       "guan-yu"
+    ]
+  },
+  "mi-yue": {
+    "counters": [
+      "fatih"
+    ],
+    "counteredBy": []
+  },
+  "allain": {
+    "counters": [
+      "dharma"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ]
+  },
+  "donghuang": {
+    "counters": [
+      "charlotte"
+    ],
+    "counteredBy": [
+      "mozi"
+    ]
+  },
+  "dun": {
+    "counters": [
+      "mulan"
+    ],
+    "counteredBy": [
+      "arli",
+      "lu-bu",
+      "shi"
+    ]
+  },
+  "mulan": {
+    "counters": [],
+    "counteredBy": [
+      "dun"
+    ]
+  },
+  "lu-bu": {
+    "counters": [
+      "dun"
+    ],
+    "counteredBy": []
+  },
+  "heino": {
+    "counters": [],
+    "counteredBy": [
+      "guan-yu",
+      "sima-yi"
+    ]
+  },
+  "sun-ce": {
+    "counters": [
+      "guan-yu"
+    ],
+    "counteredBy": [
+      "ata",
+      "liang"
+    ]
+  },
+  "mayene": {
+    "counters": [
+      "arli",
+      "hou-yi",
+      "mai-shiranui"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ]
+  },
+  "dian-wei": {
+    "counters": [
+      "menki"
+    ],
+    "counteredBy": [
+      "sun-bin"
+    ]
+  },
+  "wukong": {
+    "counters": [
+      "nakoruru"
+    ],
+    "counteredBy": [
+      "flowborn-tank"
+    ]
+  },
+  "nakoruru": {
+    "counters": [],
+    "counteredBy": [
+      "wukong"
+    ]
+  },
+  "liu-bei": {
+    "counters": [
+      "flowborn-tank"
+    ],
+    "counteredBy": [
+      "kaizer"
+    ]
+  },
+  "shi": {
+    "counters": [
+      "augran",
+      "biron",
+      "dun",
+      "fatih",
+      "flowborn-tank"
+    ],
+    "counteredBy": [
+      "gan-mo",
+      "nuwa",
+      "sima-yi",
+      "ziya"
+    ]
+  },
+  "han-xin": {
+    "counters": [
+      "kaizer"
+    ],
+    "counteredBy": []
+  },
+  "sun-bin": {
+    "counters": [
+      "dian-wei"
+    ],
+    "counteredBy": []
+  },
+  "diaochan": {
+    "counters": [
+      "pei"
+    ],
+    "counteredBy": [
+      "dyadia",
+      "liang",
+      "sima-yi"
+    ]
+  },
+  "ming": {
+    "counters": [
+      "zhuangzi"
+    ],
+    "counteredBy": [
+      "cai-yan",
+      "mozi"
+    ]
+  },
+  "zhuangzi": {
+    "counters": [
+      "lian-po"
+    ],
+    "counteredBy": [
+      "ming"
+    ]
+  },
+  "cai-yan": {
+    "counters": [
+      "ming",
+      "zhang-fei"
+    ],
+    "counteredBy": [
+      "dyadia"
+    ]
+  },
+  "yaria": {
+    "counters": [],
+    "counteredBy": [
+      "zhang-fei"
+    ]
+  },
+  "sakeer": {
+    "counters": [
+      "mozi"
+    ],
+    "counteredBy": []
+  },
+  "di-renjie": {
+    "counters": [
+      "arli",
+      "chano",
+      "marco-polo",
+      "milady"
+    ],
+    "counteredBy": [
+      "flowborn-marksman",
+      "garo",
+      "nezha"
+    ]
+  },
+  "marco-polo": {
+    "counters": [
+      "flowborn-marksman",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "di-renjie"
+    ]
+  },
+  "shouyue": {
+    "counters": [
+      "consort-yu"
+    ],
+    "counteredBy": []
+  },
+  "luban-no-7": {
+    "counters": [
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "consort-yu",
+      "fang"
+    ]
+  },
+  "hou-yi": {
+    "counters": [
+      "arli"
+    ],
+    "counteredBy": [
+      "flowborn-marksman",
+      "garo",
+      "luban-no-7",
+      "marco-polo",
+      "mayene"
+    ]
+  },
+  "garo": {
+    "counters": [
+      "arli",
+      "di-renjie",
+      "flowborn-marksman",
+      "hou-yi"
+    ],
+    "counteredBy": []
+  },
+  "luara": {
+    "counters": [
+      "arli",
+      "flowborn-tank"
+    ],
+    "counteredBy": []
+  },
+  "lady-sun": {
+    "counters": [
+      "arli"
+    ],
+    "counteredBy": [
+      "consort-yu",
+      "ziya"
+    ]
+  },
+  "alessio": {
+    "counters": [],
+    "counteredBy": [
+      "consort-yu"
+    ]
+  },
+  "huang-zhong": {
+    "counters": [
+      "erin"
+    ],
+    "counteredBy": [
+      "meng-ya"
+    ]
+  },
+  "meng-ya": {
+    "counters": [
+      "huang-zhong"
+    ],
+    "counteredBy": [
+      "flowborn-marksman"
+    ]
+  },
+  "fang": {
+    "counters": [
+      "luban-no-7"
+    ],
+    "counteredBy": []
+  },
+  "gan-mo": {
+    "counters": [
+      "haya",
+      "liang",
+      "shi"
+    ],
+    "counteredBy": [
+      "gao-changgong",
+      "kongming",
+      "mai-shiranui",
+      "shangguan",
+      "sima-yi"
+    ]
+  },
+  "ziya": {
+    "counters": [
+      "agudo",
+      "chano",
+      "lady-sun",
+      "liang",
+      "milady",
+      "shi"
+    ],
+    "counteredBy": [
+      "kongming",
+      "mai-shiranui",
+      "shangguan",
+      "sima-yi"
+    ]
+  },
+  "shangguan": {
+    "counters": [
+      "flowborn-mage",
+      "gan-mo",
+      "milady",
+      "nuwa",
+      "ziya"
+    ],
+    "counteredBy": [
+      "daji",
+      "sima-yi"
+    ]
+  },
+  "kongming": {
+    "counters": [
+      "gan-mo",
+      "nuwa",
+      "wang-zhaojun",
+      "ziya"
+    ],
+    "counteredBy": [
+      "sima-yi",
+      "yuhuan"
+    ]
+  },
+  "daji": {
+    "counters": [
+      "mai-shiranui",
+      "shangguan"
+    ],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "gao": {
+    "counters": [
+      "milady"
+    ],
+    "counteredBy": [
+      "sima-yi",
+      "wang-zhaojun"
+    ]
+  },
+  "milady": {
+    "counters": [
+      "mai-shiranui",
+      "mozi"
+    ],
+    "counteredBy": [
+      "agudo",
+      "di-renjie",
+      "gao",
+      "liang",
+      "shangguan",
+      "sima-yi",
+      "ziya"
+    ]
+  },
+  "flowborn-mage": {
+    "counters": [],
+    "counteredBy": [
+      "shangguan",
+      "sima-yi"
+    ]
+  },
+  "sima-yi": {
+    "counters": [
+      "angela",
+      "da-qiao",
+      "daji",
+      "diaochan",
+      "dr-bian",
+      "flowborn-mage",
+      "gan-mo",
+      "gao",
+      "garuda",
+      "haya",
+      "heino",
+      "kongming",
+      "lady-zhen",
+      "liang",
+      "lorion",
+      "mai-shiranui",
+      "milady",
+      "mozi",
+      "nuwa",
+      "shangguan",
+      "shi",
+      "wang-zhaojun",
+      "xiao-qiao",
+      "yixing",
+      "yuhuan",
+      "zhou-yu",
+      "ziya"
+    ],
+    "counteredBy": []
+  },
+  "gao-changgong": {
+    "counters": [
+      "gan-mo"
+    ],
+    "counteredBy": []
+  },
+  "arthur": {
+    "counters": [],
+    "counteredBy": [
+      "arli"
+    ]
+  },
+  "fuzi": {
+    "counters": [
+      "arli",
+      "mai-shiranui"
+    ],
+    "counteredBy": []
+  },
+  "lady-zhen": {
+    "counters": [
+      "augran",
+      "dyadia"
+    ],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "da-qiao": {
+    "counters": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "dr-bian": {
+    "counters": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "yixing": {
+    "counters": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "zhou-yu": {
+    "counters": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "feyd": {
+    "counters": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "li-bai": {
+    "counters": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "lam": {
+    "counters": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "li-xin": {
+    "counters": [],
+    "counteredBy": [
+      "agudo"
+    ]
+  },
+  "liu-shan": {
+    "counters": [],
+    "counteredBy": [
+      "agudo"
     ]
   }
 }

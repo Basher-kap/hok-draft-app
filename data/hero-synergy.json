@@ -1,131 +1,187 @@
 {
   "zhang-fei": {
     "synergizesWith": [
+      "aoyin",
+      "arli",
       "charlotte",
       "chicha",
-      "aoyin",
-      "ukyo-tachibana"
+      "di-renjie",
+      "mai-shiranui",
+      "nuwa",
+      "ukyo-tachibana",
+      "yixing"
     ]
   },
   "lapulapu": {
     "synergizesWith": [
+      "arli",
+      "biron",
+      "daji",
+      "dharma",
+      "dian-wei",
+      "fatih",
+      "lady-zhen",
       "lorion",
-      "mai-shiranui"
+      "mai-shiranui",
+      "menki",
+      "mi-yue",
+      "umbrosa"
     ]
   },
   "aoyin": {
     "synergizesWith": [
       "biron",
-      "zhang-fei",
-      "lorion"
+      "lorion",
+      "zhang-fei"
     ]
   },
   "lorion": {
     "synergizesWith": [
-      "chano",
-      "lapulapu",
       "aoyin",
+      "chano",
       "charlotte",
-      "fatih"
+      "fatih",
+      "lapulapu"
     ]
   },
   "chano": {
     "synergizesWith": [
-      "lorion",
-      "pei",
+      "agudo",
       "dharma",
       "dyadia",
-      "haya"
+      "fatih",
+      "haya",
+      "lorion",
+      "milady",
+      "pei"
     ]
   },
   "biron": {
     "synergizesWith": [
       "aoyin",
+      "arli",
+      "daji",
+      "lapulapu",
+      "sakeer",
+      "umbrosa",
       "xiao-qiao",
       "zhang-fei"
     ]
   },
   "charlotte": {
     "synergizesWith": [
-      "zhang-fei",
+      "consort-yu",
+      "garuda",
+      "kui",
+      "lady-sun",
       "lapulapu",
       "lorion",
+      "menki",
+      "milady",
       "pei",
-      "garuda"
+      "wang-zhaojun",
+      "zhang-fei",
+      "zhuangzi"
     ]
   },
   "dharma": {
     "synergizesWith": [
+      "angela",
       "arli",
       "chano",
-      "ukyo-tachibana"
+      "di-renjie",
+      "dian-wei",
+      "hou-yi",
+      "lady-zhen",
+      "lapulapu",
+      "lian-po",
+      "ukyo-tachibana",
+      "yixing",
+      "yuhuan"
     ]
   },
   "guan-yu": {
     "synergizesWith": [
       "annette",
+      "aoyin",
+      "augran",
       "chicha",
       "haya",
-      "zhang-fei",
-      "aoyin",
-      "jing"
+      "jing",
+      "zhang-fei"
     ]
   },
   "chicha": {
     "synergizesWith": [
-      "zhang-fei",
-      "guan-yu",
-      "mai-shiranui",
       "annette",
-      "lorion"
+      "guan-yu",
+      "haya",
+      "lorion",
+      "mai-shiranui",
+      "yuhuan",
+      "zhang-fei"
     ]
   },
   "haya": {
     "synergizesWith": [
-      "zhang-fei",
-      "guan-yu",
-      "erin",
-      "chano",
-      "lapulapu",
       "aoyin",
-      "lian-po"
+      "chano",
+      "chicha",
+      "erin",
+      "guan-yu",
+      "lapulapu",
+      "lian-po",
+      "zhang-fei"
     ]
   },
   "arli": {
     "synergizesWith": [
-      "zhang-fei",
-      "dharma",
       "annette",
+      "biron",
+      "daji",
+      "dharma",
+      "dyadia",
       "flowborn-tank",
-      "haya"
+      "haya",
+      "lapulapu",
+      "sun-bin",
+      "umbrosa",
+      "yaria",
+      "yixing",
+      "zhang-fei",
+      "zhuangzi"
     ]
   },
   "dyadia": {
     "synergizesWith": [
-      "chano"
+      "arli",
+      "augran",
+      "chano",
+      "fatih"
     ]
   },
   "xiao-qiao": {
     "synergizesWith": [
-      "biron"
+      "biron",
+      "yuhuan"
     ]
   },
   "pei": {
     "synergizesWith": [
       "chano",
       "charlotte",
-      "lian-po",
       "consort-yu",
+      "lian-po",
       "lorion",
       "zhang-fei"
     ]
   },
   "ukyo-tachibana": {
     "synergizesWith": [
-      "zhang-fei",
-      "lapulapu",
       "dharma",
-      "erin"
+      "erin",
+      "lapulapu",
+      "zhang-fei"
     ]
   },
   "jing": {
@@ -137,12 +193,12 @@
   },
   "erin": {
     "synergizesWith": [
+      "guan-yu",
       "haya",
       "lapulapu",
       "ukyo-tachibana",
-      "zhang-fei",
-      "guan-yu",
-      "ying"
+      "ying",
+      "zhang-fei"
     ]
   },
   "flowborn-marksman": {
@@ -153,83 +209,125 @@
   },
   "mai-shiranui": {
     "synergizesWith": [
-      "lapulapu",
+      "augran",
       "chicha",
       "guan-yu",
-      "zhang-fei",
       "jing",
-      "ukyo-tachibana"
+      "lapulapu",
+      "ukyo-tachibana",
+      "zhang-fei"
     ]
   },
   "augran": {
     "synergizesWith": [
       "annette",
-      "nuwa",
       "aoyin",
-      "fatih"
+      "dyadia",
+      "fatih",
+      "guan-yu",
+      "mai-shiranui",
+      "nuwa"
     ]
   },
   "garuda": {
     "synergizesWith": [
       "charlotte",
+      "devara",
       "mozi",
-      "zhang-fei",
-      "devara"
+      "zhang-fei"
     ]
   },
   "ying": {
     "synergizesWith": [
-      "lapulapu",
       "aoyin",
-      "erin"
+      "erin",
+      "lapulapu"
     ]
   },
   "lian-po": {
     "synergizesWith": [
-      "pei",
       "aoyin",
-      "haya",
       "chano",
-      "charlotte"
+      "charlotte",
+      "dharma",
+      "di-renjie",
+      "dian-wei",
+      "haya",
+      "lady-zhen",
+      "pei"
     ]
   },
   "agudo": {
     "synergizesWith": [
+      "angela",
+      "annette",
       "aoyin",
+      "chano",
+      "fatih",
+      "hou-yi",
       "lorion",
-      "annette"
+      "mi-yue",
+      "milady",
+      "mozi"
     ]
   },
   "annette": {
     "synergizesWith": [
-      "guan-yu",
-      "arli",
-      "chicha",
-      "augran",
-      "haya",
       "agudo",
+      "arli",
+      "augran",
+      "chicha",
+      "guan-yu",
+      "haya",
       "ziya"
     ]
   },
   "mozi": {
     "synergizesWith": [
-      "garuda"
+      "agudo",
+      "angela",
+      "consort-yu",
+      "di-renjie",
+      "dian-wei",
+      "garuda",
+      "hou-yi",
+      "lady-zhen",
+      "mi-yue",
+      "milady",
+      "shouyue",
+      "wang-zhaojun"
     ]
   },
   "fatih": {
     "synergizesWith": [
-      "lorion",
+      "agudo",
       "aoyin",
       "augran",
+      "chano",
+      "da-qiao",
+      "dian-wei",
+      "dyadia",
+      "hou-yi",
       "lapulapu",
-      "dyadia"
+      "lorion",
+      "milady",
+      "yaria",
+      "yixing"
     ]
   },
   "angela": {
     "synergizesWith": [
-      "zhang-fei",
+      "agudo",
+      "dharma",
+      "hou-yi",
+      "kui",
+      "lady-sun",
       "lapulapu",
-      "pei"
+      "mi-yue",
+      "mozi",
+      "pei",
+      "umbrosa",
+      "zhang-fei"
     ]
   },
   "florentino": {
@@ -241,24 +339,31 @@
     "synergizesWith": [
       "aoyin",
       "augran",
+      "di-renjie",
+      "dolia",
+      "dun",
       "dyadia",
+      "meng-ya",
       "zhang-fei"
     ]
   },
   "yuhuan": {
     "synergizesWith": [
-      "zhang-fei",
+      "chicha",
       "dharma",
-      "guan-yu"
+      "guan-yu",
+      "hou-yi",
+      "xiao-qiao",
+      "zhang-fei"
     ]
   },
   "devara": {
     "synergizesWith": [
-      "zhang-fei",
+      "chano",
       "dyadia",
       "garuda",
       "haya",
-      "chano"
+      "zhang-fei"
     ]
   },
   "nezha": {
@@ -279,9 +384,9 @@
   },
   "luna": {
     "synergizesWith": [
-      "haya",
       "biron",
       "guan-yu",
+      "haya",
       "lapulapu",
       "zhang-fei"
     ]
@@ -294,34 +399,61 @@
   },
   "menki": {
     "synergizesWith": [
-      "charlotte",
       "chano",
-      "dyadia"
+      "charlotte",
+      "consort-yu",
+      "dyadia",
+      "kui",
+      "lady-sun",
+      "lapulapu",
+      "mayene",
+      "mi-yue",
+      "milady"
     ]
   },
   "yang-jian": {
     "synergizesWith": [
-      "dolia"
+      "dolia",
+      "liang"
     ]
   },
   "wang-zhaojun": {
     "synergizesWith": [
-      "liang",
       "biron",
-      "jing"
+      "charlotte",
+      "consort-yu",
+      "dian-wei",
+      "dolia",
+      "jing",
+      "liang",
+      "marco-polo",
+      "mozi",
+      "zhuangzi"
     ]
   },
   "dolia": {
     "synergizesWith": [
+      "dun",
+      "haya",
+      "hou-yi",
+      "lady-zhen",
+      "luara",
+      "luban-no-7",
+      "marco-polo",
+      "meng-ya",
+      "nuwa",
+      "wang-zhaojun",
       "yang-jian",
-      "haya"
+      "yixing"
     ]
   },
   "liang": {
     "synergizesWith": [
-      "wang-zhaojun",
       "biron",
-      "jing"
+      "jing",
+      "marco-polo",
+      "wang-zhaojun",
+      "yang-jian"
     ]
   },
   "ziya": {
@@ -332,12 +464,235 @@
   },
   "shouyue": {
     "synergizesWith": [
-      "lapulapu"
+      "lapulapu",
+      "mozi"
     ]
   },
   "consort-yu": {
     "synergizesWith": [
-      "pei"
+      "charlotte",
+      "menki",
+      "mozi",
+      "pei",
+      "wang-zhaojun",
+      "zhuangzi"
+    ]
+  },
+  "kui": {
+    "synergizesWith": [
+      "angela",
+      "charlotte",
+      "di-renjie",
+      "hou-yi",
+      "lady-sun",
+      "marco-polo",
+      "menki",
+      "milady",
+      "umbrosa"
+    ]
+  },
+  "dian-wei": {
+    "synergizesWith": [
+      "dharma",
+      "di-renjie",
+      "fatih",
+      "lady-zhen",
+      "lapulapu",
+      "lian-po",
+      "mozi",
+      "wang-zhaojun"
+    ]
+  },
+  "di-renjie": {
+    "synergizesWith": [
+      "dharma",
+      "dian-wei",
+      "kui",
+      "lady-zhen",
+      "lian-po",
+      "mozi",
+      "nuwa",
+      "zhang-fei"
+    ]
+  },
+  "hou-yi": {
+    "synergizesWith": [
+      "agudo",
+      "angela",
+      "dharma",
+      "dolia",
+      "dun",
+      "fatih",
+      "kui",
+      "lady-zhen",
+      "mi-yue",
+      "mozi",
+      "yixing",
+      "yuhuan"
+    ]
+  },
+  "lady-sun": {
+    "synergizesWith": [
+      "angela",
+      "charlotte",
+      "kui",
+      "menki",
+      "milady",
+      "ming",
+      "umbrosa"
+    ]
+  },
+  "marco-polo": {
+    "synergizesWith": [
+      "dolia",
+      "kui",
+      "liang",
+      "sun-ce",
+      "wang-zhaojun",
+      "yixing"
+    ]
+  },
+  "milady": {
+    "synergizesWith": [
+      "agudo",
+      "chano",
+      "charlotte",
+      "fatih",
+      "kui",
+      "lady-sun",
+      "menki",
+      "mozi"
+    ]
+  },
+  "daji": {
+    "synergizesWith": [
+      "arli",
+      "biron",
+      "lapulapu",
+      "umbrosa"
+    ]
+  },
+  "umbrosa": {
+    "synergizesWith": [
+      "angela",
+      "arli",
+      "biron",
+      "daji",
+      "kui",
+      "lady-sun",
+      "lapulapu"
+    ]
+  },
+  "lady-zhen": {
+    "synergizesWith": [
+      "dharma",
+      "di-renjie",
+      "dian-wei",
+      "dolia",
+      "dun",
+      "hou-yi",
+      "lapulapu",
+      "lian-po",
+      "mozi"
+    ]
+  },
+  "mi-yue": {
+    "synergizesWith": [
+      "agudo",
+      "angela",
+      "hou-yi",
+      "lapulapu",
+      "menki",
+      "mozi"
+    ]
+  },
+  "zhuangzi": {
+    "synergizesWith": [
+      "arli",
+      "charlotte",
+      "consort-yu",
+      "wang-zhaojun"
+    ]
+  },
+  "yixing": {
+    "synergizesWith": [
+      "arli",
+      "dharma",
+      "dolia",
+      "fatih",
+      "hou-yi",
+      "luara",
+      "luban-no-7",
+      "marco-polo",
+      "zhang-fei"
+    ]
+  },
+  "luban-no-7": {
+    "synergizesWith": [
+      "dolia",
+      "yixing"
+    ]
+  },
+  "luara": {
+    "synergizesWith": [
+      "dolia",
+      "yixing"
+    ]
+  },
+  "meng-ya": {
+    "synergizesWith": [
+      "dolia",
+      "nuwa"
+    ]
+  },
+  "dun": {
+    "synergizesWith": [
+      "dolia",
+      "hou-yi",
+      "lady-zhen",
+      "nuwa"
+    ]
+  },
+  "da-qiao": {
+    "synergizesWith": [
+      "fatih",
+      "fuzi"
+    ]
+  },
+  "fuzi": {
+    "synergizesWith": [
+      "da-qiao"
+    ]
+  },
+  "ming": {
+    "synergizesWith": [
+      "lady-sun"
+    ]
+  },
+  "yaria": {
+    "synergizesWith": [
+      "arli",
+      "fatih"
+    ]
+  },
+  "sun-bin": {
+    "synergizesWith": [
+      "arli"
+    ]
+  },
+  "sun-ce": {
+    "synergizesWith": [
+      "marco-polo"
+    ]
+  },
+  "mayene": {
+    "synergizesWith": [
+      "menki"
+    ]
+  },
+  "sakeer": {
+    "synergizesWith": [
+      "biron"
     ]
   }
 }
