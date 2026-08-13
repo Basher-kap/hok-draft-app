@@ -1,0 +1,343 @@
+{
+  "zhang-fei": {
+    "synergizesWith": [
+      "charlotte",
+      "chicha",
+      "aoyin",
+      "ukyo-tachibana"
+    ]
+  },
+  "lapulapu": {
+    "synergizesWith": [
+      "lorion",
+      "mai-shiranui"
+    ]
+  },
+  "aoyin": {
+    "synergizesWith": [
+      "biron",
+      "zhang-fei",
+      "lorion"
+    ]
+  },
+  "lorion": {
+    "synergizesWith": [
+      "chano",
+      "lapulapu",
+      "aoyin",
+      "charlotte",
+      "fatih"
+    ]
+  },
+  "chano": {
+    "synergizesWith": [
+      "lorion",
+      "pei",
+      "dharma",
+      "dyadia",
+      "haya"
+    ]
+  },
+  "biron": {
+    "synergizesWith": [
+      "aoyin",
+      "xiao-qiao",
+      "zhang-fei"
+    ]
+  },
+  "charlotte": {
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "lorion",
+      "pei",
+      "garuda"
+    ]
+  },
+  "dharma": {
+    "synergizesWith": [
+      "arli",
+      "chano",
+      "ukyo-tachibana"
+    ]
+  },
+  "guan-yu": {
+    "synergizesWith": [
+      "annette",
+      "chicha",
+      "haya",
+      "zhang-fei",
+      "aoyin",
+      "jing"
+    ]
+  },
+  "chicha": {
+    "synergizesWith": [
+      "zhang-fei",
+      "guan-yu",
+      "mai-shiranui",
+      "annette",
+      "lorion"
+    ]
+  },
+  "haya": {
+    "synergizesWith": [
+      "zhang-fei",
+      "guan-yu",
+      "erin",
+      "chano",
+      "lapulapu",
+      "aoyin",
+      "lian-po"
+    ]
+  },
+  "arli": {
+    "synergizesWith": [
+      "zhang-fei",
+      "dharma",
+      "annette",
+      "flowborn-tank",
+      "haya"
+    ]
+  },
+  "dyadia": {
+    "synergizesWith": [
+      "chano"
+    ]
+  },
+  "xiao-qiao": {
+    "synergizesWith": [
+      "biron"
+    ]
+  },
+  "pei": {
+    "synergizesWith": [
+      "chano",
+      "charlotte",
+      "lian-po",
+      "consort-yu",
+      "lorion",
+      "zhang-fei"
+    ]
+  },
+  "ukyo-tachibana": {
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "dharma",
+      "erin"
+    ]
+  },
+  "jing": {
+    "synergizesWith": [
+      "chano",
+      "guan-yu",
+      "zhang-fei"
+    ]
+  },
+  "erin": {
+    "synergizesWith": [
+      "haya",
+      "lapulapu",
+      "ukyo-tachibana",
+      "zhang-fei",
+      "guan-yu",
+      "ying"
+    ]
+  },
+  "flowborn-marksman": {
+    "synergizesWith": [
+      "charlotte",
+      "dharma"
+    ]
+  },
+  "mai-shiranui": {
+    "synergizesWith": [
+      "lapulapu",
+      "chicha",
+      "guan-yu",
+      "zhang-fei",
+      "jing",
+      "ukyo-tachibana"
+    ]
+  },
+  "augran": {
+    "synergizesWith": [
+      "annette",
+      "nuwa",
+      "aoyin",
+      "fatih"
+    ]
+  },
+  "garuda": {
+    "synergizesWith": [
+      "charlotte",
+      "mozi",
+      "zhang-fei",
+      "devara"
+    ]
+  },
+  "ying": {
+    "synergizesWith": [
+      "lapulapu",
+      "aoyin",
+      "erin"
+    ]
+  },
+  "lian-po": {
+    "synergizesWith": [
+      "pei",
+      "aoyin",
+      "haya",
+      "chano",
+      "charlotte"
+    ]
+  },
+  "agudo": {
+    "synergizesWith": [
+      "aoyin",
+      "lorion",
+      "annette"
+    ]
+  },
+  "annette": {
+    "synergizesWith": [
+      "guan-yu",
+      "arli",
+      "chicha",
+      "augran",
+      "haya",
+      "agudo",
+      "ziya"
+    ]
+  },
+  "mozi": {
+    "synergizesWith": [
+      "garuda"
+    ]
+  },
+  "fatih": {
+    "synergizesWith": [
+      "lorion",
+      "aoyin",
+      "augran",
+      "lapulapu",
+      "dyadia"
+    ]
+  },
+  "angela": {
+    "synergizesWith": [
+      "zhang-fei",
+      "lapulapu",
+      "pei"
+    ]
+  },
+  "florentino": {
+    "synergizesWith": [
+      "haya"
+    ]
+  },
+  "nuwa": {
+    "synergizesWith": [
+      "aoyin",
+      "augran",
+      "dyadia",
+      "zhang-fei"
+    ]
+  },
+  "yuhuan": {
+    "synergizesWith": [
+      "zhang-fei",
+      "dharma",
+      "guan-yu"
+    ]
+  },
+  "devara": {
+    "synergizesWith": [
+      "zhang-fei",
+      "dyadia",
+      "garuda",
+      "haya",
+      "chano"
+    ]
+  },
+  "nezha": {
+    "synergizesWith": [
+      "biron"
+    ]
+  },
+  "ata": {
+    "synergizesWith": [
+      "dyadia"
+    ]
+  },
+  "flowborn-tank": {
+    "synergizesWith": [
+      "arli",
+      "biron"
+    ]
+  },
+  "luna": {
+    "synergizesWith": [
+      "haya",
+      "biron",
+      "guan-yu",
+      "lapulapu",
+      "zhang-fei"
+    ]
+  },
+  "kaizer": {
+    "synergizesWith": [
+      "aoyin",
+      "lorion"
+    ]
+  },
+  "menki": {
+    "synergizesWith": [
+      "charlotte",
+      "chano",
+      "dyadia"
+    ]
+  },
+  "yang-jian": {
+    "synergizesWith": [
+      "dolia"
+    ]
+  },
+  "wang-zhaojun": {
+    "synergizesWith": [
+      "liang",
+      "biron",
+      "jing"
+    ]
+  },
+  "dolia": {
+    "synergizesWith": [
+      "yang-jian",
+      "haya"
+    ]
+  },
+  "liang": {
+    "synergizesWith": [
+      "wang-zhaojun",
+      "biron",
+      "jing"
+    ]
+  },
+  "ziya": {
+    "synergizesWith": [
+      "annette",
+      "chicha"
+    ]
+  },
+  "shouyue": {
+    "synergizesWith": [
+      "lapulapu"
+    ]
+  },
+  "consort-yu": {
+    "synergizesWith": [
+      "pei"
+    ]
+  }
+}

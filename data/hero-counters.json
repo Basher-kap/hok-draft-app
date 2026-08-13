@@ -1,0 +1,537 @@
+{
+  "zhang-fei": {
+    "counters": [
+      "lapulapu",
+      "biron",
+      "dyadia",
+      "florentino",
+      "xiao-qiao"
+    ],
+    "counteredBy": []
+  },
+  "lapulapu": {
+    "counters": [],
+    "counteredBy": [
+      "zhang-fei",
+      "lorion",
+      "dyadia",
+      "ukyo-tachibana",
+      "chicha",
+      "charlotte"
+    ]
+  },
+  "aoyin": {
+    "counters": [
+      "biron"
+    ],
+    "counteredBy": [
+      "arli",
+      "charlotte"
+    ]
+  },
+  "lorion": {
+    "counters": [
+      "lapulapu",
+      "biron",
+      "chano",
+      "xiao-qiao"
+    ],
+    "counteredBy": [
+      "guan-yu",
+      "chicha"
+    ]
+  },
+  "chano": {
+    "counters": [
+      "dharma"
+    ],
+    "counteredBy": [
+      "lorion",
+      "biron"
+    ]
+  },
+  "biron": {
+    "counters": [
+      "chano"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "charlotte",
+      "zhang-fei",
+      "lorion",
+      "haya",
+      "chicha",
+      "lapulapu"
+    ]
+  },
+  "charlotte": {
+    "counters": [
+      "biron",
+      "ukyo-tachibana",
+      "lapulapu",
+      "aoyin",
+      "guan-yu",
+      "haya",
+      "dyadia"
+    ],
+    "counteredBy": []
+  },
+  "dharma": {
+    "counters": [
+      "zhang-fei",
+      "aoyin"
+    ],
+    "counteredBy": [
+      "angela",
+      "dyadia",
+      "chano",
+      "lapulapu"
+    ]
+  },
+  "guan-yu": {
+    "counters": [
+      "lorion",
+      "lapulapu",
+      "biron"
+    ],
+    "counteredBy": [
+      "ying",
+      "zhang-fei",
+      "charlotte",
+      "dharma"
+    ]
+  },
+  "chicha": {
+    "counters": [
+      "lapulapu",
+      "lorion",
+      "biron"
+    ],
+    "counteredBy": [
+      "erin",
+      "dyadia",
+      "zhang-fei"
+    ]
+  },
+  "haya": {
+    "counters": [
+      "agudo",
+      "biron",
+      "lapulapu",
+      "fatih",
+      "garuda",
+      "flowborn-marksman"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ]
+  },
+  "arli": {
+    "counters": [
+      "aoyin",
+      "lorion"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "xiao-qiao",
+      "ying",
+      "mai-shiranui"
+    ]
+  },
+  "dyadia": {
+    "counters": [
+      "lapulapu",
+      "chicha",
+      "dharma",
+      "xiao-qiao",
+      "guan-yu",
+      "jing"
+    ],
+    "counteredBy": [
+      "zhang-fei"
+    ]
+  },
+  "xiao-qiao": {
+    "counters": [
+      "arli"
+    ],
+    "counteredBy": [
+      "lorion",
+      "zhang-fei",
+      "aoyin",
+      "dyadia",
+      "charlotte",
+      "chano",
+      "yuhuan"
+    ]
+  },
+  "pei": {
+    "counters": [
+      "zhang-fei",
+      "arli"
+    ],
+    "counteredBy": [
+      "ukyo-tachibana",
+      "lapulapu",
+      "dharma",
+      "lorion",
+      "mai-shiranui"
+    ]
+  },
+  "ukyo-tachibana": {
+    "counters": [
+      "pei",
+      "lapulapu",
+      "xiao-qiao",
+      "florentino",
+      "aoyin"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "zhang-fei",
+      "garuda"
+    ]
+  },
+  "jing": {
+    "counters": [
+      "biron",
+      "chano",
+      "charlotte",
+      "lorion",
+      "mozi"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "dyadia",
+      "flowborn-tank"
+    ]
+  },
+  "erin": {
+    "counters": [
+      "chicha",
+      "flowborn-marksman",
+      "lorion",
+      "agudo"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "guan-yu"
+    ]
+  },
+  "flowborn-marksman": {
+    "counters": [],
+    "counteredBy": [
+      "aoyin",
+      "haya",
+      "erin",
+      "lapulapu"
+    ]
+  },
+  "mai-shiranui": {
+    "counters": [
+      "lorion",
+      "chano",
+      "yuhuan",
+      "arli",
+      "dyadia",
+      "pei",
+      "charlotte"
+    ],
+    "counteredBy": [
+      "zhang-fei"
+    ]
+  },
+  "augran": {
+    "counters": [
+      "aoyin",
+      "lapulapu",
+      "dharma",
+      "lorion"
+    ],
+    "counteredBy": []
+  },
+  "garuda": {
+    "counters": [
+      "lorion",
+      "ukyo-tachibana",
+      "lian-po"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "haya",
+      "dharma"
+    ]
+  },
+  "ying": {
+    "counters": [
+      "guan-yu",
+      "arli",
+      "agudo"
+    ],
+    "counteredBy": [
+      "aoyin",
+      "haya",
+      "jing",
+      "zhang-fei"
+    ]
+  },
+  "lian-po": {
+    "counters": [
+      "aoyin",
+      "charlotte",
+      "biron"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "zhang-fei",
+      "garuda"
+    ]
+  },
+  "agudo": {
+    "counters": [
+      "biron",
+      "lapulapu",
+      "arli",
+      "charlotte",
+      "dharma"
+    ],
+    "counteredBy": [
+      "haya",
+      "zhang-fei",
+      "chano"
+    ]
+  },
+  "annette": {
+    "counters": [
+      "mozi",
+      "lapulapu",
+      "ata",
+      "arli",
+      "biron",
+      "chicha"
+    ],
+    "counteredBy": []
+  },
+  "mozi": {
+    "counters": [
+      "lorion"
+    ],
+    "counteredBy": [
+      "annette",
+      "arli",
+      "chano",
+      "dharma",
+      "jing"
+    ]
+  },
+  "fatih": {
+    "counters": [
+      "dharma",
+      "lapulapu",
+      "zhang-fei",
+      "chicha"
+    ],
+    "counteredBy": [
+      "haya"
+    ]
+  },
+  "angela": {
+    "counters": [
+      "dharma",
+      "aoyin",
+      "xiao-qiao",
+      "zhang-fei"
+    ],
+    "counteredBy": [
+      "chano",
+      "charlotte",
+      "lorion"
+    ]
+  },
+  "florentino": {
+    "counters": [
+      "charlotte"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "aoyin",
+      "chicha",
+      "devara",
+      "ukyo-tachibana"
+    ]
+  },
+  "nuwa": {
+    "counters": [
+      "biron",
+      "chano",
+      "haya",
+      "jing"
+    ],
+    "counteredBy": [
+      "charlotte",
+      "guan-yu"
+    ]
+  },
+  "yuhuan": {
+    "counters": [
+      "xiao-qiao",
+      "mozi",
+      "biron",
+      "chicha"
+    ],
+    "counteredBy": [
+      "mai-shiranui"
+    ]
+  },
+  "devara": {
+    "counters": [
+      "chicha",
+      "florentino",
+      "lapulapu",
+      "lorion",
+      "ukyo-tachibana",
+      "agudo",
+      "zhang-fei"
+    ],
+    "counteredBy": []
+  },
+  "nezha": {
+    "counters": [
+      "lorion",
+      "chano",
+      "flowborn-marksman",
+      "lapulapu"
+    ],
+    "counteredBy": [
+      "zhang-fei",
+      "fatih",
+      "ukyo-tachibana"
+    ]
+  },
+  "ata": {
+    "counters": [
+      "flowborn-marksman"
+    ],
+    "counteredBy": [
+      "lapulapu",
+      "guan-yu",
+      "annette",
+      "haya"
+    ]
+  },
+  "flowborn-tank": {
+    "counters": [
+      "jing",
+      "annette",
+      "lian-po"
+    ],
+    "counteredBy": [
+      "guan-yu"
+    ]
+  },
+  "luna": {
+    "counters": [
+      "aoyin"
+    ],
+    "counteredBy": [
+      "lorion",
+      "biron",
+      "dharma",
+      "erin",
+      "lapulapu",
+      "ying"
+    ]
+  },
+  "kaizer": {
+    "counters": [
+      "chicha",
+      "dharma",
+      "zhang-fei"
+    ],
+    "counteredBy": []
+  },
+  "menki": {
+    "counters": [
+      "angela",
+      "aoyin",
+      "lapulapu",
+      "biron"
+    ],
+    "counteredBy": [
+      "arli",
+      "augran"
+    ]
+  },
+  "yang-jian": {
+    "counters": [
+      "flowborn-marksman",
+      "zhang-fei"
+    ],
+    "counteredBy": []
+  },
+  "umbrosa": {
+    "counters": [],
+    "counteredBy": [
+      "guan-yu"
+    ]
+  },
+  "wang-zhaojun": {
+    "counters": [
+      "aoyin",
+      "lorion"
+    ],
+    "counteredBy": [
+      "haya"
+    ]
+  },
+  "dolia": {
+    "counters": [
+      "flowborn-marksman",
+      "zhang-fei"
+    ],
+    "counteredBy": []
+  },
+  "liang": {
+    "counters": [
+      "aoyin"
+    ],
+    "counteredBy": [
+      "haya"
+    ]
+  },
+  "zilong": {
+    "counters": [],
+    "counteredBy": [
+      "biron",
+      "chano",
+      "dyadia"
+    ]
+  },
+  "musashi": {
+    "counters": [
+      "augran"
+    ],
+    "counteredBy": [
+      "agudo"
+    ]
+  },
+  "bai-qi": {
+    "counters": [],
+    "counteredBy": [
+      "lorion"
+    ]
+  },
+  "consort-yu": {
+    "counters": [
+      "florentino",
+      "lapulapu"
+    ],
+    "counteredBy": []
+  },
+  "xiang-yu": {
+    "counters": [],
+    "counteredBy": [
+      "guan-yu"
+    ]
+  }
+}
