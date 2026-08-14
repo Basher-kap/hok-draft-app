@@ -4,23 +4,32 @@ import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
 // Ranked list, highest priority first (index 0 = top suggestion to ban/pick).
-export default function AISuggestPanel({ suggestions, phase, onSelect, disabled }) {
+// isBlindPick: true only for the draft's very first pick (no board info at
+// all yet) - changes the subtitle so it's clear why the ranking leans on
+// tournament stats/tier instead of counters this one time.
+export default function AISuggestPanel({ suggestions, phase, onSelect, disabled, isBlindPick = false }) {
   if (!suggestions || suggestions.length === 0) return null;
 
   const accent = phase === "ban" ? "#ef4444" : "#f5c451";
+  const subtitle =
+    phase === "ban"
+      ? "ranked by tier + KWC 2026 presence/win rate"
+      : isBlindPick
+      ? "no board info yet — ranked by tier + proven tournament strength"
+      : "ranked by tier, lane gaps, counters & KWC 2026 stats";
 
   return (
     <div
       className="rounded-lg p-3 mb-3"
       style={{ background: "#161920", border: `1px solid ${accent}33` }}
     >
-      <div className="flex items-center gap-1.5 mb-2">
+      <div className="flex items-center gap-1.5 mb-2 flex-wrap">
         <Sparkles size={14} color={accent} />
         <span className="font-display font-bold text-xs tracking-wide" style={{ color: accent }}>
            {phase === "ban" ? "BANNING" : "PICKING"}
         </span>
         <span className="font-body text-[11px] text-gray-500">
-          {suggestions.length} ranked &mdash; #1 = highest priority
+          {suggestions.length} ranked &mdash; #1 = highest priority &middot; {subtitle}
         </span>
       </div>
 

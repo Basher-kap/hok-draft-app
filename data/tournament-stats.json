@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "source": "Liquipedia — Honor of Kings World Cup 2026 Statistics",
+    "sourceUrl": "https://liquipedia.net/honorofkings/Honor_of_Kings_World_Cup/2026/Statistics",
+    "totalGames": 0,
+    "lastUpdated": null,
+    "note": "EMPTY TEMPLATE. totalGames = the games-played count from the Liquipedia Statistics page (used as the denominator for pick/ban rate). Each entry under `heroes` is { picks, bans, wins } as RAW COUNTS, not percentages — rates are derived in lib/heroes.js so there's one source of truth. A hero with no entry here simply gets zero stat-bonus in the AI suggester, same pattern as the counters/synergy data. Fill this in from the Liquipedia table, then set lastUpdated to today's date."
+  },
+  "heroes": {}
+}

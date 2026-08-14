@@ -29,7 +29,45 @@ lib/
   rankDraft.js               Rank Draft turn-order state machine
 data/
   heroes.json                116 heroes, international server (name, tier, roles, image, etc.)
+  tournament-stats.json      Real pick/ban/win-rate data from a HoK esports tournament (empty
+                              template until populated - see "Tournament stats" below)
 ```
+
+## Blue Side / Red Side
+
+Team A always leads the snake pick order (`PICK_ORDER` in `lib/rankDraft.js`), so it's
+labeled **Blue Side / First Pick** and Team B is **Red Side / Counter Pick**
+(`SIDE_META` in the same file). This is just a naming layer - the state machine
+doesn't change.
+
+Because the pick order is `A,B,B,A,A,B,B,A,A,B`, only the very first pick of the whole
+draft (Blue's opener) is truly blind - every pick after that already has at least one
+enemy hero on the board. The AI suggester (`lib/recommendation.js`) detects that one
+blind moment automatically (no enemy picks AND no team picks yet) and, for that pick
+only, leans harder on tier + tournament win rate/presence and adds a small penalty for
+heroes with a lot of known hard counters, since revealing a heavily-counterable hero
+into the unknown is the riskiest opening move. Every other pick already gets real
+counter/synergy signal from the board, so Red's structural "always reacts to something"
+advantage falls out of that data naturally - no extra hardcoding needed.
+
+## Tournament stats
+
+`data/tournament-stats.json` holds real pick/ban/win counts from a tournament (source
+noted in `meta.source`/`meta.sourceUrl` in that file). It ships as an empty template -
+`meta.totalGames: 0` and `heroes: {}` - so the AI suggester's stat bonus is inert until
+it's populated. To fill it in:
+
+1. Set `meta.totalGames` to the tournament's total games-played count.
+2. For each hero, add `"slug": { "picks": N, "bans": N, "wins": N }` as **raw counts**,
+   not percentages - `lib/heroes.js` (`tournamentStatsFor`) derives pick rate, ban rate,
+   presence (pick+ban rate), and win rate from those counts, so there's one source of
+   truth.
+3. Set `meta.lastUpdated`.
+
+A hero with no entry gets zero stat bonus, same as heroes missing from the counter/synergy
+data - never penalized or guessed at. Win rate only affects scoring once a hero has at
+least 5 recorded picks (`MIN_SAMPLE_GAMES` in `lib/recommendation.js`), so a 1-2 game
+sample doesn't swing the ranking.
 
 ## Rank Draft rules currently implemented
 

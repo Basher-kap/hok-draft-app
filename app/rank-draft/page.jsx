@@ -86,14 +86,18 @@ export default function RankDraftPage() {
     return isHeroBannedByTeam(state, otherTeam, hero.slug) ? otherTeam : null;
   }
 
+  const teamPickEntries = state.picks[step.team];
+  const enemyPickEntries = state.picks[step.team === "A" ? "B" : "A"];
+  const isBlindPick = step.phase === "pick" && teamPickEntries.length === 0 && enemyPickEntries.length === 0;
+
   const suggestions =
     step.phase === "complete"
       ? []
       : getSuggestions({
           availableHeroes: HEROES.filter((h) => isSelectable(state, step, h.slug)),
           phase: step.phase,
-          teamPickEntries: state.picks[step.team],
-          enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
+          teamPickEntries,
+          enemyPickEntries,
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
         });
@@ -182,9 +186,9 @@ export default function RankDraftPage() {
         <TurnIndicator step={step} totalBans={TOTAL_BANS} totalPicks={TOTAL_PICKS} />
 
         <div className="grid grid-cols-[1fr_auto_1fr] gap-4 mb-6 items-start">
-          <TeamPanel side="A" name="TEAM A" bans={state.bans.A} picks={state.picks.A} activeStep={step} />
+          <TeamPanel side="A" name="TEAM A · BLUE" bans={state.bans.A} picks={state.picks.A} activeStep={step} />
           <div className="w-px self-stretch" style={{ background: "rgba(255,255,255,0.08)" }} />
-          <TeamPanel side="B" name="TEAM B" bans={state.bans.B} picks={state.picks.B} activeStep={step} />
+          <TeamPanel side="B" name="TEAM B · RED" bans={state.bans.B} picks={state.picks.B} activeStep={step} />
         </div>
 
         <div
@@ -196,6 +200,7 @@ export default function RankDraftPage() {
             phase={step.phase}
             onSelect={handleSelect}
             disabled={step.phase === "complete"}
+            isBlindPick={isBlindPick}
           />
           <HeroGrid
             getStatus={getStatus}
