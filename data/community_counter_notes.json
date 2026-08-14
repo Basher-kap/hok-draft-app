@@ -493,5 +493,280 @@
     "a": "lapulapu",
     "b": "mozi",
     "note": "interrupts ultimate"
+  },
+  {
+    "a": "arli",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "arli",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "di-renjie",
+    "b": "marco-polo",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "di-renjie",
+    "b": "yaria",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "garo",
+    "b": "marco-polo",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "yaria",
+    "note": "outranges"
+  },
+  {
+    "a": "agudo",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "agudo",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "musashi",
+    "b": "hou-yi",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "musashi",
+    "b": "cai-yan",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "kaizer",
+    "b": "hou-yi",
+    "note": "damage reduction"
+  },
+  {
+    "a": "kaizer",
+    "b": "cai-yan",
+    "note": "damage reduction"
+  },
+  {
+    "a": "guan-yu",
+    "b": "hou-yi",
+    "note": "displacement"
+  },
+  {
+    "a": "guan-yu",
+    "b": "cai-yan",
+    "note": "displacement"
+  },
+  {
+    "a": "sun-ce",
+    "b": "hou-yi",
+    "note": "continuous control"
+  },
+  {
+    "a": "sun-ce",
+    "b": "cai-yan",
+    "note": "continuous control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "hou-yi",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "cai-yan",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "guiguzi",
+    "b": "hou-yi",
+    "note": "group speed"
+  },
+  {
+    "a": "guiguzi",
+    "b": "cai-yan",
+    "note": "group speed"
+  },
+  {
+    "a": "garo",
+    "b": "hou-yi",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "cai-yan",
+    "note": "outranges"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "hou-yi",
+    "note": "early burst"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "cai-yan",
+    "note": "early burst"
+  },
+  {
+    "a": "garo",
+    "b": "erin",
+    "note": "outranges"
+  },
+  {
+    "a": "hou-yi",
+    "b": "erin",
+    "note": "outdamages, controls"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "augran",
+    "note": "freezes dashless Augran"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "dyadia",
+    "note": "freezes dashless Augran"
+  },
+  {
+    "a": "arli",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "arli",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "di-renjie",
+    "b": "marco-polo",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "di-renjie",
+    "b": "yaria",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "garo",
+    "b": "marco-polo",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "yaria",
+    "note": "outranges"
+  },
+  {
+    "a": "agudo",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "agudo",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "musashi",
+    "b": "hou-yi",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "musashi",
+    "b": "cai-yan",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "kaizer",
+    "b": "hou-yi",
+    "note": "damage reduction"
+  },
+  {
+    "a": "kaizer",
+    "b": "cai-yan",
+    "note": "damage reduction"
+  },
+  {
+    "a": "guan-yu",
+    "b": "hou-yi",
+    "note": "displacement"
+  },
+  {
+    "a": "guan-yu",
+    "b": "cai-yan",
+    "note": "displacement"
+  },
+  {
+    "a": "sun-ce",
+    "b": "hou-yi",
+    "note": "continuous control"
+  },
+  {
+    "a": "sun-ce",
+    "b": "cai-yan",
+    "note": "continuous control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "hou-yi",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "cai-yan",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "guiguzi",
+    "b": "hou-yi",
+    "note": "group speed"
+  },
+  {
+    "a": "guiguzi",
+    "b": "cai-yan",
+    "note": "group speed"
+  },
+  {
+    "a": "garo",
+    "b": "hou-yi",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "cai-yan",
+    "note": "outranges"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "hou-yi",
+    "note": "early burst"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "cai-yan",
+    "note": "early burst"
+  },
+  {
+    "a": "garo",
+    "b": "erin",
+    "note": "outranges"
+  },
+  {
+    "a": "hou-yi",
+    "b": "erin",
+    "note": "outdamage, control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "augran",
+    "note": "freezes dashless Augran"
   }
 ]

@@ -82,7 +82,9 @@
   },
   "guan-yu": {
     "strongAgainst": [
-      "heino"
+      "cai-yan",
+      "heino",
+      "hou-yi"
     ],
     "counteredBy": [
       "sun-ce"
@@ -96,7 +98,9 @@
   },
   "sun-ce": {
     "strongAgainst": [
-      "guan-yu"
+      "cai-yan",
+      "guan-yu",
+      "hou-yi"
     ],
     "counteredBy": [
       "ata",
@@ -132,7 +136,10 @@
     ]
   },
   "musashi": {
-    "strongAgainst": [],
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi"
+    ],
     "counteredBy": [
       "menki"
     ]
@@ -161,7 +168,9 @@
       "augran",
       "li-xin",
       "liu-shan",
-      "milady"
+      "marco-polo",
+      "milady",
+      "yaria"
     ],
     "counteredBy": [
       "ziya"
@@ -233,6 +242,8 @@
   },
   "kaizer": {
     "strongAgainst": [
+      "cai-yan",
+      "hou-yi",
       "liu-bei"
     ],
     "counteredBy": [
@@ -299,7 +310,15 @@
       "zhang-fei"
     ],
     "counteredBy": [
-      "dyadia"
+      "dyadia",
+      "garo",
+      "guan-yu",
+      "guiguzi",
+      "kaizer",
+      "lady-zhen",
+      "luban-no-7",
+      "musashi",
+      "sun-ce"
     ]
   },
   "dyadia": {
@@ -334,6 +353,10 @@
   "yaria": {
     "strongAgainst": [],
     "counteredBy": [
+      "agudo",
+      "arli",
+      "di-renjie",
+      "garo",
       "zhang-fei"
     ]
   },
@@ -397,7 +420,8 @@
       "arli",
       "chano",
       "marco-polo",
-      "milady"
+      "milady",
+      "yaria"
     ],
     "counteredBy": [
       "flowborn-marksman",
@@ -412,7 +436,9 @@
       "bai-qi",
       "dun",
       "lian-po",
-      "menki"
+      "marco-polo",
+      "menki",
+      "yaria"
     ],
     "counteredBy": [
       "chano",
@@ -445,7 +471,10 @@
       "hou-yi"
     ],
     "counteredBy": [
-      "di-renjie"
+      "agudo",
+      "arli",
+      "di-renjie",
+      "garo"
     ]
   },
   "chano": {
@@ -480,6 +509,7 @@
   },
   "luban-no-7": {
     "strongAgainst": [
+      "cai-yan",
       "hou-yi"
     ],
     "counteredBy": [
@@ -489,22 +519,33 @@
   },
   "hou-yi": {
     "strongAgainst": [
-      "arli"
+      "arli",
+      "erin"
     ],
     "counteredBy": [
       "flowborn-marksman",
       "garo",
+      "guan-yu",
+      "guiguzi",
+      "kaizer",
+      "lady-zhen",
       "luban-no-7",
       "marco-polo",
-      "mayene"
+      "mayene",
+      "musashi",
+      "sun-ce"
     ]
   },
   "garo": {
     "strongAgainst": [
       "arli",
+      "cai-yan",
       "di-renjie",
+      "erin",
       "flowborn-marksman",
-      "hou-yi"
+      "hou-yi",
+      "marco-polo",
+      "yaria"
     ],
     "counteredBy": [
       "sima-yi"
@@ -551,6 +592,8 @@
       "consort-yu"
     ],
     "counteredBy": [
+      "garo",
+      "hou-yi",
       "huang-zhong"
     ]
   },
@@ -794,7 +837,9 @@
   "lady-zhen": {
     "strongAgainst": [
       "augran",
-      "dyadia"
+      "cai-yan",
+      "dyadia",
+      "hou-yi"
     ],
     "counteredBy": []
   },
@@ -860,6 +905,13 @@
   "lapulapu": {
     "strongAgainst": [
       "mozi"
+    ],
+    "counteredBy": []
+  },
+  "guiguzi": {
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi"
     ],
     "counteredBy": []
   }

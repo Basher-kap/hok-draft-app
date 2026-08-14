@@ -637,5 +637,208 @@
       "yuhuan"
     ],
     "note": null
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dyadia"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "arli",
+      "zhang-fei"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "dyadia"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "sakeer"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dyadia"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "arli",
+      "zhang-fei"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "dyadia"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "sakeer"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "lady-sun"
+    ],
+    "note": "pairs early spikes"
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "marco-polo"
+    ],
+    "note": "pairs early spikes"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "garo",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "flowborn-marksman",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "garo",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "flowborn-marksman",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mozi",
+      "shouyue"
+    ],
+    "note": "follow-up damage"
+  },
+  {
+    "heroes": [
+      "angela",
+      "sun-ce"
+    ],
+    "note": "riding in tandem"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "sun-ce"
+    ],
+    "note": "riding in tandem"
+  },
+  {
+    "heroes": [
+      "sun-ce",
+      "wang-zhaojun"
+    ],
+    "note": "riding in tandem"
   }
 ]
