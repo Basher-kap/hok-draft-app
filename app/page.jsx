@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Swords, Trophy } from "lucide-react";
+import { Swords, Trophy, ListTree } from "lucide-react";
 
 function ModeCard({ href, icon, title, phases, disabled }) {
   const Comp = disabled ? "div" : Link;
@@ -81,6 +81,15 @@ export default function HomePage() {
           disabled
         />
       </div>
+
+      <Link
+        href="/tier-list"
+        className="flex items-center gap-2 mt-6 font-display font-semibold text-sm tracking-wide transition-colors"
+        style={{ color: "#8a94a6" }}
+      >
+        <ListTree size={15} />
+        Customize your tier list
+      </Link>
     </div>
   );
 }

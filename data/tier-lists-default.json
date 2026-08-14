@@ -1,0 +1,197 @@
+{
+  "Clash Lane": {
+    "S": [
+      "florentino"
+    ],
+    "A": [
+      "guan-yu",
+      "biron",
+      "charlotte",
+      "dharma",
+      "sun-ce",
+      "fatih",
+      "fuzi"
+    ],
+    "B": [
+      "lian-po",
+      "bai-qi",
+      "ata",
+      "nezha",
+      "yango",
+      "mi-yue",
+      "mulan",
+      "li-xin",
+      "mayene",
+      "umbrosa"
+    ],
+    "C": [
+      "devara",
+      "lu-bu",
+      "allain",
+      "liu-bang",
+      "xiang-yu"
+    ],
+    "D": [
+      "arthur",
+      "wuyan"
+    ]
+  },
+  "Jungle": {
+    "S": [
+      "pei",
+      "jing",
+      "luna",
+      "augran"
+    ],
+    "A": [
+      "feyd",
+      "agudo",
+      "yang-jian",
+      "ying",
+      "musashi",
+      "kaizer",
+      "ukyo-tachibana",
+      "nezha",
+      "wukong",
+      "yao"
+    ],
+    "B": [
+      "xuance",
+      "lam",
+      "han-xin",
+      "nakoruru",
+      "ata",
+      "dun",
+      "menki",
+      "flowborn-tank",
+      "sima-yi",
+      "umbrosa"
+    ],
+    "C": [
+      "mi-yue",
+      "gao-changgong",
+      "athena",
+      "liu-bei",
+      "dian-wei"
+    ],
+    "D": [
+      "arke",
+      "li-bai",
+      "fang",
+      "wuyan",
+      "cirrus"
+    ]
+  },
+  "Mid": {
+    "S": [
+      "mai-shiranui",
+      "haya",
+      "nuwa"
+    ],
+    "A": [
+      "lorion",
+      "wang-zhaojun",
+      "xiao-qiao",
+      "angela",
+      "garuda",
+      "lady-zhen",
+      "yuhuan",
+      "shi",
+      "gan-mo",
+      "kongming",
+      "shangguan"
+    ],
+    "B": [
+      "ziya",
+      "heino",
+      "flowborn-mage",
+      "daji",
+      "zhou-yu",
+      "diaochan",
+      "milady",
+      "da-qiao",
+      "gao"
+    ],
+    "C": [
+      "dr-bian",
+      "liang",
+      "annette"
+    ],
+    "D": [
+      "mozi",
+      "sima-yi"
+    ]
+  },
+  "Roam": {
+    "S": [
+      "dyadia",
+      "zhang-fei",
+      "lapulapu"
+    ],
+    "A": [
+      "mozi",
+      "lian-po",
+      "da-qiao",
+      "sakeer",
+      "yuhuan",
+      "kui",
+      "annette"
+    ],
+    "B": [
+      "cai-yan",
+      "guiguzi",
+      "liu-bang",
+      "donghuang",
+      "liang",
+      "zhuangzi",
+      "sun-bin",
+      "yaria",
+      "ming",
+      "dolia",
+      "flowborn-tank"
+    ],
+    "C": [
+      "liu-shan",
+      "dun",
+      "xiang-yu"
+    ],
+    "D": [
+      "wang-zhaojun",
+      "shi",
+      "ziya"
+    ]
+  },
+  "Farm": {
+    "S": [
+      "aoyin",
+      "flowborn-marksman",
+      "chano",
+      "chicha"
+    ],
+    "A": [
+      "arli",
+      "erin",
+      "di-renjie",
+      "lady-sun",
+      "consort-yu"
+    ],
+    "B": [
+      "shouyue",
+      "marco-polo",
+      "hou-yi"
+    ],
+    "C": [
+      "garo",
+      "huang-zhong",
+      "luban-no-7",
+      "meng-ya",
+      "alessio",
+      "luara"
+    ],
+    "D": [
+      "fang",
+      "agudo",
+      "dr-bian"
+    ]
+  }
+}

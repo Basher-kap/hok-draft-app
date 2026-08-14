@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, RotateCcw, Undo2, Sparkles, Heart } from "lucide-react";
+import { ArrowLeft, RotateCcw, Undo2, Sparkles, Heart, ListTree } from "lucide-react";
 import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
 import AISuggestPanel from "@/components/AISuggestPanel";
 import RoleSelectModal from "@/components/RoleSelectModal";
 import { useComfort } from "@/components/ComfortProvider";
+import { useTierList } from "@/components/TierListProvider";
 import { getSuggestions } from "@/lib/recommendation";
-import { HEROES } from "@/lib/heroes";
 import {
   initialDraftState,
   applyAction,
@@ -29,6 +29,7 @@ export default function RankDraftPage() {
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const step = getStep(state.step);
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
+  const { effectiveHeroes } = useTierList();
 
   // Commits a ban, or a pick with its chosen role, to state + history.
   function commit(hero, role) {
@@ -90,7 +91,7 @@ export default function RankDraftPage() {
     step.phase === "complete"
       ? []
       : getSuggestions({
-          availableHeroes: HEROES.filter((h) => isSelectable(state, step, h.slug)),
+          availableHeroes: effectiveHeroes.filter((h) => isSelectable(state, step, h.slug)),
           phase: step.phase,
           teamPickEntries: state.picks[step.team],
           enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
@@ -170,13 +171,22 @@ export default function RankDraftPage() {
             </span>
           </button>
 
-          <Link
-            href="/comfort-picks"
-            className="flex items-center gap-1.5 font-display font-bold text-xs tracking-wide rounded-md px-3.5 py-1.5 transition-all"
-            style={{ background: "rgba(232,121,249,0.12)", color: "#e879f9", border: "1px solid rgba(232,121,249,0.35)" }}
-          >
-            <Heart size={13} fill="#e879f9" /> Comfort Heroes ({totalAssignments})
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/tier-list"
+              className="flex items-center gap-1.5 font-display font-bold text-xs tracking-wide rounded-md px-3.5 py-1.5 transition-all"
+              style={{ background: "rgba(245,196,81,0.12)", color: "#f5c451", border: "1px solid rgba(245,196,81,0.35)" }}
+            >
+              <ListTree size={13} /> Tier List
+            </Link>
+            <Link
+              href="/comfort-picks"
+              className="flex items-center gap-1.5 font-display font-bold text-xs tracking-wide rounded-md px-3.5 py-1.5 transition-all"
+              style={{ background: "rgba(232,121,249,0.12)", color: "#e879f9", border: "1px solid rgba(232,121,249,0.35)" }}
+            >
+              <Heart size={13} fill="#e879f9" /> Comfort Heroes ({totalAssignments})
+            </Link>
+          </div>
         </div>
 
         <TurnIndicator step={step} totalBans={TOTAL_BANS} totalPicks={TOTAL_PICKS} />
@@ -198,6 +208,7 @@ export default function RankDraftPage() {
             disabled={step.phase === "complete"}
           />
           <HeroGrid
+            heroes={effectiveHeroes}
             getStatus={getStatus}
             onSelect={handleSelect}
             disabled={step.phase === "complete"}

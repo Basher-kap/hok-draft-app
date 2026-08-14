@@ -4,8 +4,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { X as XIcon, ArrowLeft, GripVertical } from "lucide-react";
-import { HEROES, ROLES, ROLE_COLOR, sortByTier } from "@/lib/heroes";
+import { ROLES, ROLE_COLOR, sortByTier } from "@/lib/heroes";
 import { useComfort } from "@/components/ComfortProvider";
+import { useTierList } from "@/components/TierListProvider";
 import HeroCard from "@/components/HeroCard";
 
 const COMFORT_COLOR = "#e879f9";
@@ -28,11 +29,11 @@ function DraggablePoolCard({ hero }) {
   );
 }
 
-function LevelZone({ lane, level, assignedSlugs, onDrop, onRemove }) {
+function LevelZone({ lane, level, assignedSlugs, onDrop, onRemove, roster }) {
   const [isOver, setIsOver] = useState(false);
   const isSuper = level === "super";
   const accent = isSuper ? SUPER_COMFORT_COLOR : COMFORT_COLOR;
-  const heroes = [...assignedSlugs].map((slug) => HEROES.find((h) => h.slug === slug)).filter(Boolean);
+  const heroes = [...assignedSlugs].map((slug) => roster.find((h) => h.slug === slug)).filter(Boolean);
 
   return (
     <div
@@ -104,7 +105,7 @@ function LevelZone({ lane, level, assignedSlugs, onDrop, onRemove }) {
   );
 }
 
-function LaneColumn({ lane, assignments, onDrop, onRemove }) {
+function LaneColumn({ lane, assignments, onDrop, onRemove, roster }) {
   return (
     <div className="rounded-lg overflow-hidden" style={{ background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}>
       <div className="flex items-center gap-2 px-3 py-2.5" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
@@ -114,8 +115,8 @@ function LaneColumn({ lane, assignments, onDrop, onRemove }) {
         </span>
       </div>
       <div className="flex flex-col gap-2 p-2">
-        <LevelZone lane={lane} level="super" assignedSlugs={assignments.super} onDrop={onDrop} onRemove={onRemove} />
-        <LevelZone lane={lane} level="comfort" assignedSlugs={assignments.comfort} onDrop={onDrop} onRemove={onRemove} />
+        <LevelZone lane={lane} level="super" assignedSlugs={assignments.super} onDrop={onDrop} onRemove={onRemove} roster={roster} />
+        <LevelZone lane={lane} level="comfort" assignedSlugs={assignments.comfort} onDrop={onDrop} onRemove={onRemove} roster={roster} />
       </div>
     </div>
   );
@@ -124,8 +125,9 @@ function LaneColumn({ lane, assignments, onDrop, onRemove }) {
 export default function ComfortPicksPage() {
   const router = useRouter();
   const { comfortAssignments, assignComfort, removeComfort, totalAssignments } = useComfort();
+  const { effectiveHeroes } = useTierList();
 
-  const pool = sortByTier(HEROES);
+  const pool = sortByTier(effectiveHeroes);
 
   return (
     <div className="min-h-screen" style={{ background: "#12141a", color: "#e8e6e1" }}>
@@ -178,6 +180,7 @@ export default function ComfortPicksPage() {
               assignments={comfortAssignments[lane]}
               onDrop={assignComfort}
               onRemove={removeComfort}
+              roster={effectiveHeroes}
             />
           ))}
         </div>
