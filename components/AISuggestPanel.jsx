@@ -3,9 +3,17 @@
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
+// Show at most this many reasons per card - the score can accumulate quite
+// a few (tier, lane gap, counters, synergy, composition...); more than
+// this makes the card unreadable, so the rest just aren't that decisive.
+const MAX_REASONS_SHOWN = 3;
+
 // Ranked list, highest priority first (index 0 = top suggestion to ban/pick).
+// Caller should already cap this at 10 (see topN in getSuggestions), this
+// slice is just a safety net.
 export default function AISuggestPanel({ suggestions, phase, onSelect, disabled }) {
   if (!suggestions || suggestions.length === 0) return null;
+  const shown = suggestions.slice(0, 10);
 
   const accent = phase === "ban" ? "#ef4444" : "#f5c451";
 
@@ -20,40 +28,59 @@ export default function AISuggestPanel({ suggestions, phase, onSelect, disabled 
            {phase === "ban" ? "BANNING" : "PICKING"}
         </span>
         <span className="font-body text-[11px] text-gray-500">
-          {suggestions.length} ranked &mdash; #1 = highest priority
+          top {shown.length} &mdash; #1 = highest priority
         </span>
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "thin" }}>
-        {suggestions.map(({ hero, reasons }, i) => (
-          <button
-            key={hero.slug}
-            onClick={() => !disabled && onSelect(hero)}
-            disabled={disabled}
-            className="flex items-center gap-2 rounded-md pl-1.5 pr-3 py-1.5 shrink-0 transition-all"
-            style={{
-              background: "#1a1e26",
-              border: `1px solid ${i === 0 ? accent + "88" : "rgba(255,255,255,0.08)"}`,
-              cursor: disabled ? "default" : "pointer",
-            }}
-          >
-            <span
-              className="font-display font-bold text-[11px] w-5 text-center shrink-0"
-              style={{ color: i === 0 ? accent : "#6b7280" }}
+        {shown.map(({ hero, reasons }, i) => {
+          const visibleReasons = reasons.slice(0, MAX_REASONS_SHOWN);
+          const hiddenCount = reasons.length - visibleReasons.length;
+          return (
+            <button
+              key={hero.slug}
+              onClick={() => !disabled && onSelect(hero)}
+              disabled={disabled}
+              className="flex items-start gap-2 rounded-md pl-1.5 pr-2.5 py-1.5 shrink-0 transition-all text-left"
+              style={{
+                background: "#1a1e26",
+                border: `1px solid ${i === 0 ? accent + "88" : "rgba(255,255,255,0.08)"}`,
+                cursor: disabled ? "default" : "pointer",
+                width: 168,
+              }}
             >
-              {i + 1}
-            </span>
-            <div className="relative w-7 h-9 rounded overflow-hidden shrink-0 bg-[#0f1115]">
-              <Image src={hero.image} alt={hero.name} fill className="object-cover" unoptimized />
-            </div>
-            <div className="flex flex-col items-start whitespace-nowrap">
-              <span className="font-display font-semibold text-xs" style={{ color: "#f2efe9" }}>
-                {hero.name}
+              <span
+                className="font-display font-bold text-[11px] w-4 text-center shrink-0 pt-0.5"
+                style={{ color: i === 0 ? accent : "#6b7280" }}
+              >
+                {i + 1}
               </span>
-              <span className="font-body text-[10px] text-gray-500">{reasons.join(" · ")}</span>
-            </div>
-          </button>
-        ))}
+              <div className="relative w-7 h-9 rounded overflow-hidden shrink-0 bg-[#0f1115]">
+                <Image src={hero.image} alt={hero.name} fill className="object-cover" unoptimized />
+              </div>
+              <div className="flex flex-col items-start min-w-0 flex-1">
+                <span className="font-display font-semibold text-xs truncate w-full" style={{ color: "#f2efe9" }}>
+                  {hero.name}
+                </span>
+                <div className="flex flex-col gap-0.5 mt-0.5 w-full">
+                  {visibleReasons.map((reason, idx) => (
+                    <span
+                      key={idx}
+                      className="font-body text-[10px] leading-tight text-gray-500 line-clamp-2"
+                    >
+                      {reason}
+                    </span>
+                  ))}
+                  {hiddenCount > 0 && (
+                    <span className="font-body text-[9.5px] leading-tight text-gray-600">
+                      +{hiddenCount} more
+                    </span>
+                  )}
+                </div>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

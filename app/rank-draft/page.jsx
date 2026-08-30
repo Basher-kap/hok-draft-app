@@ -97,6 +97,7 @@ export default function RankDraftPage() {
           enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
+          topN: 10,
         });
 
   function reset() {
