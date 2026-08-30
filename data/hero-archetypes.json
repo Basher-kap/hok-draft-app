@@ -1,0 +1,201 @@
+{
+  "Clash Lane": {
+    "Heavy": [
+      "arthur",
+      "donghuang",
+      "dun",
+      "lian-po",
+      "xiang-yu",
+      "ata",
+      "flowborn-tank",
+      "bai-qi",
+      "dharma",
+      "guan-yu",
+      "liu-bang",
+      "zhuangzi"
+    ],
+    "Hybrid": [
+      "florentino",
+      "devara",
+      "kaizer",
+      "biron",
+      "charlotte",
+      "lu-bu",
+      "fatih",
+      "mi-yue",
+      "allain",
+      "mayene",
+      "mulan",
+      "nezha",
+      "umbrosa",
+      "wuyan",
+      "yang-jian",
+      "sun-ce"
+    ],
+    "Damage": [
+      "li-xin",
+      "chicha",
+      "diaochan",
+      "fuzi"
+    ]
+  },
+  "Jungle": {
+    "Heavy": [
+      "arthur",
+      "ata",
+      "menki",
+      "flowborn-tank"
+    ],
+    "Hybrid": [
+      "augran",
+      "kaizer",
+      "butterfly",
+      "sun-ce",
+      "fatih",
+      "athena",
+      "yang-jian",
+      "xuance",
+      "umbrosa",
+      "wuyan",
+      "musashi"
+    ],
+    "Damage": [
+      "pei",
+      "chicha",
+      "fang",
+      "agudo",
+      "chano"
+    ],
+    "Assassin": [
+      "arke",
+      "gao-changgong",
+      "lam",
+      "ying",
+      "zilong",
+      "feyd",
+      "han-xin",
+      "jing",
+      "li-bai",
+      "luna",
+      "nakoruru",
+      "yao",
+      "ukyo-tachibana",
+      "yango"
+    ],
+    "Lockdown": [
+      "kongming",
+      "wukong",
+      "dian-wei",
+      "musashi",
+      "sima-yi",
+      "cirrus",
+      "liu-bei"
+    ]
+  },
+  "Roam": {
+    "Buff": [
+      "da-qiao",
+      "zhuangzi",
+      "guiguzi",
+      "ming",
+      "sun-bin",
+      "zhang-fei"
+    ],
+    "Support": [
+      "cai-yan",
+      "dolia",
+      "dyadia",
+      "yaria",
+      "annette",
+      "sakeer",
+      "yuhuan"
+    ],
+    "Damage": [
+      "liang",
+      "ziya",
+      "wang-zhaojun"
+    ],
+    "Lockdown": [
+      "liang",
+      "mozi",
+      "donghuang"
+    ],
+    "Heavy": [
+      "dun",
+      "kui",
+      "lian-po",
+      "xiang-yu",
+      "lapulapu",
+      "liu-bang",
+      "liu-shan"
+    ]
+  },
+  "Mid": {
+    "Artillery": [
+      "angela",
+      "haya",
+      "nuwa",
+      "xiao-qiao",
+      "garuda",
+      "wang-zhaojun",
+      "heino",
+      "lady-zhen",
+      "ziya",
+      "flowborn-mage",
+      "dr-bian",
+      "gan-mo"
+    ],
+    "Assassin": [
+      "kongming",
+      "diaochan",
+      "mai-shiranui",
+      "sima-yi",
+      "gao",
+      "shangguan"
+    ],
+    "Control": [
+      "wang-zhaojun",
+      "lorion",
+      "da-qiao",
+      "lady-zhen",
+      "shi",
+      "yixing",
+      "yuhuan",
+      "zhou-yu"
+    ],
+    "Lockdown": [
+      "daji",
+      "liang",
+      "haya",
+      "kongming",
+      "milady"
+    ]
+  },
+  "Farm": {
+    "Range": [
+      "consort-yu",
+      "garo",
+      "shouyue",
+      "huang-zhong"
+    ],
+    "Shredd": [
+      "hou-yi",
+      "luara",
+      "luban-no-7",
+      "marco-polo",
+      "arli",
+      "di-renjie",
+      "flowborn-marksman"
+    ],
+    "Kits": [
+      "aoyin",
+      "chicha",
+      "erin",
+      "lady-sun",
+      "alessio",
+      "fang",
+      "chano",
+      "meng-ya"
+    ]
+  }
+}
