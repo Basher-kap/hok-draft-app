@@ -1,0 +1,844 @@
+[
+  {
+    "heroes": [
+      "angela",
+      "kui"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dian-wei",
+      "wang-zhaojun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "consort-yu",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mozi",
+      "shouyue"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "angela",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mozi",
+      "wang-zhaojun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "kui"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "kui",
+      "lady-sun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "kui"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "kui",
+      "marco-polo"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "kui"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "agudo",
+      "milady"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dian-wei",
+      "fatih"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "daji",
+      "umbrosa"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "lapulapu"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "charlotte",
+      "wang-zhaojun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dian-wei",
+      "mozi"
+    ],
+    "note": "long-range hookup"
+  },
+  {
+    "heroes": [
+      "fatih",
+      "lapulapu"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "consort-yu",
+      "menki"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "angela",
+      "dharma"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dharma",
+      "dian-wei",
+      "lady-zhen"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "angela",
+      "kui",
+      "umbrosa"
+    ],
+    "note": "sweep or cut off route"
+  },
+  {
+    "heroes": [
+      "kui",
+      "lady-sun",
+      "menki"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "agudo",
+      "milady",
+      "mozi"
+    ],
+    "note": "destroy towers"
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "lady-zhen",
+      "mozi"
+    ],
+    "note": "artillery stun lockdown"
+  },
+  {
+    "heroes": [
+      "lapulapu",
+      "menki",
+      "mi-yue"
+    ],
+    "note": "bait & switch frontline"
+  },
+  {
+    "heroes": [
+      "dharma",
+      "dian-wei",
+      "lady-zhen",
+      "lapulapu"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "angela",
+      "kui",
+      "lady-sun",
+      "umbrosa"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "agudo",
+      "chano",
+      "fatih",
+      "milady"
+    ],
+    "note": "turret melter"
+  },
+  {
+    "heroes": [
+      "charlotte",
+      "consort-yu",
+      "wang-zhaojun",
+      "zhuangzi"
+    ],
+    "note": "anti-dive"
+  },
+  {
+    "heroes": [
+      "dharma",
+      "di-renjie",
+      "dian-wei",
+      "lady-zhen",
+      "lian-po"
+    ],
+    "note": "full lineup"
+  },
+  {
+    "heroes": [
+      "agudo",
+      "angela",
+      "hou-yi",
+      "mi-yue",
+      "mozi"
+    ],
+    "note": "full lineup"
+  },
+  {
+    "heroes": [
+      "arli",
+      "biron",
+      "daji",
+      "lapulapu",
+      "umbrosa"
+    ],
+    "note": "full lineup"
+  },
+  {
+    "heroes": [
+      "charlotte",
+      "kui",
+      "lady-sun",
+      "menki",
+      "milady"
+    ],
+    "note": "full lineup"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "charlotte",
+      "kui",
+      "menki",
+      "milady"
+    ],
+    "note": "full lineup"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dolia",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "marco-polo",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "hou-yi",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "luban-no-7",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "luara",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "wang-zhaojun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "lady-zhen"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "meng-ya",
+      "nuwa"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "dun",
+      "hou-yi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "liang",
+      "marco-polo",
+      "wang-zhaojun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "liang",
+      "yang-jian"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mozi",
+      "shouyue"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "consort-yu",
+      "mozi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "fuzi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "fatih"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "lady-sun",
+      "ming"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "augran",
+      "dyadia"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "dyadia"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "sun-bin"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "zhuangzi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "yixing",
+      "zhang-fei"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "nuwa",
+      "zhang-fei"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dolia"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "hou-yi"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "yuhuan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "fatih",
+      "hou-yi",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dharma",
+      "hou-yi",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mai-shiranui",
+      "zhang-fei"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "augran",
+      "mai-shiranui"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "luara",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "luban-no-7",
+      "yixing"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "yixing",
+      "zhang-fei"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dun",
+      "lady-zhen"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "chicha",
+      "haya"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "chicha",
+      "yuhuan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dyadia",
+      "fatih"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "fatih",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "fatih"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dharma",
+      "hou-yi",
+      "yuhuan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "sun-ce"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "dolia",
+      "dun"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mayene",
+      "menki"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "augran",
+      "guan-yu"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "biron",
+      "sakeer"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "yixing",
+      "zhang-fei"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "xiao-qiao",
+      "yuhuan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dyadia"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "arli",
+      "zhang-fei"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "dyadia"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "sakeer"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "aoyin",
+      "dyadia"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "arli",
+      "zhang-fei"
+    ],
+    "note": "strong duo"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "dyadia"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "sakeer"
+    ],
+    "note": "balanced risk-reward"
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "lady-sun"
+    ],
+    "note": "pairs early spikes"
+  },
+  {
+    "heroes": [
+      "da-qiao",
+      "marco-polo"
+    ],
+    "note": "pairs early spikes"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "garo",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "flowborn-marksman",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "yaria"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "hou-yi",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "arli",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "garo",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "flowborn-marksman",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "di-renjie",
+      "liu-shan"
+    ],
+    "note": null
+  },
+  {
+    "heroes": [
+      "mozi",
+      "shouyue"
+    ],
+    "note": "follow-up damage"
+  },
+  {
+    "heroes": [
+      "angela",
+      "sun-ce"
+    ],
+    "note": "riding in tandem"
+  },
+  {
+    "heroes": [
+      "marco-polo",
+      "sun-ce"
+    ],
+    "note": "riding in tandem"
+  },
+  {
+    "heroes": [
+      "sun-ce",
+      "wang-zhaojun"
+    ],
+    "note": "riding in tandem"
+  }
+]

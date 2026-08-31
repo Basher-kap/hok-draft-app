@@ -1,0 +1,918 @@
+{
+  "biron": {
+    "strongAgainst": [
+      "dharma"
+    ],
+    "counteredBy": [
+      "fatih",
+      "shi"
+    ]
+  },
+  "dharma": {
+    "strongAgainst": [
+      "arli",
+      "mai-shiranui"
+    ],
+    "counteredBy": [
+      "allain",
+      "biron"
+    ]
+  },
+  "fatih": {
+    "strongAgainst": [
+      "biron"
+    ],
+    "counteredBy": [
+      "mi-yue",
+      "shi"
+    ]
+  },
+  "mi-yue": {
+    "strongAgainst": [
+      "fatih"
+    ],
+    "counteredBy": []
+  },
+  "charlotte": {
+    "strongAgainst": [
+      "allain",
+      "mayene"
+    ],
+    "counteredBy": [
+      "donghuang"
+    ]
+  },
+  "allain": {
+    "strongAgainst": [
+      "dharma"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ]
+  },
+  "donghuang": {
+    "strongAgainst": [
+      "charlotte"
+    ],
+    "counteredBy": [
+      "mozi"
+    ]
+  },
+  "dun": {
+    "strongAgainst": [
+      "mulan"
+    ],
+    "counteredBy": [
+      "arli",
+      "lu-bu",
+      "shi"
+    ]
+  },
+  "mulan": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dun"
+    ]
+  },
+  "lu-bu": {
+    "strongAgainst": [
+      "dun"
+    ],
+    "counteredBy": []
+  },
+  "guan-yu": {
+    "strongAgainst": [
+      "cai-yan",
+      "heino",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "sun-ce"
+    ]
+  },
+  "heino": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "guan-yu"
+    ]
+  },
+  "sun-ce": {
+    "strongAgainst": [
+      "cai-yan",
+      "guan-yu",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "ata",
+      "liang"
+    ]
+  },
+  "ata": {
+    "strongAgainst": [
+      "sun-ce"
+    ],
+    "counteredBy": []
+  },
+  "mayene": {
+    "strongAgainst": [
+      "arli",
+      "feyd",
+      "hou-yi",
+      "mai-shiranui"
+    ],
+    "counteredBy": [
+      "charlotte"
+    ]
+  },
+  "menki": {
+    "strongAgainst": [
+      "augran",
+      "musashi"
+    ],
+    "counteredBy": [
+      "arli",
+      "dian-wei",
+      "liang"
+    ]
+  },
+  "musashi": {
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "menki"
+    ]
+  },
+  "augran": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "agudo",
+      "lady-zhen",
+      "menki",
+      "shi",
+      "wang-zhaojun",
+      "yuhuan"
+    ]
+  },
+  "dian-wei": {
+    "strongAgainst": [
+      "menki"
+    ],
+    "counteredBy": [
+      "sun-bin"
+    ]
+  },
+  "agudo": {
+    "strongAgainst": [
+      "augran",
+      "li-xin",
+      "liu-shan",
+      "marco-polo",
+      "milady",
+      "yaria"
+    ],
+    "counteredBy": [
+      "ziya"
+    ]
+  },
+  "flowborn-tank": {
+    "strongAgainst": [
+      "jing",
+      "luna",
+      "wukong"
+    ],
+    "counteredBy": [
+      "liu-bei",
+      "luara",
+      "shi"
+    ]
+  },
+  "luna": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "flowborn-tank",
+      "liang"
+    ]
+  },
+  "jing": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "flowborn-tank",
+      "liang"
+    ]
+  },
+  "wukong": {
+    "strongAgainst": [
+      "nakoruru"
+    ],
+    "counteredBy": [
+      "flowborn-tank"
+    ]
+  },
+  "nakoruru": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "wukong"
+    ]
+  },
+  "liu-bei": {
+    "strongAgainst": [
+      "flowborn-tank"
+    ],
+    "counteredBy": [
+      "kaizer"
+    ]
+  },
+  "shi": {
+    "strongAgainst": [
+      "augran",
+      "biron",
+      "dun",
+      "fatih",
+      "flowborn-tank"
+    ],
+    "counteredBy": [
+      "gan-mo",
+      "nuwa",
+      "ziya"
+    ]
+  },
+  "kaizer": {
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi",
+      "liu-bei"
+    ],
+    "counteredBy": [
+      "han-xin"
+    ]
+  },
+  "han-xin": {
+    "strongAgainst": [
+      "kaizer"
+    ],
+    "counteredBy": []
+  },
+  "sun-bin": {
+    "strongAgainst": [
+      "dian-wei"
+    ],
+    "counteredBy": []
+  },
+  "diaochan": {
+    "strongAgainst": [
+      "pei"
+    ],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "pei": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "diaochan",
+      "liang"
+    ]
+  },
+  "ming": {
+    "strongAgainst": [
+      "zhuangzi"
+    ],
+    "counteredBy": [
+      "cai-yan",
+      "mozi"
+    ]
+  },
+  "zhuangzi": {
+    "strongAgainst": [
+      "lian-po"
+    ],
+    "counteredBy": [
+      "ming"
+    ]
+  },
+  "lian-po": {
+    "strongAgainst": [
+      "mozi"
+    ],
+    "counteredBy": [
+      "arli",
+      "zhuangzi"
+    ]
+  },
+  "cai-yan": {
+    "strongAgainst": [
+      "ming",
+      "zhang-fei"
+    ],
+    "counteredBy": [
+      "dyadia",
+      "garo",
+      "guan-yu",
+      "guiguzi",
+      "kaizer",
+      "lady-zhen",
+      "luban-no-7",
+      "musashi",
+      "sun-ce"
+    ]
+  },
+  "dyadia": {
+    "strongAgainst": [
+      "arli",
+      "cai-yan",
+      "diaochan",
+      "feyd",
+      "jing",
+      "lam",
+      "li-bai",
+      "luna",
+      "mai-shiranui",
+      "ukyo-tachibana",
+      "ying",
+      "zilong"
+    ],
+    "counteredBy": [
+      "lady-zhen",
+      "liang"
+    ]
+  },
+  "zhang-fei": {
+    "strongAgainst": [
+      "liang",
+      "yaria"
+    ],
+    "counteredBy": [
+      "cai-yan"
+    ]
+  },
+  "yaria": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "agudo",
+      "arli",
+      "di-renjie",
+      "garo",
+      "zhang-fei"
+    ]
+  },
+  "liang": {
+    "strongAgainst": [
+      "arke",
+      "arli",
+      "diaochan",
+      "dyadia",
+      "feyd",
+      "jing",
+      "lam",
+      "li-bai",
+      "luna",
+      "mai-shiranui",
+      "menki",
+      "milady",
+      "pei",
+      "sima-yi",
+      "sun-ce",
+      "ukyo-tachibana",
+      "ying",
+      "zilong"
+    ],
+    "counteredBy": [
+      "dolia",
+      "gan-mo",
+      "nuwa",
+      "xiao-qiao",
+      "zhang-fei",
+      "ziya"
+    ]
+  },
+  "mozi": {
+    "strongAgainst": [
+      "donghuang",
+      "ming"
+    ],
+    "counteredBy": [
+      "chano",
+      "lapulapu",
+      "lian-po",
+      "milady",
+      "sakeer"
+    ]
+  },
+  "sakeer": {
+    "strongAgainst": [
+      "mozi"
+    ],
+    "counteredBy": []
+  },
+  "dolia": {
+    "strongAgainst": [
+      "liang"
+    ],
+    "counteredBy": []
+  },
+  "di-renjie": {
+    "strongAgainst": [
+      "arli",
+      "chano",
+      "marco-polo",
+      "milady",
+      "yaria"
+    ],
+    "counteredBy": [
+      "flowborn-marksman",
+      "garo",
+      "nezha"
+    ]
+  },
+  "arli": {
+    "strongAgainst": [
+      "aoyin",
+      "arthur",
+      "bai-qi",
+      "dun",
+      "lian-po",
+      "marco-polo",
+      "menki",
+      "yaria"
+    ],
+    "counteredBy": [
+      "chano",
+      "dharma",
+      "di-renjie",
+      "dyadia",
+      "fuzi",
+      "garo",
+      "hou-yi",
+      "lady-sun",
+      "liang",
+      "luara",
+      "mayene"
+    ]
+  },
+  "aoyin": {
+    "strongAgainst": [
+      "feyd",
+      "luara"
+    ],
+    "counteredBy": [
+      "arli",
+      "consort-yu",
+      "yuhuan"
+    ]
+  },
+  "marco-polo": {
+    "strongAgainst": [
+      "flowborn-marksman",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "agudo",
+      "arli",
+      "di-renjie",
+      "garo"
+    ]
+  },
+  "chano": {
+    "strongAgainst": [
+      "arli",
+      "mai-shiranui",
+      "mozi"
+    ],
+    "counteredBy": [
+      "di-renjie",
+      "ziya"
+    ]
+  },
+  "shouyue": {
+    "strongAgainst": [
+      "consort-yu"
+    ],
+    "counteredBy": []
+  },
+  "consort-yu": {
+    "strongAgainst": [
+      "alessio",
+      "aoyin",
+      "flowborn-marksman",
+      "lady-sun",
+      "luban-no-7"
+    ],
+    "counteredBy": [
+      "erin",
+      "shouyue"
+    ]
+  },
+  "luban-no-7": {
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "counteredBy": [
+      "consort-yu",
+      "fang"
+    ]
+  },
+  "hou-yi": {
+    "strongAgainst": [
+      "arli",
+      "erin"
+    ],
+    "counteredBy": [
+      "flowborn-marksman",
+      "garo",
+      "guan-yu",
+      "guiguzi",
+      "kaizer",
+      "lady-zhen",
+      "luban-no-7",
+      "marco-polo",
+      "mayene",
+      "musashi",
+      "sun-ce"
+    ]
+  },
+  "garo": {
+    "strongAgainst": [
+      "arli",
+      "cai-yan",
+      "di-renjie",
+      "erin",
+      "flowborn-marksman",
+      "hou-yi",
+      "marco-polo",
+      "yaria"
+    ],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "flowborn-marksman": {
+    "strongAgainst": [
+      "di-renjie",
+      "hou-yi",
+      "meng-ya"
+    ],
+    "counteredBy": [
+      "consort-yu",
+      "garo",
+      "marco-polo"
+    ]
+  },
+  "luara": {
+    "strongAgainst": [
+      "arli",
+      "flowborn-tank"
+    ],
+    "counteredBy": [
+      "aoyin"
+    ]
+  },
+  "lady-sun": {
+    "strongAgainst": [
+      "arli"
+    ],
+    "counteredBy": [
+      "consort-yu",
+      "ziya"
+    ]
+  },
+  "alessio": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "consort-yu"
+    ]
+  },
+  "erin": {
+    "strongAgainst": [
+      "consort-yu"
+    ],
+    "counteredBy": [
+      "garo",
+      "hou-yi",
+      "huang-zhong"
+    ]
+  },
+  "huang-zhong": {
+    "strongAgainst": [
+      "erin"
+    ],
+    "counteredBy": [
+      "meng-ya"
+    ]
+  },
+  "meng-ya": {
+    "strongAgainst": [
+      "huang-zhong"
+    ],
+    "counteredBy": [
+      "flowborn-marksman"
+    ]
+  },
+  "fang": {
+    "strongAgainst": [
+      "luban-no-7"
+    ],
+    "counteredBy": []
+  },
+  "mai-shiranui": {
+    "strongAgainst": [
+      "gan-mo",
+      "nuwa",
+      "ziya"
+    ],
+    "counteredBy": [
+      "chano",
+      "daji",
+      "dharma",
+      "dyadia",
+      "fuzi",
+      "haya",
+      "liang",
+      "mayene",
+      "milady",
+      "yuhuan"
+    ]
+  },
+  "nuwa": {
+    "strongAgainst": [
+      "haya",
+      "liang",
+      "shi"
+    ],
+    "counteredBy": [
+      "kongming",
+      "mai-shiranui",
+      "shangguan",
+      "sima-yi"
+    ]
+  },
+  "gan-mo": {
+    "strongAgainst": [
+      "haya",
+      "liang",
+      "shi"
+    ],
+    "counteredBy": [
+      "gao-changgong",
+      "kongming",
+      "mai-shiranui",
+      "shangguan"
+    ]
+  },
+  "ziya": {
+    "strongAgainst": [
+      "agudo",
+      "chano",
+      "lady-sun",
+      "liang",
+      "milady",
+      "shi"
+    ],
+    "counteredBy": [
+      "kongming",
+      "mai-shiranui",
+      "shangguan",
+      "sima-yi"
+    ]
+  },
+  "shangguan": {
+    "strongAgainst": [
+      "flowborn-mage",
+      "gan-mo",
+      "milady",
+      "nuwa",
+      "ziya"
+    ],
+    "counteredBy": [
+      "daji"
+    ]
+  },
+  "kongming": {
+    "strongAgainst": [
+      "gan-mo",
+      "nuwa",
+      "wang-zhaojun",
+      "ziya"
+    ],
+    "counteredBy": [
+      "yuhuan"
+    ]
+  },
+  "haya": {
+    "strongAgainst": [
+      "mai-shiranui"
+    ],
+    "counteredBy": [
+      "gan-mo",
+      "nuwa"
+    ]
+  },
+  "daji": {
+    "strongAgainst": [
+      "mai-shiranui",
+      "shangguan"
+    ],
+    "counteredBy": []
+  },
+  "yuhuan": {
+    "strongAgainst": [
+      "aoyin",
+      "augran",
+      "kongming",
+      "mai-shiranui"
+    ],
+    "counteredBy": []
+  },
+  "gao": {
+    "strongAgainst": [
+      "milady"
+    ],
+    "counteredBy": [
+      "wang-zhaojun"
+    ]
+  },
+  "milady": {
+    "strongAgainst": [
+      "mai-shiranui",
+      "mozi"
+    ],
+    "counteredBy": [
+      "agudo",
+      "di-renjie",
+      "gao",
+      "liang",
+      "shangguan",
+      "ziya"
+    ]
+  },
+  "wang-zhaojun": {
+    "strongAgainst": [
+      "augran",
+      "gao"
+    ],
+    "counteredBy": [
+      "kongming",
+      "sima-yi"
+    ]
+  },
+  "flowborn-mage": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "shangguan"
+    ]
+  },
+  "xiao-qiao": {
+    "strongAgainst": [
+      "liang"
+    ],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "sima-yi": {
+    "strongAgainst": [
+      "angela",
+      "garo",
+      "garuda",
+      "nuwa",
+      "wang-zhaojun",
+      "xiao-qiao",
+      "ziya"
+    ],
+    "counteredBy": [
+      "liang"
+    ]
+  },
+  "angela": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "gao-changgong": {
+    "strongAgainst": [
+      "gan-mo"
+    ],
+    "counteredBy": []
+  },
+  "feyd": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "aoyin",
+      "dyadia",
+      "liang",
+      "mayene"
+    ]
+  },
+  "arthur": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "arli"
+    ]
+  },
+  "bai-qi": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "arli"
+    ]
+  },
+  "nezha": {
+    "strongAgainst": [
+      "di-renjie"
+    ],
+    "counteredBy": []
+  },
+  "fuzi": {
+    "strongAgainst": [
+      "arli",
+      "mai-shiranui"
+    ],
+    "counteredBy": []
+  },
+  "lady-zhen": {
+    "strongAgainst": [
+      "augran",
+      "cai-yan",
+      "dyadia",
+      "hou-yi"
+    ],
+    "counteredBy": []
+  },
+  "ukyo-tachibana": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "zilong": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "ying": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "li-bai": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "lam": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "dyadia",
+      "liang"
+    ]
+  },
+  "li-xin": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "agudo"
+    ]
+  },
+  "liu-shan": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "agudo"
+    ]
+  },
+  "arke": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "liang"
+    ]
+  },
+  "garuda": {
+    "strongAgainst": [],
+    "counteredBy": [
+      "sima-yi"
+    ]
+  },
+  "lapulapu": {
+    "strongAgainst": [
+      "mozi"
+    ],
+    "counteredBy": []
+  },
+  "guiguzi": {
+    "strongAgainst": [
+      "cai-yan",
+      "hou-yi"
+    ],
+    "counteredBy": []
+  }
+}

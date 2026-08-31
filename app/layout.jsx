@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ComfortProvider } from "@/components/ComfortProvider";
+import { TierListProvider } from "@/components/TierListProvider";
 
 export const metadata = {
   title: "HoK Draft Pick",
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <ComfortProvider>{children}</ComfortProvider>
+        <TierListProvider>
+          <ComfortProvider>{children}</ComfortProvider>
+        </TierListProvider>
       </body>
     </html>
   );

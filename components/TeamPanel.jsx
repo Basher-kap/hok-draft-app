@@ -23,8 +23,12 @@ function BanSlot({ slug }) {
   );
 }
 
-function PickSlot({ slug, side, active }) {
-  const hero = slug ? heroBySlug(slug) : null;
+// pickEntry: { slug, role } | undefined - role is the lane THIS pick was
+// drafted for (chosen at pick time for flex heroes), not the hero's full
+// role list.
+function PickSlot({ pickEntry, side, active }) {
+  const hero = pickEntry ? heroBySlug(pickEntry.slug) : null;
+  const role = pickEntry?.role;
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
 
   return (
@@ -48,17 +52,14 @@ function PickSlot({ slug, side, active }) {
             <div className="font-display font-semibold text-[11px] leading-tight truncate" style={{ color: "#f2efe9" }}>
               {hero.name}
             </div>
-            <div className="flex gap-0.5 mt-0.5 flex-wrap">
-              {hero.roles.slice(0, 1).map((r) => (
-                <span
-                  key={r}
-                  className="font-body font-semibold rounded"
-                  style={{ fontSize: 7.5, color: "#0f1115", background: ROLE_COLOR[r], padding: "1px 3px" }}
-                >
-                  {r}
-                </span>
-              ))}
-            </div>
+            {role && (
+              <span
+                className="font-body font-semibold rounded inline-block mt-0.5"
+                style={{ fontSize: 7.5, color: "#0f1115", background: ROLE_COLOR[role], padding: "1px 3px" }}
+              >
+                {role}
+              </span>
+            )}
           </div>
         </>
       ) : (
@@ -74,9 +75,9 @@ function PickSlot({ slug, side, active }) {
   );
 }
 
+// picks: [{slug, role}] for this team
 export default function TeamPanel({ side, name, bans, picks, activeStep }) {
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
-  const align = side === "A" ? "text-left" : "text-right";
 
   return (
     <div className="flex flex-col gap-3">
@@ -97,7 +98,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep }) {
         {Array.from({ length: 5 }).map((_, i) => (
           <PickSlot
             key={i}
-            slug={picks[i]}
+            pickEntry={picks[i]}
             side={side}
             active={activeStep.phase === "pick" && activeStep.team === side && activeStep.index === i}
           />

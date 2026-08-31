@@ -9,13 +9,20 @@ const TIERS = ["S", "A", "B", "C"];
 
 // getStatus(hero) => "available" | "banned" | "picked"
 // getComfortLevel(hero) => null | "comfort" | "super"
-export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel }) {
+// getEnemyBannedTeam(hero) => null | "A" | "B" (ban phase only - already banned by the OTHER team)
+// heroes: optional override of the roster to render, tier included -
+// defaults to the static HEROES import. Pass useTierList().effectiveHeroes
+// here so the grid (badges, tier filter, sort) reflects a user's custom
+// tier list instead of the flat hokstats.gg-sourced default.
+export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel, getEnemyBannedTeam, heroes }) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState("All");
   const [activeTier, setActiveTier] = useState("All");
 
+  const roster = heroes || HEROES;
+
   const filtered = useMemo(() => {
-    let list = HEROES;
+    let list = roster;
     if (activeRole !== "All") list = list.filter((h) => h.roles.includes(activeRole));
     if (activeTier !== "All") list = list.filter((h) => h.tier === activeTier);
     if (query.trim()) {
@@ -23,7 +30,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLeve
       list = list.filter((h) => h.name.toLowerCase().includes(q));
     }
     return sortByTier(list);
-  }, [query, activeRole, activeTier]);
+  }, [query, activeRole, activeTier, roster]);
 
   return (
     <div>
@@ -102,6 +109,7 @@ export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLeve
             onClick={onSelect}
             disabled={disabled}
             comfortLevel={getComfortLevel ? getComfortLevel(hero) : null}
+            enemyBannedTeam={getEnemyBannedTeam ? getEnemyBannedTeam(hero) : null}
           />
         ))}
       </div>
