@@ -153,13 +153,15 @@
       "gao",
       "shangguan"
     ],
-    "Control": [
+    "Control (Long)": [
       "wang-zhaojun",
       "lorion",
       "da-qiao",
+      "yixing"
+    ],
+    "Control (Short)": [
       "lady-zhen",
       "shi",
-      "yixing",
       "yuhuan",
       "zhou-yu"
     ],
