@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { heroBySlug, ROLE_COLOR } from "@/lib/heroes";
-import { compositionSummary, ACTIVE_BALANCE_TEMPLATES, COMPOSITION_BUCKETS, humanizeBucket } from "@/lib/heroArchetypes";
+import { heroBySlug, ROLE_COLOR, ROLES } from "@/lib/heroes";
+import { compositionSummary, pickPrimaryTemplate, COMPOSITION_BUCKETS, humanizeBucket } from "@/lib/heroArchetypes";
+import { getFilledLanes } from "@/lib/recommendation";
 import { Ban, Check } from "lucide-react";
 
 function BanSlot({ slug }) {
@@ -76,50 +77,62 @@ function PickSlot({ pickEntry, side, active }) {
   );
 }
 
-// Live status bar for the fixed target comp (see ACTIVE_BALANCE_TEMPLATES
-// in lib/heroArchetypes.js - currently "2 Tank / 2 Damage(L+S) / 1
-// Semi-Tank"). Shows what this team still needs per bucket, ticking down
-// to 0 as picks are drafted - e.g. starts at Tank:2, drops to Tank:1 once
-// a Heavy is picked, then to Tank:0 (checked off) on the second one. Only
-// buckets the active target actually calls for (>0) are shown, so this
-// adapts automatically if the target template is ever changed.
-function CompositionTracker({ picks, accent }) {
-  const target = ACTIVE_BALANCE_TEMPLATES[0];
+// Live status bar for whichever standard balance shape the engine has
+// currently auto-selected as the closest realistic target (see
+// pickPrimaryTemplate in lib/heroArchetypes.js). Which shape that is can
+// change over the course of the draft - as picks fill buckets, or as bans
+// eliminate the heroes that could have completed a different shape - so
+// this bar can visibly switch which template it's tracking, not just tick
+// down a fixed one. Shows what this team still needs per bucket for the
+// currently-selected shape, e.g. starts at Tank:2, drops to Tank:1 once a
+// Heavy is picked, then to Tank:0 (checked off) on the second one.
+//
+// availableHeroes: every hero not yet banned/picked by EITHER side - the
+// same pool the AI suggestion engine reasons about, so this bar tracks
+// the same shape the suggestion panel's "fits ..." reasons refer to.
+function CompositionTracker({ picks, accent, availableHeroes }) {
   const current = compositionSummary(picks);
+  const openLanes = ROLES.filter((r) => !getFilledLanes(picks).has(r));
+  const target = pickPrimaryTemplate(current, openLanes, availableHeroes);
   const buckets = COMPOSITION_BUCKETS.filter((b) => target[b] > 0);
   if (buckets.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5">
-      <span className="font-body font-semibold text-[9px] tracking-wide text-gray-600 uppercase shrink-0">
-        Target
-      </span>
-      {buckets.map((b) => {
-        const remaining = Math.max(target[b] - current[b], 0);
-        const over = current[b] > target[b];
-        const done = remaining === 0 && !over;
-        return (
-          <span
-            key={b}
-            className="flex items-center gap-1 rounded px-1.5 py-0.5 font-display font-semibold text-[10px] whitespace-nowrap"
-            style={{
-              background: done ? "rgba(255,255,255,0.04)" : over ? "rgba(245,158,11,0.1)" : `${accent}18`,
-              border: `1px solid ${over ? "#f59e0b70" : done ? "rgba(255,255,255,0.08)" : accent + "55"}`,
-              color: over ? "#f59e0b" : done ? "#5b6270" : accent,
-            }}
-            title={over ? `${humanizeBucket(b)}: drafted ${current[b]}, target was ${target[b]}` : undefined}
-          >
-            {done && <Check size={9} strokeWidth={3} />}
-            {humanizeBucket(b)}: {remaining}
-          </span>
-        );
-      })}
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-wrap items-center gap-1.5">
+        <span className="font-body font-semibold text-[9px] tracking-wide text-gray-600 uppercase shrink-0">
+          Target
+        </span>
+        {buckets.map((b) => {
+          const remaining = Math.max(target[b] - current[b], 0);
+          const over = current[b] > target[b];
+          const done = remaining === 0 && !over;
+          return (
+            <span
+              key={b}
+              className="flex items-center gap-1 rounded px-1.5 py-0.5 font-display font-semibold text-[10px] whitespace-nowrap"
+              style={{
+                background: done ? "rgba(255,255,255,0.04)" : over ? "rgba(245,158,11,0.1)" : `${accent}18`,
+                border: `1px solid ${over ? "#f59e0b70" : done ? "rgba(255,255,255,0.08)" : accent + "55"}`,
+                color: over ? "#f59e0b" : done ? "#5b6270" : accent,
+              }}
+              title={over ? `${humanizeBucket(b)}: drafted ${current[b]}, target was ${target[b]}` : undefined}
+            >
+              {done && <Check size={9} strokeWidth={3} />}
+              {humanizeBucket(b)}: {remaining}
+            </span>
+          );
+        })}
+      </div>
+      <span className="font-body text-[9px] text-gray-600 truncate">{target.label}</span>
     </div>
   );
 }
 
 // picks: [{slug, role}] for this team
-export default function TeamPanel({ side, name, bans, picks, activeStep }) {
+// availableHeroes: every hero not yet banned/picked by EITHER side (drives
+// which balance-lineup shape the tracker below auto-selects)
+export default function TeamPanel({ side, name, bans, picks, activeStep, availableHeroes }) {
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
 
   return (
@@ -149,7 +162,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep }) {
       </div>
 
       <div className={`flex ${side === "B" ? "justify-end" : "justify-start"}`}>
-        <CompositionTracker picks={picks} accent={accent} />
+        <CompositionTracker picks={picks} accent={accent} availableHeroes={availableHeroes} />
       </div>
     </div>
   );
