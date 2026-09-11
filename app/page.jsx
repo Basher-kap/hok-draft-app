@@ -75,10 +75,10 @@ export default function HomePage() {
           icon={<Trophy size={22} />}
           title="TOURNAMENT DRAFT"
           phases={[
-            "Phase 1 — 2 bans, 3 picks",
-            "Phase 2 — 2 bans, 2 picks",
+            "Bo3 / Bo5 / Bo7 series",
+            "Phase 1 — 4 bans, 6 picks",
+            "Phase 2 — 4 bans, 4 picks",
           ]}
-          disabled
         />
       </div>
 

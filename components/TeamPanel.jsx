@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { heroBySlug, ROLE_COLOR, ROLES } from "@/lib/heroes";
-import { compositionSummary, pickPrimaryTemplate, COMPOSITION_BUCKETS, humanizeBucket } from "@/lib/heroArchetypes";
-import { getFilledLanes } from "@/lib/recommendation";
-import { Ban, Check } from "lucide-react";
+import { heroBySlug, ROLE_COLOR } from "@/lib/heroes";
+import { Ban } from "lucide-react";
 
 function BanSlot({ slug }) {
   const hero = slug ? heroBySlug(slug) : null;
@@ -77,62 +75,10 @@ function PickSlot({ pickEntry, side, active }) {
   );
 }
 
-// Live status bar for whichever standard balance shape the engine has
-// currently auto-selected as the closest realistic target (see
-// pickPrimaryTemplate in lib/heroArchetypes.js). Which shape that is can
-// change over the course of the draft - as picks fill buckets, or as bans
-// eliminate the heroes that could have completed a different shape - so
-// this bar can visibly switch which template it's tracking, not just tick
-// down a fixed one. Shows what this team still needs per bucket for the
-// currently-selected shape, e.g. starts at Tank:2, drops to Tank:1 once a
-// Heavy is picked, then to Tank:0 (checked off) on the second one.
-//
-// availableHeroes: every hero not yet banned/picked by EITHER side - the
-// same pool the AI suggestion engine reasons about, so this bar tracks
-// the same shape the suggestion panel's "fits ..." reasons refer to.
-function CompositionTracker({ picks, accent, availableHeroes }) {
-  const current = compositionSummary(picks);
-  const openLanes = ROLES.filter((r) => !getFilledLanes(picks).has(r));
-  const target = pickPrimaryTemplate(current, openLanes, availableHeroes);
-  const buckets = COMPOSITION_BUCKETS.filter((b) => target[b] > 0);
-  if (buckets.length === 0) return null;
-
-  return (
-    <div className="flex flex-col gap-1">
-      <div className="flex flex-wrap items-center gap-1.5">
-        <span className="font-body font-semibold text-[9px] tracking-wide text-gray-600 uppercase shrink-0">
-          Target
-        </span>
-        {buckets.map((b) => {
-          const remaining = Math.max(target[b] - current[b], 0);
-          const over = current[b] > target[b];
-          const done = remaining === 0 && !over;
-          return (
-            <span
-              key={b}
-              className="flex items-center gap-1 rounded px-1.5 py-0.5 font-display font-semibold text-[10px] whitespace-nowrap"
-              style={{
-                background: done ? "rgba(255,255,255,0.04)" : over ? "rgba(245,158,11,0.1)" : `${accent}18`,
-                border: `1px solid ${over ? "#f59e0b70" : done ? "rgba(255,255,255,0.08)" : accent + "55"}`,
-                color: over ? "#f59e0b" : done ? "#5b6270" : accent,
-              }}
-              title={over ? `${humanizeBucket(b)}: drafted ${current[b]}, target was ${target[b]}` : undefined}
-            >
-              {done && <Check size={9} strokeWidth={3} />}
-              {humanizeBucket(b)}: {remaining}
-            </span>
-          );
-        })}
-      </div>
-      <span className="font-body text-[9px] text-gray-600 truncate">{target.label}</span>
-    </div>
-  );
-}
-
 // picks: [{slug, role}] for this team
-// availableHeroes: every hero not yet banned/picked by EITHER side (drives
-// which balance-lineup shape the tracker below auto-selects)
-export default function TeamPanel({ side, name, bans, picks, activeStep, availableHeroes }) {
+// banCount / pickCount: total slots to render (defaults match Rank Draft:
+// 3 bans, 5 picks - Tournament Draft passes banCount=4).
+export default function TeamPanel({ side, name, bans, picks, activeStep, banCount = 3, pickCount = 5 }) {
   const accent = side === "A" ? "#3b82f6" : "#ef4444";
 
   return (
@@ -144,14 +90,17 @@ export default function TeamPanel({ side, name, bans, picks, activeStep, availab
         </span>
       </div>
 
-      <div className={`flex gap-1.5 ${side === "B" ? "flex-row-reverse" : ""}`}>
-        {Array.from({ length: 3 }).map((_, i) => (
+      <div className={`flex gap-1.5 flex-wrap ${side === "B" ? "flex-row-reverse" : ""}`}>
+        {Array.from({ length: banCount }).map((_, i) => (
           <BanSlot key={i} slug={bans[i]} />
         ))}
       </div>
 
-      <div className="grid grid-cols-5 gap-1.5" style={{ direction: side === "B" ? "rtl" : "ltr" }}>
-        {Array.from({ length: 5 }).map((_, i) => (
+      <div
+        className="grid gap-1.5"
+        style={{ direction: side === "B" ? "rtl" : "ltr", gridTemplateColumns: `repeat(${pickCount}, minmax(0, 1fr))` }}
+      >
+        {Array.from({ length: pickCount }).map((_, i) => (
           <PickSlot
             key={i}
             pickEntry={picks[i]}
@@ -159,10 +108,6 @@ export default function TeamPanel({ side, name, bans, picks, activeStep, availab
             active={activeStep.phase === "pick" && activeStep.team === side && activeStep.index === i}
           />
         ))}
-      </div>
-
-      <div className={`flex ${side === "B" ? "justify-end" : "justify-start"}`}>
-        <CompositionTracker picks={picks} accent={accent} availableHeroes={availableHeroes} />
       </div>
     </div>
   );

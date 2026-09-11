@@ -98,14 +98,8 @@ export default function RankDraftPage() {
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
           topN: 10,
+          mode: "rank",
         });
-
-  // Every hero not yet banned or picked by EITHER side - the shared pool
-  // both TeamPanel's composition trackers reason about when auto-selecting
-  // which balance-lineup shape is still realistically reachable.
-  const draftPool = effectiveHeroes.filter(
-    (h) => !isHeroBannedByAnyone(state, h.slug) && !isHeroPicked(state, h.slug)
-  );
 
   function reset() {
     setState(initialDraftState());
@@ -200,9 +194,9 @@ export default function RankDraftPage() {
         <TurnIndicator step={step} totalBans={TOTAL_BANS} totalPicks={TOTAL_PICKS} />
 
         <div className="grid grid-cols-[1fr_auto_1fr] gap-4 mb-6 items-start">
-          <TeamPanel side="A" name="TEAM A" bans={state.bans.A} picks={state.picks.A} activeStep={step} availableHeroes={draftPool} />
+          <TeamPanel side="A" name="TEAM A" bans={state.bans.A} picks={state.picks.A} activeStep={step} />
           <div className="w-px self-stretch" style={{ background: "rgba(255,255,255,0.08)" }} />
-          <TeamPanel side="B" name="TEAM B" bans={state.bans.B} picks={state.picks.B} activeStep={step} availableHeroes={draftPool} />
+          <TeamPanel side="B" name="TEAM B" bans={state.bans.B} picks={state.picks.B} activeStep={step} />
         </div>
 
         <div
