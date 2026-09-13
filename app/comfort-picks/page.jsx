@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { X as XIcon, ArrowLeft, GripVertical, Search } from "lucide-react";
+import { X as XIcon, ArrowLeft, GripVertical } from "lucide-react";
 import { ROLES, ROLE_COLOR, sortByTier } from "@/lib/heroes";
 import { useComfort } from "@/components/ComfortProvider";
 import { useTierList } from "@/components/TierListProvider";
@@ -125,20 +125,12 @@ function LaneColumn({ lane, assignments, onDrop, onRemove, roster }) {
 export default function ComfortPicksPage() {
   const router = useRouter();
   const { comfortAssignments, assignComfort, removeComfort, totalAssignments } = useComfort();
-  const { effectiveHeroes } = useTierList();
+  const { effectiveHeroesFor } = useTierList();
+  // Comfort picks apply across both draft modes, so the pool/badges here
+  // just need one consistent tier reference - ranked is the primary list.
+  const effectiveHeroes = effectiveHeroesFor("ranked");
 
-  const [query, setQuery] = useState("");
-  const [activeRole, setActiveRole] = useState("All");
-
-  const pool = useMemo(() => {
-    let list = effectiveHeroes;
-    if (activeRole !== "All") list = list.filter((h) => h.roles.includes(activeRole));
-    if (query.trim()) {
-      const q = query.trim().toLowerCase();
-      list = list.filter((h) => h.name.toLowerCase().includes(q));
-    }
-    return sortByTier(list);
-  }, [effectiveHeroes, activeRole, query]);
+  const pool = sortByTier(effectiveHeroes);
 
   return (
     <div className="min-h-screen" style={{ background: "#12141a", color: "#e8e6e1" }}>
@@ -173,55 +165,7 @@ export default function ComfortPicksPage() {
             </button>
           </div>
 
-          <div className="flex items-center justify-between gap-3 flex-wrap mb-2.5">
-            <div className="flex gap-1.5 flex-wrap">
-              {["All", ...ROLES].map((r) => {
-                const isActive = activeRole === r;
-                const color = r === "All" ? "#e8e6e1" : ROLE_COLOR[r];
-                return (
-                  <button
-                    key={r}
-                    onClick={() => setActiveRole(r)}
-                    className="font-display font-semibold rounded px-3 py-1.5 text-[12.5px] tracking-wide transition-all"
-                    style={{
-                      border: `1px solid ${isActive ? color : "rgba(255,255,255,0.1)"}`,
-                      background: isActive ? `${color}22` : "transparent",
-                      color: isActive ? color : "#8a94a6",
-                    }}
-                  >
-                    {r}
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="relative w-56">
-              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-500" />
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search hero..."
-                className="w-full rounded px-8 py-1.5 text-[13px] outline-none font-body"
-                style={{
-                  background: "#1a1e26",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  color: "#e8e6e1",
-                }}
-              />
-              {query && (
-                <XIcon
-                  size={14}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
-                  onClick={() => setQuery("")}
-                />
-              )}
-            </div>
-          </div>
-
           <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: "thin" }}>
-            {pool.length === 0 && (
-              <span className="font-body text-[12px] text-gray-500 py-6">No heroes match "{query}".</span>
-            )}
             {pool.map((hero) => (
               <DraggablePoolCard key={hero.slug} hero={hero} />
             ))}

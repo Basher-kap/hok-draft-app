@@ -1,0 +1,32 @@
+{
+  "Clash Lane": {
+    "S": ["li-xin"],
+    "A": ["dun", "chicha", "kaizer", "devara", "mi-yue", "florentino"],
+    "B": ["lian-po", "lu-bu", "arthur", "umbrosa", "sun-ce", "xiang-yu", "biron", "charlotte"],
+    "C": ["flowborn-tank", "ata", "allain", "guan-yu", "nezha", "fatih", "wuyan", "fuzi", "bai-qi", "mayene", "mulan", "yang-jian", "yango", "liu-bang", "dharma"]
+  },
+  "Jungle": {
+    "S": ["augran"],
+    "A": ["wukong", "lam", "dian-wei"],
+    "B": ["musashi", "zilong", "ying", "sima-yi", "yao", "luna", "arke", "feyd", "gao-changgong"],
+    "C": ["butterfly", "agudo", "li-bai", "nakoruru", "ukyo-tachibana", "jing", "xuance", "liu-bei", "pei", "han-xin", "menki", "cirrus", "athena"]
+  },
+  "Mid": {
+    "S": ["angela", "daji", "milady", "mozi", "liang"],
+    "A": ["kongming", "wang-zhaojun", "xiao-qiao", "haya", "nuwa"],
+    "B": ["lady-zhen", "shi", "garuda", "diaochan", "heino"],
+    "C": ["yixing", "ziya", "mai-shiranui", "dr-bian", "yuhuan", "lorion", "flowborn-mage", "gao", "zhou-yu", "gan-mo", "shangguan"]
+  },
+  "Roam": {
+    "S": ["dolia", "cai-yan"],
+    "A": ["yaria", "dyadia", "donghuang"],
+    "B": ["kui", "da-qiao", "liu-shan", "zhang-fei", "zhuangzi"],
+    "C": ["ming", "sakeer", "annette", "lapulapu", "sun-bin", "guiguzi"]
+  },
+  "Farm": {
+    "S": ["hou-yi", "aoyin"],
+    "A": ["luban-no-7", "marco-polo", "lady-sun", "erin", "consort-yu", "garo"],
+    "B": ["flowborn-marksman", "fang", "shouyue", "luara", "alessio", "di-renjie", "chano", "arli"],
+    "C": ["huang-zhong", "meng-ya"]
+  }
+}

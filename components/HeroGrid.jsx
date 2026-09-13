@@ -11,7 +11,7 @@ const TIERS = ["S", "A", "B", "C"];
 // getComfortLevel(hero) => null | "comfort" | "super"
 // getEnemyBannedTeam(hero) => null | "A" | "B" (ban phase only - already banned by the OTHER team)
 // heroes: optional override of the roster to render, tier included -
-// defaults to the static HEROES import. Pass useTierList().effectiveHeroes
+// defaults to the static HEROES import. Pass useTierList().effectiveHeroesFor(mode)
 // here so the grid (badges, tier filter, sort) reflects a user's custom
 // tier list instead of the flat hokstats.gg-sourced default.
 export default function HeroGrid({ getStatus, onSelect, disabled, getComfortLevel, getEnemyBannedTeam, heroes }) {

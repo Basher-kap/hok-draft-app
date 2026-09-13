@@ -101,7 +101,8 @@ export default function TournamentDraftPage() {
   const [history, setHistory] = useState([]); // stack of previous seriesState snapshots, for undo
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
-  const { effectiveHeroes } = useTierList();
+  const { effectiveHeroesFor } = useTierList();
+  const effectiveHeroes = effectiveHeroesFor("tournament");
 
   if (!seriesState) {
     return <SeriesSetup onStart={(n) => setSeriesState(initialSeriesState(n))} />;

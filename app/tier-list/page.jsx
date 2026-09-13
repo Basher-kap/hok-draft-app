@@ -3,10 +3,29 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, RotateCcw, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowLeft, RotateCcw, ExternalLink, Sparkles, Swords, Trophy } from "lucide-react";
 import { ROLES, ROLE_COLOR, TIER_STYLE } from "@/lib/heroes";
 import { TIERS, unrankedHeroesForRole } from "@/lib/tierList";
 import { useTierList } from "@/components/TierListProvider";
+
+const MODE_META = {
+  ranked: {
+    label: "RANKED",
+    icon: Swords,
+    accent: "#5aa9e6",
+    blurb:
+      "This starts as a sample list (community/hokstats.gg-style ratings, split per lane) \u2014 what Rank Draft's AI scores against.",
+    link: { href: "https://hokstats.gg/official-popularity", label: "hokstats.gg" },
+  },
+  tournament: {
+    label: "TOURNAMENT",
+    icon: Trophy,
+    accent: "#f5c451",
+    blurb:
+      "Starts as a copy of the ranked list, but this one is yours to curate toward pro/tournament-scene viability \u2014 ranked-ladder popularity and pro play don't always agree. What Tournament Draft's AI scores against.",
+    link: null,
+  },
+};
 
 // D isn't in the shared TIER_STYLE (draft board only ever shows S-C as a
 // filter), so it gets its own look here - same visual language, one notch
@@ -94,8 +113,14 @@ function TierRow({ tier, role, heroes, onDropHero }) {
 }
 
 export default function TierListPage() {
-  const { assignments, moveHero, resetRole, resetAll, isCustomized, anyCustomized, effectiveHeroes } = useTierList();
+  const { assignmentsByMode, moveHero, resetRole, resetAllForMode, isCustomized, anyCustomized, effectiveHeroesFor } =
+    useTierList();
+  const [activeMode, setActiveMode] = useState("ranked");
   const [activeRole, setActiveRole] = useState(ROLES[0]);
+
+  const assignments = assignmentsByMode[activeMode];
+  const effectiveHeroes = effectiveHeroesFor(activeMode);
+  const modeInfo = MODE_META[activeMode];
 
   const heroBySlug = (slug) => effectiveHeroes.find((h) => h.slug === slug);
   const heroesForTier = (role, tier) =>
@@ -116,8 +141,8 @@ export default function TierListPage() {
             TIER LIST
           </h1>
           <button
-            onClick={resetAll}
-            disabled={!anyCustomized}
+            onClick={() => resetAllForMode(activeMode)}
+            disabled={!anyCustomized(activeMode)}
             className="flex items-center gap-1.5 font-display font-semibold text-sm transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             style={{ color: "#e8e6e1" }}
           >
@@ -125,28 +150,48 @@ export default function TierListPage() {
           </button>
         </div>
 
-        <p className="font-body text-[12.5px] text-gray-500 text-center mb-5">
-          Drag heroes between tiers to build your own list, per lane. Your list drives the AI suggestions on the
-          draft board &mdash; not just the badges.
+        <p className="font-body text-[12.5px] text-gray-500 text-center mb-4">
+          Drag heroes between tiers to build your own list, per lane. Ranked and Tournament each have their own list
+          and drive that mode's AI suggestions separately &mdash; not just the badges.
         </p>
+
+        <div className="flex gap-1.5 mb-4">
+          {Object.entries(MODE_META).map(([mode, meta]) => {
+            const Icon = meta.icon;
+            const isActive = activeMode === mode;
+            return (
+              <button
+                key={mode}
+                onClick={() => setActiveMode(mode)}
+                className="flex-1 flex items-center justify-center gap-1.5 font-display font-bold text-sm tracking-wide rounded-lg py-2 transition-all"
+                style={{
+                  border: `1.5px solid ${isActive ? meta.accent : "rgba(255,255,255,0.08)"}`,
+                  background: isActive ? `${meta.accent}18` : "#161920",
+                  color: isActive ? meta.accent : "#8a94a6",
+                }}
+              >
+                <Icon size={14} /> {meta.label}
+              </button>
+            );
+          })}
+        </div>
 
         <div
           className="flex items-center gap-2 mb-4 p-2.5 rounded-lg flex-wrap"
           style={{ background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}
         >
-          <Sparkles size={13} color="#f5c451" className="shrink-0 ml-0.5" />
-          <span className="font-body text-[11.5px] text-gray-500">
-            This starts as a sample list (community/hokstats.gg-style ratings, split per lane). Drag anything to make
-            it yours &mdash; it's saved on this device.
-          </span>
-          <a
-            href="https://hokstats.gg/tier-list/"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-auto flex items-center gap-1 font-display font-semibold text-[11px] text-gray-500 hover:text-gray-300 transition-colors shrink-0"
-          >
-            hokstats.gg <ExternalLink size={11} />
-          </a>
+          <Sparkles size={13} color={modeInfo.accent} className="shrink-0 ml-0.5" />
+          <span className="font-body text-[11.5px] text-gray-500">{modeInfo.blurb}</span>
+          {modeInfo.link && (
+            <a
+              href={modeInfo.link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="ml-auto flex items-center gap-1 font-display font-semibold text-[11px] text-gray-500 hover:text-gray-300 transition-colors shrink-0"
+            >
+              {modeInfo.link.label} <ExternalLink size={11} />
+            </a>
+          )}
         </div>
 
         <div className="flex gap-1.5 flex-wrap mb-4">
@@ -164,7 +209,7 @@ export default function TierListPage() {
                 }}
               >
                 {r}
-                {isCustomized(r) && (
+                {isCustomized(activeMode, r) && (
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: ROLE_COLOR[r] }} title="Customized" />
                 )}
               </button>
@@ -177,8 +222,8 @@ export default function TierListPage() {
             {activeRole.toUpperCase()}
           </span>
           <button
-            onClick={() => resetRole(activeRole)}
-            disabled={!isCustomized(activeRole)}
+            onClick={() => resetRole(activeMode, activeRole)}
+            disabled={!isCustomized(activeMode, activeRole)}
             className="flex items-center gap-1.5 font-display font-semibold text-xs text-gray-400 hover:text-gray-200 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <RotateCcw size={12} /> Reset {activeRole} to sample
@@ -192,7 +237,7 @@ export default function TierListPage() {
               tier={tier}
               role={activeRole}
               heroes={heroesForTier(activeRole, tier)}
-              onDropHero={moveHero}
+              onDropHero={(role, slug, toTier) => moveHero(activeMode, role, slug, toTier)}
             />
           ))}
         </div>
@@ -202,7 +247,7 @@ export default function TierListPage() {
           onDrop={(e) => {
             e.preventDefault();
             const slug = e.dataTransfer.getData("text/plain");
-            if (slug) moveHero(activeRole, slug, "unranked");
+            if (slug) moveHero(activeMode, activeRole, slug, "unranked");
           }}
           className="rounded-lg p-2.5"
           style={{ border: "1.5px dashed rgba(255,255,255,0.12)", background: "#12141a" }}

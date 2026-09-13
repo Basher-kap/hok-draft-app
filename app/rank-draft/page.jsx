@@ -29,7 +29,8 @@ export default function RankDraftPage() {
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const step = getStep(state.step);
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
-  const { effectiveHeroes } = useTierList();
+  const { effectiveHeroesFor } = useTierList();
+  const effectiveHeroes = effectiveHeroesFor("ranked");
 
   // Commits a ban, or a pick with its chosen role, to state + history.
   function commit(hero, role) {
