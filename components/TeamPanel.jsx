@@ -105,7 +105,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep, banCoun
             key={i}
             pickEntry={picks[i]}
             side={side}
-            active={activeStep.phase === "pick" && activeStep.team === side && activeStep.index === i}
+            active={activeStep.phase === "pick" && activeStep.team === side && picks.length === i}
           />
         ))}
       </div>
