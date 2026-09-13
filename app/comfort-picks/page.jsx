@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { X as XIcon, ArrowLeft, GripVertical } from "lucide-react";
+import { X as XIcon, ArrowLeft, GripVertical, Search } from "lucide-react";
 import { ROLES, ROLE_COLOR, sortByTier } from "@/lib/heroes";
 import { useComfort } from "@/components/ComfortProvider";
 import { useTierList } from "@/components/TierListProvider";
@@ -129,8 +129,11 @@ export default function ComfortPicksPage() {
   // Comfort picks apply across both draft modes, so the pool/badges here
   // just need one consistent tier reference - ranked is the primary list.
   const effectiveHeroes = effectiveHeroesFor("ranked");
+  const [query, setQuery] = useState("");
 
-  const pool = sortByTier(effectiveHeroes);
+  const pool = sortByTier(effectiveHeroes).filter((hero) =>
+    query.trim() ? hero.name.toLowerCase().includes(query.trim().toLowerCase()) : true
+  );
 
   return (
     <div className="min-h-screen" style={{ background: "#12141a", color: "#e8e6e1" }}>
@@ -165,10 +168,42 @@ export default function ComfortPicksPage() {
             </button>
           </div>
 
+          <div className="flex items-center justify-between gap-3 mb-2">
+            <span className="font-display font-semibold text-[11px] tracking-wide text-gray-500">
+              DRAG FROM POOL ({pool.length})
+            </span>
+            <div className="relative w-56">
+              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-500" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search hero..."
+                className="w-full rounded px-8 py-1.5 text-[13px] outline-none font-body"
+                style={{
+                  background: "#1a1e26",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  color: "#e8e6e1",
+                }}
+              />
+              {query && (
+                <XIcon
+                  size={14}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+                  onClick={() => setQuery("")}
+                />
+              )}
+            </div>
+          </div>
+
           <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: "thin" }}>
             {pool.map((hero) => (
               <DraggablePoolCard key={hero.slug} hero={hero} />
             ))}
+            {pool.length === 0 && (
+              <div className="w-full text-center py-6 text-gray-500 font-display text-sm">
+                No heroes match &ldquo;{query}&rdquo;.
+              </div>
+            )}
           </div>
         </div>
       </div>
