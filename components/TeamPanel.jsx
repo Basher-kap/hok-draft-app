@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { heroBySlug, ROLE_COLOR } from "@/lib/heroes";
 import { Ban } from "lucide-react";
+import { compositionSummary, achievableTemplates, pickPrimaryTemplate, COMPOSITION_BUCKETS, humanizeBucket } from "@/lib/heroArchetypes";
 
 function BanSlot({ slug }) {
   const hero = slug ? heroBySlug(slug) : null;
@@ -75,6 +76,70 @@ function PickSlot({ pickEntry, side, active }) {
   );
 }
 
+const BUCKET_COLOR = {
+  Tank: "#f87171",
+  SemiTank: "#fb923c",
+  SemiTankSupport: "#facc15",
+  DamageLong: "#34d399",
+  DamageShort: "#22d3ee",
+};
+
+// Live read on the team's composition against the four standard balance
+// shapes (lib/heroArchetypes.js BALANCE_TEMPLATES) - one pill per bucket,
+// filled count vs. what the current best-fit template calls for. Purely
+// achievable-based (teamComp math only, no remaining-hero-pool check) -
+// same simplification the scoring engine uses for its own template
+// bonus/warning in lib/recommendation.js.
+function CompositionTracker({ picks, side }) {
+  const teamComp = compositionSummary(picks);
+  if (teamComp.total === 0) return null;
+
+  const achievable = achievableTemplates(teamComp);
+  const primary = pickPrimaryTemplate(teamComp);
+  const offTemplate = achievable.length === 0;
+
+  return (
+    <div className={`flex items-center gap-1.5 flex-wrap ${side === "B" ? "flex-row-reverse" : ""}`}>
+      {COMPOSITION_BUCKETS.map((bucket) => {
+        const have = teamComp[bucket] || 0;
+        const want = primary[bucket] || 0;
+        const filled = have > 0;
+        const color = BUCKET_COLOR[bucket];
+        return (
+          <div
+            key={bucket}
+            title={`${humanizeBucket(bucket)}: ${have}/${want || 0}`}
+            className="flex items-center gap-1 rounded px-1.5 py-1"
+            style={{
+              background: filled ? `${color}22` : "transparent",
+              border: `1px solid ${filled ? color + "77" : "rgba(255,255,255,0.08)"}`,
+            }}
+          >
+            <div
+              className="w-1.5 h-1.5 rounded-full shrink-0"
+              style={{ background: filled ? color : "rgba(255,255,255,0.2)" }}
+            />
+            <span
+              className="font-body font-semibold text-[9.5px] tabular-nums"
+              style={{ color: filled ? color : "#6b7280" }}
+            >
+              {have}
+              {want > 0 ? `/${want}` : ""}
+            </span>
+          </div>
+        );
+      })}
+      <span
+        className="font-body text-[9px] ml-1"
+        style={{ color: offTemplate ? "#f87171" : "#6b7280" }}
+        title={offTemplate ? "No standard balance shape currently fits this comp" : primary.label}
+      >
+        {offTemplate ? "off-template" : `${achievable.length}/4 shapes open`}
+      </span>
+    </div>
+  );
+}
+
 // picks: [{slug, role}] for this team
 // banCount / pickCount: total slots to render (defaults match Rank Draft:
 // 3 bans, 5 picks - Tournament Draft passes banCount=4).
@@ -109,6 +174,8 @@ export default function TeamPanel({ side, name, bans, picks, activeStep, banCoun
           />
         ))}
       </div>
+
+      <CompositionTracker picks={picks} side={side} />
     </div>
   );
 }
