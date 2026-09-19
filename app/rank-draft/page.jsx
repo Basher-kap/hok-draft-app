@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, RotateCcw, Undo2, Heart, ListTree } from "lucide-react";
+import { ArrowLeft, RotateCcw, Undo2, Sparkles, Heart, ListTree } from "lucide-react";
 import HeroGrid from "@/components/HeroGrid";
 import TeamPanel from "@/components/TeamPanel";
 import TurnIndicator from "@/components/TurnIndicator";
@@ -29,7 +29,7 @@ export default function RankDraftPage() {
   const [history, setHistory] = useState([]); // stack of previous states, for undo
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const step = getStep(state.step);
-  const { isComfortHero, totalAssignments } = useComfort();
+  const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
   const { tierFor: comfortTierFor } = useComfortTier();
   const { effectiveHeroesFor } = useTierList();
   const effectiveHeroes = effectiveHeroesFor("ranked");
@@ -98,6 +98,8 @@ export default function RankDraftPage() {
           phase: step.phase,
           teamPickEntries: state.picks[step.team],
           enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
+          algorithmMode,
+          getComfortLevel: (hero) => isComfortHero(hero.slug),
           getComfortTier: (lane, slug) => comfortTierFor(lane, slug),
           topN: 10,
           mode: "rank",
@@ -143,9 +145,38 @@ export default function RankDraftPage() {
         </div>
 
         <div
-          className="flex items-center justify-end gap-3 flex-wrap mb-4 rounded-lg px-4 py-2.5"
+          className="flex items-center justify-between gap-3 flex-wrap mb-4 rounded-lg px-4 py-2.5"
           style={{ background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}
         >
+          <button
+            onClick={() => setAlgorithmMode(algorithmMode === "standard" ? "comfort" : "standard")}
+            className="flex items-center gap-2.5"
+            title="Switches how the AI recommendation engine will weigh suggestions (standard meta tier vs. leaning on your comfort picks)"
+          >
+            <Sparkles size={14} color={algorithmMode === "comfort" ? "#e879f9" : "#8a94a6"} />
+            <span className="font-display font-semibold text-xs tracking-wide" style={{ color: "#8a94a6" }}>
+              ALGORITHM
+            </span>
+            <div
+              className="relative rounded-full transition-colors"
+              style={{ width: 40, height: 20, background: algorithmMode === "comfort" ? "#e879f9" : "rgba(255,255,255,0.15)" }}
+            >
+              <div
+                className="absolute rounded-full bg-white transition-transform"
+                style={{
+                  width: 16, height: 16, top: 2, left: 2,
+                  transform: algorithmMode === "comfort" ? "translateX(20px)" : "translateX(0)",
+                }}
+              />
+            </div>
+            <span
+              className="font-display font-semibold text-xs tracking-wide"
+              style={{ color: algorithmMode === "comfort" ? "#e879f9" : "#e8e6e1" }}
+            >
+              {algorithmMode === "comfort" ? "COMFORT-WEIGHTED" : "STANDARD"}
+            </span>
+          </button>
+
           <div className="flex items-center gap-2">
             <Link
               href="/tier-list"
