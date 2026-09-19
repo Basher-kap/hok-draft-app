@@ -365,8 +365,7 @@
     "name": "Dharma",
     "tier": "C",
     "roles": [
-      "Clash Lane",
-      "Jungle"
+      "Clash Lane"
     ],
     "intl_exclusive": false,
     "image": "https://hokstats.gg/heroes-splash/dharma.jpg",
@@ -446,7 +445,8 @@
     "tier": "A",
     "roles": [
       "Clash Lane",
-      "Roam"
+      "Roam",
+      "Jungle"
     ],
     "intl_exclusive": false,
     "image": "https://hokstats.gg/heroes-splash/dun.jpg",

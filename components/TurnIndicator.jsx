@@ -1,18 +1,21 @@
 "use client";
 
-export default function TurnIndicator({ step, totalBans, totalPicks }) {
+// completeLabel / phaseLabel let callers (e.g. Tournament Draft, which has
+// two ban+pick sub-phases per game) override the default text without
+// touching Rank Draft's plain "BAN PHASE" / "PICK PHASE" behavior.
+export default function TurnIndicator({ step, totalBans, totalPicks, completeLabel = "DRAFT COMPLETE", phaseLabel }) {
   if (step.phase === "complete") {
     return (
       <div className="text-center py-2">
         <span className="font-display font-bold text-xl tracking-wide" style={{ color: "#f5c451" }}>
-          DRAFT COMPLETE
+          {completeLabel}
         </span>
       </div>
     );
   }
 
   const accent = step.team === "A" ? "#3b82f6" : "#ef4444";
-  const label = step.phase === "ban" ? "BAN PHASE" : "PICK PHASE";
+  const label = phaseLabel || (step.phase === "ban" ? "BAN PHASE" : "PICK PHASE");
   const progress =
     step.phase === "ban" ? `${step.index + 1} / ${totalBans}` : `${step.index + 1} / ${totalPicks}`;
 

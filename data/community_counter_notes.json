@@ -1,0 +1,772 @@
+[
+  {
+    "a": "biron",
+    "b": "dharma",
+    "note": "sustains through Dharma's damage"
+  },
+  {
+    "a": "fatih",
+    "b": "biron",
+    "note": "shreds sustain"
+  },
+  {
+    "a": "mi-yue",
+    "b": "fatih",
+    "note": "wins the laning phase"
+  },
+  {
+    "a": "charlotte",
+    "b": "allain",
+    "note": "mobility advantage"
+  },
+  {
+    "a": "donghuang",
+    "b": "charlotte",
+    "note": "sustain & damage"
+  },
+  {
+    "a": "dun",
+    "b": "mulan",
+    "note": "CC immunity and tankiness"
+  },
+  {
+    "a": "lu-bu",
+    "b": "dun",
+    "note": "true damage"
+  },
+  {
+    "a": "sun-ce",
+    "b": "guan-yu",
+    "note": "denies rotation"
+  },
+  {
+    "a": "flowborn-tank",
+    "b": "luna",
+    "note": "vs mobile assassins"
+  },
+  {
+    "a": "flowborn-tank",
+    "b": "jing",
+    "note": "vs mobile assassins"
+  },
+  {
+    "a": "wukong",
+    "b": "nakoruru",
+    "note": "dodge skills"
+  },
+  {
+    "a": "flowborn-tank",
+    "b": "wukong",
+    "note": "tanky, CC"
+  },
+  {
+    "a": "liu-bei",
+    "b": "flowborn-tank",
+    "note": "immune to CC"
+  },
+  {
+    "a": "shi",
+    "b": "augran",
+    "note": "easy to pull"
+  },
+  {
+    "a": "kaizer",
+    "b": "liu-bei",
+    "note": "dodge and tanky"
+  },
+  {
+    "a": "han-xin",
+    "b": "kaizer",
+    "note": "too many dashes in/out"
+  },
+  {
+    "a": "sun-bin",
+    "b": "dian-wei",
+    "note": "movement speed help"
+  },
+  {
+    "a": "diaochan",
+    "b": "pei",
+    "note": "counter play"
+  },
+  {
+    "a": "zhuangzi",
+    "b": "lian-po",
+    "note": "CC immunity"
+  },
+  {
+    "a": "cai-yan",
+    "b": "ming",
+    "note": "continuous CC bounce"
+  },
+  {
+    "a": "dyadia",
+    "b": "cai-yan",
+    "note": "CC while grouped"
+  },
+  {
+    "a": "mozi",
+    "b": "donghuang",
+    "note": "poke"
+  },
+  {
+    "a": "mozi",
+    "b": "ming",
+    "note": "poke"
+  },
+  {
+    "a": "sakeer",
+    "b": "mozi",
+    "note": "heal and stun"
+  },
+  {
+    "a": "dolia",
+    "b": "liang",
+    "note": "cancels ultimate"
+  },
+  {
+    "a": "di-renjie",
+    "b": "marco-polo",
+    "note": "removes CC"
+  },
+  {
+    "a": "garo",
+    "b": "arli",
+    "note": "outranges burst"
+  },
+  {
+    "a": "garo",
+    "b": "di-renjie",
+    "note": "outranges burst"
+  },
+  {
+    "a": "garo",
+    "b": "flowborn-marksman",
+    "note": "outranges burst"
+  },
+  {
+    "a": "garo",
+    "b": "hou-yi",
+    "note": "outranges burst"
+  },
+  {
+    "a": "consort-yu",
+    "b": "lady-sun",
+    "note": "wins the poke"
+  },
+  {
+    "a": "consort-yu",
+    "b": "flowborn-marksman",
+    "note": "wins the poke"
+  },
+  {
+    "a": "consort-yu",
+    "b": "alessio",
+    "note": "wins the poke"
+  },
+  {
+    "a": "consort-yu",
+    "b": "aoyin",
+    "note": "wins the poke"
+  },
+  {
+    "a": "huang-zhong",
+    "b": "erin",
+    "note": "magic defense"
+  },
+  {
+    "a": "meng-ya",
+    "b": "huang-zhong",
+    "note": "dodge and damage"
+  },
+  {
+    "a": "flowborn-marksman",
+    "b": "meng-ya",
+    "note": "dashless"
+  },
+  {
+    "a": "mai-shiranui",
+    "b": "nuwa",
+    "note": "assassin dive, high mobility"
+  },
+  {
+    "a": "mai-shiranui",
+    "b": "gan-mo",
+    "note": "assassin dive"
+  },
+  {
+    "a": "mai-shiranui",
+    "b": "ziya",
+    "note": "assassin dive"
+  },
+  {
+    "a": "shangguan",
+    "b": "nuwa",
+    "note": "assassin dive"
+  },
+  {
+    "a": "shangguan",
+    "b": "gan-mo",
+    "note": "assassin dive"
+  },
+  {
+    "a": "shangguan",
+    "b": "ziya",
+    "note": "assassin dive"
+  },
+  {
+    "a": "kongming",
+    "b": "nuwa",
+    "note": "assassin dive"
+  },
+  {
+    "a": "kongming",
+    "b": "gan-mo",
+    "note": "assassin dive"
+  },
+  {
+    "a": "kongming",
+    "b": "ziya",
+    "note": "assassin dive"
+  },
+  {
+    "a": "gan-mo",
+    "b": "haya",
+    "note": "outranges"
+  },
+  {
+    "a": "nuwa",
+    "b": "haya",
+    "note": "outranges"
+  },
+  {
+    "a": "daji",
+    "b": "mai-shiranui",
+    "note": "stuns and bursts assassins"
+  },
+  {
+    "a": "daji",
+    "b": "shangguan",
+    "note": "stuns and bursts assassins"
+  },
+  {
+    "a": "wang-zhaojun",
+    "b": "gao",
+    "note": "dashless"
+  },
+  {
+    "a": "kongming",
+    "b": "wang-zhaojun",
+    "note": "dashless"
+  },
+  {
+    "a": "shangguan",
+    "b": "flowborn-mage",
+    "note": "assassin"
+  },
+  {
+    "a": "milady",
+    "b": "mai-shiranui",
+    "note": "blocked by her minions"
+  },
+  {
+    "a": "gao",
+    "b": "milady",
+    "note": "ult targets minions"
+  },
+  {
+    "a": "di-renjie",
+    "b": "milady",
+    "note": "destroys the minions"
+  },
+  {
+    "a": "di-renjie",
+    "b": "chano",
+    "note": "destroys the minions"
+  },
+  {
+    "a": "ziya",
+    "b": "milady",
+    "note": "destroys the minions"
+  },
+  {
+    "a": "ziya",
+    "b": "chano",
+    "note": "destroys the minions"
+  },
+  {
+    "a": "xiao-qiao",
+    "b": "liang",
+    "note": "damage and outpoke"
+  },
+  {
+    "a": "sima-yi",
+    "b": "xiao-qiao",
+    "note": "easy to target"
+  },
+  {
+    "a": "sima-yi",
+    "b": "angela",
+    "note": "easy to target"
+  },
+  {
+    "a": "sima-yi",
+    "b": "nuwa",
+    "note": "easy to target"
+  },
+  {
+    "a": "sima-yi",
+    "b": "wang-zhaojun",
+    "note": "easy to target"
+  },
+  {
+    "a": "gao-changgong",
+    "b": "gan-mo",
+    "note": "assassin"
+  },
+  {
+    "a": "arli",
+    "b": "dun",
+    "note": "vs heavy/tanky heroes"
+  },
+  {
+    "a": "arli",
+    "b": "menki",
+    "note": "vs heavy/tanky heroes"
+  },
+  {
+    "a": "arli",
+    "b": "arthur",
+    "note": "vs heavy/tanky heroes"
+  },
+  {
+    "a": "arli",
+    "b": "bai-qi",
+    "note": "vs heavy/tanky heroes"
+  },
+  {
+    "a": "arli",
+    "b": "lian-po",
+    "note": "vs heavy/tanky heroes"
+  },
+  {
+    "a": "shi",
+    "b": "dun",
+    "note": "vs tanky/aggressive front fighters"
+  },
+  {
+    "a": "shi",
+    "b": "flowborn-tank",
+    "note": "vs tanky/aggressive front fighters"
+  },
+  {
+    "a": "shi",
+    "b": "fatih",
+    "note": "vs tanky/aggressive front fighters"
+  },
+  {
+    "a": "shi",
+    "b": "biron",
+    "note": "vs tanky/aggressive front fighters"
+  },
+  {
+    "a": "yuhuan",
+    "b": "augran",
+    "note": "dodges skills for escape or bait"
+  },
+  {
+    "a": "yuhuan",
+    "b": "kongming",
+    "note": "dodges skills for escape or bait"
+  },
+  {
+    "a": "yuhuan",
+    "b": "aoyin",
+    "note": "dodges skills for escape or bait"
+  },
+  {
+    "a": "liang",
+    "b": "menki",
+    "note": "denies dive/initiation"
+  },
+  {
+    "a": "liang",
+    "b": "sun-ce",
+    "note": "denies dive/initiation"
+  },
+  {
+    "a": "agudo",
+    "b": "milady",
+    "note": "denies fast rotation/push"
+  },
+  {
+    "a": "agudo",
+    "b": "li-xin",
+    "note": "denies fast rotation/push"
+  },
+  {
+    "a": "agudo",
+    "b": "liu-shan",
+    "note": "denies fast rotation/push"
+  },
+  {
+    "a": "liang",
+    "b": "luna",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "jing",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "arke",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "lam",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "ying",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "zilong",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "li-bai",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "pei",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "mai-shiranui",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "liang",
+    "b": "sima-yi",
+    "note": "suppresses dashing assassins"
+  },
+  {
+    "a": "sima-yi",
+    "b": "angela",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "nuwa",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "garuda",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "ziya",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "sima-yi",
+    "b": "garo",
+    "note": "easy target to dive"
+  },
+  {
+    "a": "lian-po",
+    "b": "mozi",
+    "note": "interrupts ultimate"
+  },
+  {
+    "a": "lapulapu",
+    "b": "mozi",
+    "note": "interrupts ultimate"
+  },
+  {
+    "a": "arli",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "arli",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "di-renjie",
+    "b": "marco-polo",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "di-renjie",
+    "b": "yaria",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "garo",
+    "b": "marco-polo",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "yaria",
+    "note": "outranges"
+  },
+  {
+    "a": "agudo",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "agudo",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "musashi",
+    "b": "hou-yi",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "musashi",
+    "b": "cai-yan",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "kaizer",
+    "b": "hou-yi",
+    "note": "damage reduction"
+  },
+  {
+    "a": "kaizer",
+    "b": "cai-yan",
+    "note": "damage reduction"
+  },
+  {
+    "a": "guan-yu",
+    "b": "hou-yi",
+    "note": "displacement"
+  },
+  {
+    "a": "guan-yu",
+    "b": "cai-yan",
+    "note": "displacement"
+  },
+  {
+    "a": "sun-ce",
+    "b": "hou-yi",
+    "note": "continuous control"
+  },
+  {
+    "a": "sun-ce",
+    "b": "cai-yan",
+    "note": "continuous control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "hou-yi",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "cai-yan",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "guiguzi",
+    "b": "hou-yi",
+    "note": "group speed"
+  },
+  {
+    "a": "guiguzi",
+    "b": "cai-yan",
+    "note": "group speed"
+  },
+  {
+    "a": "garo",
+    "b": "hou-yi",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "cai-yan",
+    "note": "outranges"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "hou-yi",
+    "note": "early burst"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "cai-yan",
+    "note": "early burst"
+  },
+  {
+    "a": "garo",
+    "b": "erin",
+    "note": "outranges"
+  },
+  {
+    "a": "hou-yi",
+    "b": "erin",
+    "note": "outdamages, controls"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "augran",
+    "note": "freezes dashless Augran"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "dyadia",
+    "note": "freezes dashless Augran"
+  },
+  {
+    "a": "arli",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "arli",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "di-renjie",
+    "b": "marco-polo",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "di-renjie",
+    "b": "yaria",
+    "note": "blocks passive and purifies"
+  },
+  {
+    "a": "garo",
+    "b": "marco-polo",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "yaria",
+    "note": "outranges"
+  },
+  {
+    "a": "agudo",
+    "b": "marco-polo",
+    "note": "blocks skills"
+  },
+  {
+    "a": "agudo",
+    "b": "yaria",
+    "note": "blocks skills"
+  },
+  {
+    "a": "musashi",
+    "b": "hou-yi",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "musashi",
+    "b": "cai-yan",
+    "note": "burst, anti-heal ultimate"
+  },
+  {
+    "a": "kaizer",
+    "b": "hou-yi",
+    "note": "damage reduction"
+  },
+  {
+    "a": "kaizer",
+    "b": "cai-yan",
+    "note": "damage reduction"
+  },
+  {
+    "a": "guan-yu",
+    "b": "hou-yi",
+    "note": "displacement"
+  },
+  {
+    "a": "guan-yu",
+    "b": "cai-yan",
+    "note": "displacement"
+  },
+  {
+    "a": "sun-ce",
+    "b": "hou-yi",
+    "note": "continuous control"
+  },
+  {
+    "a": "sun-ce",
+    "b": "cai-yan",
+    "note": "continuous control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "hou-yi",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "cai-yan",
+    "note": "AoE control, anti-heal"
+  },
+  {
+    "a": "guiguzi",
+    "b": "hou-yi",
+    "note": "group speed"
+  },
+  {
+    "a": "guiguzi",
+    "b": "cai-yan",
+    "note": "group speed"
+  },
+  {
+    "a": "garo",
+    "b": "hou-yi",
+    "note": "outranges"
+  },
+  {
+    "a": "garo",
+    "b": "cai-yan",
+    "note": "outranges"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "hou-yi",
+    "note": "early burst"
+  },
+  {
+    "a": "luban-no-7",
+    "b": "cai-yan",
+    "note": "early burst"
+  },
+  {
+    "a": "garo",
+    "b": "erin",
+    "note": "outranges"
+  },
+  {
+    "a": "hou-yi",
+    "b": "erin",
+    "note": "outdamage, control"
+  },
+  {
+    "a": "lady-zhen",
+    "b": "augran",
+    "note": "freezes dashless Augran"
+  }
+]

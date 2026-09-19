@@ -1,0 +1,37 @@
+{
+  "Clash Lane": {
+    "priority": ["dharma", "charlotte"],
+    "reserve": ["fatih"],
+    "common": ["ata", "biron"],
+    "adjust": ["sun-ce", "arthur"],
+    "wildcard": ["mi-yue"]
+  },
+  "Jungle": {
+    "priority": ["pei"],
+    "reserve": ["augran", "yang-jian"],
+    "common": ["musashi", "lam"],
+    "adjust": ["kongming", "agudo"],
+    "wildcard": ["dun"]
+  },
+  "Mid": {
+    "priority": ["garuda", "haya"],
+    "reserve": ["nuwa", "wang-zhaojun"],
+    "common": ["angela"],
+    "adjust": ["yuhuan"],
+    "wildcard": ["milady", "daji"]
+  },
+  "Roam": {
+    "priority": ["zhang-fei", "lapulapu"],
+    "reserve": ["liang"],
+    "common": ["mozi", "lian-po"],
+    "adjust": ["guiguzi", "yuhuan"],
+    "wildcard": []
+  },
+  "Farm": {
+    "priority": ["flowborn-marksman", "aoyin", "chicha"],
+    "reserve": ["erin", "arli", "chano"],
+    "common": ["lady-sun", "di-renjie"],
+    "adjust": ["shouyue"],
+    "wildcard": ["consort-yu"]
+  }
+}
