@@ -9,6 +9,7 @@ import TurnIndicator from "@/components/TurnIndicator";
 import AISuggestPanel from "@/components/AISuggestPanel";
 import RoleSelectModal from "@/components/RoleSelectModal";
 import { useComfort } from "@/components/ComfortProvider";
+import { useComfortTier } from "@/components/ComfortTierProvider";
 import { useTierList } from "@/components/TierListProvider";
 import { getSuggestions } from "@/lib/recommendation";
 import {
@@ -29,6 +30,7 @@ export default function RankDraftPage() {
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const step = getStep(state.step);
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
+  const { tierFor: comfortTierFor } = useComfortTier();
   const { effectiveHeroesFor } = useTierList();
   const effectiveHeroes = effectiveHeroesFor("ranked");
 
@@ -98,6 +100,7 @@ export default function RankDraftPage() {
           enemyPickEntries: state.picks[step.team === "A" ? "B" : "A"],
           algorithmMode,
           getComfortLevel: (hero) => isComfortHero(hero.slug),
+          getComfortTier: (lane, slug) => comfortTierFor(lane, slug),
           topN: 10,
           mode: "rank",
         });

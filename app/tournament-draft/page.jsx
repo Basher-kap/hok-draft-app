@@ -10,6 +10,7 @@ import TurnIndicator from "@/components/TurnIndicator";
 import AISuggestPanel from "@/components/AISuggestPanel";
 import RoleSelectModal from "@/components/RoleSelectModal";
 import { useComfort } from "@/components/ComfortProvider";
+import { useComfortTier } from "@/components/ComfortTierProvider";
 import { useTierList } from "@/components/TierListProvider";
 import { getSuggestions } from "@/lib/recommendation";
 import { heroBySlug } from "@/lib/heroes";
@@ -101,6 +102,7 @@ export default function TournamentDraftPage() {
   const [history, setHistory] = useState([]); // stack of previous seriesState snapshots, for undo
   const [pendingHero, setPendingHero] = useState(null); // flex hero awaiting a role choice (pick phase)
   const { isComfortHero, algorithmMode, setAlgorithmMode, totalAssignments } = useComfort();
+  const { tierFor: comfortTierFor } = useComfortTier();
   const { effectiveHeroesFor } = useTierList();
   const effectiveHeroes = effectiveHeroesFor("tournament");
 
@@ -185,6 +187,7 @@ export default function TournamentDraftPage() {
         enemyPickEntries: seriesState.current.picks[step.team === "A" ? "B" : "A"],
         algorithmMode,
         getComfortLevel: (hero) => isComfortHero(hero.slug),
+        getComfortTier: (lane, slug) => comfortTierFor(lane, slug),
         topN: 10,
       });
 

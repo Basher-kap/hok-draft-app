@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ComfortProvider } from "@/components/ComfortProvider";
+import { ComfortTierProvider } from "@/components/ComfortTierProvider";
 import { TierListProvider } from "@/components/TierListProvider";
 
 export const metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <TierListProvider>
-          <ComfortProvider>{children}</ComfortProvider>
+          <ComfortProvider>
+            <ComfortTierProvider>{children}</ComfortTierProvider>
+          </ComfortProvider>
         </TierListProvider>
       </body>
     </html>
