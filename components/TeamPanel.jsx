@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { heroBySlug, ROLE_COLOR } from "@/lib/heroes";
 import { Ban } from "lucide-react";
-import { compositionSummary, achievableTemplates, pickPrimaryTemplate, COMPOSITION_BUCKETS, humanizeBucket } from "@/lib/heroArchetypes";
+import { compositionSummary, achievableTemplates, pickPrimaryTemplate, COMPOSITION_BUCKETS, humanizeBucket, BALANCE_TEMPLATES } from "@/lib/heroArchetypes";
 
 function BanSlot({ slug }) {
   const hero = slug ? heroBySlug(slug) : null;
@@ -84,58 +84,107 @@ const BUCKET_COLOR = {
   DamageShort: "#22d3ee",
 };
 
-// Live read on the team's composition against the four standard balance
-// shapes (lib/heroArchetypes.js BALANCE_TEMPLATES) - one pill per bucket,
-// filled count vs. what the current best-fit template calls for. Purely
-// achievable-based (teamComp math only, no remaining-hero-pool check) -
-// same simplification the scoring engine uses for its own template
-// bonus/warning in lib/recommendation.js.
-function CompositionTracker({ picks, side }) {
-  const teamComp = compositionSummary(picks);
-  if (teamComp.total === 0) return null;
+const BUCKET_SHORT_LABEL = {
+  Tank: "Tank",
+  SemiTank: "Semi-Tank",
+  SemiTankSupport: "Semi-Tank Sup.",
+  DamageLong: "Dmg (L)",
+  DamageShort: "Dmg (S)",
+};
 
+// Exact wording Basher uses for each of the four standard balance shapes
+// (lib/heroArchetypes.js BALANCE_TEMPLATES), keyed by the template's own
+// unique `label` so this can never point at the wrong shape even if the
+// templates array gets reordered.
+const TEMPLATE_DISPLAY_LABEL = {
+  "2 Tank / 2 Damage (L+S) / 1 Semi-Tank": "2 Tanks, 2 Damage (Long and Short), 1 Semi-Tank",
+  "2 Semi-Tank / 2 Damage (L+S) / 1 Semi-Tank Support": "2 Semi-Tanks, 2 Damage (Long and Short), 1 Semi-Tank Support",
+  "3 Damage (2S+1L) / 1 Tank / 1 Semi-Tank": "3 Damage (2 Short and 1 Long), 1 Tank, 1 Semi-Tank",
+  "3 Damage (2S+1L) / 2 Tank": "3 Damage (2 Short and 1 Long), 2 Tank",
+};
+function templateDisplayLabel(t) {
+  return TEMPLATE_DISPLAY_LABEL[t.label] || t.label;
+}
+
+// Below the pick grid: which of the four standard balance shapes this
+// team is building toward, PLUS a running tally of how many heroes of
+// each archetype bucket have actually been picked - so it's both "what
+// shape are we aiming for" and "what have we actually drafted so far".
+// Purely achievable-based (teamComp math only, no remaining-hero-pool
+// check) - same simplification the scoring engine's own template
+// bonus/warning uses in lib/recommendation.js.
+function LineupBalancePanel({ picks, side }) {
+  const teamComp = compositionSummary(picks);
   const achievable = achievableTemplates(teamComp);
+  const achievableLabels = new Set(achievable.map((t) => t.label));
   const primary = pickPrimaryTemplate(teamComp);
-  const offTemplate = achievable.length === 0;
 
   return (
-    <div className={`flex items-center gap-1.5 flex-wrap ${side === "B" ? "flex-row-reverse" : ""}`}>
-      {COMPOSITION_BUCKETS.map((bucket) => {
-        const have = teamComp[bucket] || 0;
-        const want = primary[bucket] || 0;
-        const filled = have > 0;
-        const color = BUCKET_COLOR[bucket];
-        return (
-          <div
-            key={bucket}
-            title={`${humanizeBucket(bucket)}: ${have}/${want || 0}`}
-            className="flex items-center gap-1 rounded px-1.5 py-1"
-            style={{
-              background: filled ? `${color}22` : "transparent",
-              border: `1px solid ${filled ? color + "77" : "rgba(255,255,255,0.08)"}`,
-            }}
-          >
-            <div
-              className="w-1.5 h-1.5 rounded-full shrink-0"
-              style={{ background: filled ? color : "rgba(255,255,255,0.2)" }}
-            />
+    <div className="flex flex-col gap-2 rounded-lg px-3 py-2.5" style={{ background: "#161920", border: "1px solid rgba(255,255,255,0.06)" }}>
+      <div className={`flex items-center justify-between gap-2 ${side === "B" ? "flex-row-reverse" : ""}`}>
+        <span className="font-display font-bold text-[10px] tracking-wide" style={{ color: "#8a94a6" }}>
+          LINEUP BALANCE
+        </span>
+        {/* Archetype tally - how many heroes of each bucket are actually
+            picked so far, regardless of which template ends up used. */}
+        <div className={`flex items-center gap-2 ${side === "B" ? "flex-row-reverse" : ""}`}>
+          {COMPOSITION_BUCKETS.map((bucket) => (
             <span
+              key={bucket}
+              title={humanizeBucket(bucket)}
               className="font-body font-semibold text-[9.5px] tabular-nums"
-              style={{ color: filled ? color : "#6b7280" }}
+              style={{ color: teamComp[bucket] > 0 ? BUCKET_COLOR[bucket] : "#4b5563" }}
             >
-              {have}
-              {want > 0 ? `/${want}` : ""}
+              {BUCKET_SHORT_LABEL[bucket]} {teamComp[bucket] || 0}
             </span>
-          </div>
-        );
-      })}
-      <span
-        className="font-body text-[9px] ml-1"
-        style={{ color: offTemplate ? "#f87171" : "#6b7280" }}
-        title={offTemplate ? "No standard balance shape currently fits this comp" : primary.label}
-      >
-        {offTemplate ? "off-template" : `${achievable.length}/4 shapes open`}
-      </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        {BALANCE_TEMPLATES.map((t) => {
+          const isAchievable = achievableLabels.has(t.label);
+          const isPrimary = isAchievable && t.label === primary.label;
+          return (
+            <div
+              key={t.label}
+              className={`flex items-center gap-2.5 rounded px-2 py-1.5 ${side === "B" ? "flex-row-reverse text-right" : ""}`}
+              style={{
+                opacity: isAchievable ? 1 : 0.4,
+                background: isPrimary ? "rgba(245,196,81,0.1)" : "transparent",
+                border: `1px solid ${isPrimary ? "rgba(245,196,81,0.4)" : "transparent"}`,
+              }}
+            >
+              <div
+                className="w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ background: isAchievable ? (isPrimary ? "#f5c451" : "#8a94a6") : "#ef4444" }}
+              />
+              <span
+                className="font-body text-[11px] flex-1"
+                style={{
+                  color: isPrimary ? "#f5c451" : isAchievable ? "#e8e6e1" : "#6b7280",
+                  textDecoration: isAchievable ? "none" : "line-through",
+                }}
+              >
+                {templateDisplayLabel(t)}
+              </span>
+              {/* Per-bucket have/need for this specific shape, so it's
+                  visible exactly what's still missing to complete it. */}
+              <div className="flex items-center gap-1.5 shrink-0">
+                {COMPOSITION_BUCKETS.filter((b) => t[b] > 0).map((b) => (
+                  <span
+                    key={b}
+                    className="font-body text-[9px] tabular-nums"
+                    style={{ color: (teamComp[b] || 0) >= t[b] ? BUCKET_COLOR[b] : "#6b7280" }}
+                  >
+                    {teamComp[b] || 0}/{t[b]}
+                  </span>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -175,7 +224,7 @@ export default function TeamPanel({ side, name, bans, picks, activeStep, banCoun
         ))}
       </div>
 
-      <CompositionTracker picks={picks} side={side} />
+      <LineupBalancePanel picks={picks} side={side} />
     </div>
   );
 }
